@@ -1,8 +1,11 @@
 <template>
     <div class="h5-share-wrapper" style="height: 100%;overflow-y: auto">
-        <announcement v-if="type == 'club'" :type="type" ></announcement>
-        <footprint  v-if="type == 'track'" :type="type"></footprint>
-        <journey v-if="type == 'travel' || type == 'poi' || type == 'temp'" :type="type"></journey>
+        <announcement v-if="type == 'club'" 
+            :type="type" :id="id" ></announcement>
+        <footprint  v-if="type == 'track'" 
+            :type="type" :id="id"></footprint>
+        <journey v-if="type == 'travel' || type == 'poi' || type == 'temp'"
+            :type="type" :id="id"></journey>
     </div>
 </template>
 
@@ -14,7 +17,8 @@
         name: 'share',
         data(){
             return {
-            	type:''
+            	type:'',
+                id:''
             }
         },
         components:{
@@ -29,7 +33,8 @@
         },
         methods: {
             getQuery(){
-            	this.type = this.$route.query.type;
+                this.type = this.$route.query.type;
+            	this.id = this.$route.query.id;
             }
         },
         destroyed(){

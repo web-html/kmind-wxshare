@@ -19,9 +19,10 @@
     import Download from '../common/Download';
     import User from '../common/User';
     import FooterCode from '../common/FooterCode';
-    import {getPoiDetail , getTravelDetail} from "@/api/route"
+    import { getPoiDetail , getTravelDetail, getTempDetail } from "@/api/route"
     export default {
         name: 'journey',
+        props:['type','id'],
         data(){
             return {
                 url:'',
@@ -38,7 +39,16 @@
             User
         },
         created(){
-            this.getTravelDetail()
+            if(this.type == 'travel'){
+                this.getTravelDetail();
+            }
+            
+            if(this.type == 'poi'){
+                this.getPoi();
+            }
+            if(this.type == 'temp'){
+                this.getTemp();
+            }
         },
         computed: {
         },
@@ -55,6 +65,20 @@
                     this.user = user
                 }).catch(res=>{
                     console.log(res)
+                })
+            },
+            getPoi(){
+                getPoiDetail({
+                    objectId:this.id
+                }).then(res => {
+                    console.log(res)
+                })
+            },
+            getTemp(){
+                getTempDetail({
+                    id:this.id
+                }).then(res => {
+                    console.log(res);
                 })
             }
         },

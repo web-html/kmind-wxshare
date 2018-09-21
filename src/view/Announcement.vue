@@ -27,6 +27,7 @@
     import {getNotice} from '../api/route.js'
     export default {
         name: 'announcement',
+        props:['id'],
         data(){
             return {
                 user:{},
@@ -41,23 +42,13 @@
             User
         },
         created(){
-            // this.getData();
             this.getNotice()
         },
         computed: {
         },
         methods: {
-            getData(){
-                console.log(request)
-                request.get('/api/app/system/feedback/list').then(res => {
-
-                })
-                // $api.post('/app/club/look/notice').then(res =>{
-                //     console.log(res);
-                // })
-            },
             getNotice(){
-                let  params = {'noticeId':'5ba453f01dac53696449ae10'}
+                let  params = {'noticeId':this.id}
                 getNotice(params).then(res=>{
                     let data = res.data;
                     let {user,club,theme,picture} = data.root;
