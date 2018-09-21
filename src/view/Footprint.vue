@@ -22,9 +22,10 @@
     import Download from '../common/Download';
     import User from '../common/User';
     import FooterCode from '../common/FooterCode';
-    import {getTrack} from "@/api/route"
+    import { getTrack } from "@/api/route"
     export default {
         name: 'announcement',
+        props:['type','id'],
         data(){
             return {
                 user:{},
@@ -37,13 +38,15 @@
             User
         },
         created(){
-            this.getTrack()
+            this.getTrack();
+            
         },
         computed: {
         },
         methods: {
+
             getTrack(){
-                getTrack({'id': '5ba396f3ee38fb4c8900bf57'}).then(res=>{
+                getTrack({'id': this.id}).then(res=>{
                     let data = res.data;
                     let {user,poiCount,strokeCover,totalDay,totalDistance,theme} = data.root;
                     this.user = user || {}

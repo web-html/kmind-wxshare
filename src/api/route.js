@@ -4,6 +4,9 @@ import api from '@/utils/request'
 export function getPoiDetail (params) {
   return api.post('/api/app/poi/detail', params)
 }
+export function getTempDetail (params) {
+  return api.post('/api/app/wild/detail', params)
+}
 //足迹
 export function getTrack (params) {
   return api.post('/api/app/track/simple', params)
