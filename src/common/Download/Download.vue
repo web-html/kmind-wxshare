@@ -17,7 +17,7 @@
 <script>
     import './download.less';
     // import $device from '../../tools/device';
-    // import {AppLink} from '../../tools/arouse';
+    import {AppLink} from '../../utils/arouse';
     // require('../../tools/arouse');
     export default {
         name: 'download',
@@ -43,8 +43,8 @@
                     // 应用宝的地址
                     yyb: '//a.app.qq.com/o/simple.jsp?pkgname=com.mtime.lookface&fromcase=40002'
                 };
-                // let applink = new AppLink(config)
-                // applink.open();
+                let applink = new AppLink(config)
+                applink.open();
             }
         },
         watch: {

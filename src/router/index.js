@@ -15,6 +15,7 @@ const NotFound = asyncComponent('NotFound')
 const Announcement = asyncComponent('Announcement')
 const Footprint = asyncComponent('Footprint')
 const Journey = asyncComponent('Journey')
+const Share = asyncComponent('Share')
 
 Vue.use(Router)
 
@@ -31,6 +32,7 @@ const router = new Router({
     {path: '/footprint', name: 'footprint', component: Footprint},
     {path: '/poi', name: 'poi', component: Journey},
     {path: '/journey', name: 'journey', component: Journey},
+    {path: '/share', name: 'share', component: Share},
     {path: '*', name: 'NotFound', component: NotFound}
   ]
 })

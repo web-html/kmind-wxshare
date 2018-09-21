@@ -46,7 +46,7 @@
                 getTrack({'id': '5ba396f3ee38fb4c8900bf57'}).then(res=>{
                     let data = res.data;
                     let {user,poiCount,strokeCover,totalDay,totalDistance,theme} = data.root;
-                    this.user = user
+                    this.user = user || {}
                     this.url = strokeCover.url;
                     this.totalDay = totalDay;
                     this.totalDistance = totalDistance;
