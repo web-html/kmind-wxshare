@@ -23,6 +23,7 @@
     "vue-awesome-swiper": "^2.6.4",
     "vue-router": "^2.3.1",
     "vuex": "^3.0.0",
+    "webpack": "^3.6.0",
     "weixin-js-sdk": "^1.2.0"
   },
   "devDependencies": {
@@ -87,7 +88,7 @@
     "vue-loader": "^12.1.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.3",
-    "webpack": "^2.6.1",
+    "webpack": "^3.4.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.18.0",
