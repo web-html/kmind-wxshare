@@ -1,26 +1,24 @@
-webpackJsonp([0],Array(68).concat([
-/* 68 */
+webpackJsonp([0],Array(66).concat([
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./Bought": 72,
-	"./Bought.vue": 72,
-	"./Details": 73,
-	"./Details.vue": 73,
-	"./Follow": 74,
-	"./Follow.vue": 74,
-	"./Guide": 75,
-	"./Guide.vue": 75,
-	"./List": 76,
-	"./List.vue": 76,
-	"./NotFound": 77,
-	"./NotFound.vue": 77,
-	"./Pay": 78,
-	"./Pay.vue": 78,
-	"./User": 79,
-	"./User.vue": 79,
-	"./signUp": 80,
-	"./signUp.vue": 80
+	"./Announcement": 71,
+	"./Announcement.vue": 71,
+	"./Details": 77,
+	"./Details.vue": 77,
+	"./Footprint": 72,
+	"./Footprint.vue": 72,
+	"./Journey": 73,
+	"./Journey.vue": 73,
+	"./Map": 78,
+	"./Map.vue": 78,
+	"./NotFound": 79,
+	"./NotFound.vue": 79,
+	"./Share": 80,
+	"./Share.vue": 80,
+	"./signUp": 81,
+	"./signUp.vue": 81
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -36,10 +34,142 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 68;
+webpackContext.id = 66;
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = getPoiDetail;
+/* harmony export (immutable) */ __webpack_exports__["c"] = getTempDetail;
+/* harmony export (immutable) */ __webpack_exports__["d"] = getTrack;
+/* harmony export (immutable) */ __webpack_exports__["a"] = getTravelDetail;
+/* harmony export (immutable) */ __webpack_exports__["e"] = getNotice;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(75);
+
+
+//poi
+function getPoiDetail(params) {
+  return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/app/poi/detail', params);
+}
+function getTempDetail(params) {
+  return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/app/wild/detail', params);
+}
+//足迹
+function getTrack(params) {
+  return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/app/track/simple', params);
+}
+//路线
+function getTravelDetail(params) {
+  return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/app/travel/detail', params);
+}
+// 公告
+function getNotice(params) {
+  return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/app/club/look/notice', params);
+}
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Download_vue__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Download_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Download_vue__);
+/**
+ * Created by chunting on 2018/9/18.
+ */
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__Download_vue___default.a);
 
 /***/ }),
 /* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Footer_vue__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Footer_vue__);
+/**
+ * Created by chunting on 2018/9/18.
+ */
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__Footer_vue___default.a);
+
+/***/ }),
+/* 70 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__User_vue__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__User_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__User_vue__);
+/**
+ * Created by chunting on 2018/9/18.
+ */
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__User_vue___default.a);
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(4)(
+  /* script */
+  __webpack_require__(87),
+  /* template */
+  __webpack_require__(116),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(4)(
+  /* script */
+  __webpack_require__(89),
+  /* template */
+  __webpack_require__(118),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(4)(
+  /* script */
+  __webpack_require__(90),
+  /* template */
+  __webpack_require__(125),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 74 */
 /***/ (function(module, exports) {
 
 // 列表需要的变量，用Object.assign添加到vue data里面
@@ -92,7 +222,56 @@ module.exports.search = search;
 module.exports.queryParam = queryParam;
 
 /***/ }),
-/* 70 */
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+
+// import { Message } from 'element-ui'
+
+// create an axios instance
+const service = __WEBPACK_IMPORTED_MODULE_0_axios___default.a.create({
+  baseURL: __webpack_require__.i({"NODE_ENV":"production"}).BASE_API, // api的base_url
+  timeout: 5000 // request timeout
+});
+
+// request interceptor
+service.interceptors.request.use(config => {
+  return config;
+}, error => {
+  // Do something with request error
+  console.log(error); // for debug
+  Promise.reject(error);
+});
+
+// respone interceptor
+service.interceptors.response.use(response => response, error => {
+  console.log('err' + error); // for debug
+  // Message({
+  //   message: error.message,
+  //   type: 'error',
+  //   duration: 5 * 1000
+  // })
+  return Promise.reject(error);
+});
+
+const ajaxMethod = ['get', 'post', 'delete', 'put'];
+const api = {};
+ajaxMethod.forEach(method => {
+  api[method] = function fun(uri, data, config) {
+    return new Promise(resolve => {
+      service[method](uri, data, config).then(response => {
+        resolve(response);
+      });
+    });
+  };
+});
+/* harmony default export */ __webpack_exports__["a"] = (api);
+
+/***/ }),
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -5452,93 +5631,7 @@ else if (typeof define === 'function' && define.amd) {
 
 
 /***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(4)(
-  /* script */
-  __webpack_require__(84),
-  /* template */
-  __webpack_require__(129),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 72 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(4)(
-  /* script */
-  __webpack_require__(85),
-  /* template */
-  __webpack_require__(125),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-function injectStyle (ssrContext) {
-  __webpack_require__(103)
-}
-var Component = __webpack_require__(4)(
-  /* script */
-  __webpack_require__(86),
-  /* template */
-  __webpack_require__(120),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-12096e6e",
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-function injectStyle (ssrContext) {
-  __webpack_require__(102)
-}
-var Component = __webpack_require__(4)(
-  /* script */
-  __webpack_require__(87),
-  /* template */
-  __webpack_require__(119),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 function injectStyle (ssrContext) {
@@ -5548,51 +5641,11 @@ var Component = __webpack_require__(4)(
   /* script */
   __webpack_require__(88),
   /* template */
-  __webpack_require__(131),
+  __webpack_require__(117),
   /* styles */
   injectStyle,
   /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(4)(
-  /* script */
-  __webpack_require__(89),
-  /* template */
-  __webpack_require__(124),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(4)(
-  /* script */
-  __webpack_require__(90),
-  /* template */
-  __webpack_require__(128),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
+  "data-v-318baef2",
   /* moduleIdentifier (server only) */
   null
 )
@@ -5608,7 +5661,7 @@ var Component = __webpack_require__(4)(
   /* script */
   __webpack_require__(91),
   /* template */
-  __webpack_require__(126),
+  __webpack_require__(119),
   /* styles */
   null,
   /* scopeId */
@@ -5628,7 +5681,7 @@ var Component = __webpack_require__(4)(
   /* script */
   __webpack_require__(92),
   /* template */
-  __webpack_require__(121),
+  __webpack_require__(124),
   /* styles */
   null,
   /* scopeId */
@@ -5648,7 +5701,7 @@ var Component = __webpack_require__(4)(
   /* script */
   __webpack_require__(93),
   /* template */
-  __webpack_require__(127),
+  __webpack_require__(126),
   /* styles */
   null,
   /* scopeId */
@@ -5662,6 +5715,26 @@ module.exports = Component.exports
 
 /***/ }),
 /* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(4)(
+  /* script */
+  __webpack_require__(94),
+  /* template */
+  __webpack_require__(121),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5708,7 +5781,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5728,7 +5801,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 var browser = typeof window !== 'undefined';
-if (browser) window.Swiper = __webpack_require__(70);
+if (browser) window.Swiper = __webpack_require__(76);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'swiper',
   props: {
@@ -5794,113 +5867,22 @@ if (browser) window.Swiper = __webpack_require__(70);
 });
 
 /***/ }),
-/* 83 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cropperjs__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cropperjs_dist_cropper_min_css__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cropperjs_dist_cropper_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_cropperjs_dist_cropper_min_css__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'v-simple-cropper',
-  props: {
-    initParam: Object,
-    successCallback: {
-      type: Function,
-      default: () => {}
-    }
-  },
-  data() {
-    return {
-      cropper: {},
-      filename: '',
-      disabled: false
-    };
-  },
-  mounted() {
-    this.init();
-  },
-  methods: {
-    // 初始化裁剪插件
-    init() {
-      let cropperImg = this.$refs['cropperImg'];
-      this.cropper = new __WEBPACK_IMPORTED_MODULE_0_cropperjs__["a" /* default */](cropperImg, {
-        aspectRatio: 1 / 1,
-        dragMode: 'move'
-      });
-    },
-    // 点击上传按钮
-    upload() {
-      this.$refs['file'].click();
-    },
-    // 选择上传文件
-    uploadChange(e) {
-      let file = e.target.files[0];
-      this.filename = file['name'];
-      let URL = window.URL || window.webkitURL;
-      this.$refs['layer'].style.display = 'block';
-      this.cropper.replace(URL.createObjectURL(file));
-    },
-    // 取消上传
-    cancelHandle() {
-      this.cropper.reset();
-      this.$refs['layer'].style.display = 'none';
-      this.$refs['file'].value = '';
-    },
-    // 确定上传
-    confirmHandle() {
-      let cropBox = this.cropper.getCropBoxData();
-      let scale = this.initParam['scale'] || 1;
-      let cropCanvas = this.cropper.getCroppedCanvas({
-        width: cropBox.width * scale,
-        height: cropBox.height * scale
-      });
-      let imgData = cropCanvas.toDataURL('image/jpeg');
-      let formData = new window.FormData();
-      formData.append('fileType', this.initParam['fileType']);
-      formData.append('img', imgData);
-      formData.append('signId', this.$localStorage('signId'));
-      formData.append('originalFilename', this.filename);
-      this.disabled = true;
-      window.$axios(this.initParam['uploadURL'], formData, {
-        method: 'post',
-        headers: { 'Content-Type': 'multipart/form-data' }
-      }).then(res => {
-        this.disabled = false;
-        this.successCallback(res.data);
-        this.cancelHandle();
-      });
-    }
-  }
-});
-
-/***/ }),
 /* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__download_less__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__download_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__download_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_arouse__ = __webpack_require__(96);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5910,22 +5892,48 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+// import $device from '../../tools/device';
+
+// require('../../tools/arouse');
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'tab-bar',
-  data() {
-    let routeName = this.$route.name.replace(/^\w{1}/, L => L.toLowerCase()); // 首字符小写
-    return {
-      routeName
-    };
-  },
-  watch: {
-    routeName(val) {
-      this.$router.push(val);
+    name: 'download',
+    props: ['data'],
+    data() {
+        return {};
     },
-    $route(to) {
-      this.routeName = to.name.replace(/^\w{1}/, L => L.toLowerCase());
-    }
-  }
+    components: {},
+    created() {
+        // console.log(AppLink)
+    },
+    methods: {
+        download() {
+            let config = {
+                // 和app协定的scheme
+                schema: 'mtlf://scheme?p=home',
+                // iOS下的App在appstore的地址
+                appstore: '//itunes.apple.com/cn/app/%E4%BE%83%E4%BE%83%E7%8C%A9/id1267259289?mt=8',
+                // 应用宝的地址
+                yyb: '//a.app.qq.com/o/simple.jsp?pkgname=com.mtime.lookface&fromcase=40002'
+            };
+            let applink = new __WEBPACK_IMPORTED_MODULE_1__utils_arouse__["a" /* AppLink */](config);
+            applink.open();
+        }
+    },
+    watch: {
+        progress() {
+            this.draw();
+        }
+    },
+    mounted() {
+        /*this.canvas = document.getElementById('canvas');
+        this.canvas.width = this.width * 2;
+        this.canvas.height = this.width * 2;
+        this.context = this.canvas.getContext('2d');
+        this.context.scale(2, 2);
+        this.draw();*/
+    },
+    destroyed() {}
 });
 
 /***/ }),
@@ -5934,15 +5942,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_TabBar__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_TabBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_TabBar__);
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__footer_less__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__footer_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__footer_less__);
 //
 //
 //
@@ -5956,28 +5957,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-const queryList = __webpack_require__(69);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'list',
-  data() {
-    return queryList.queryParam;
-  },
-  created() {
-    this.search(1);
-  },
-  methods: {
-    search(page) {
-      queryList.search('/account/animation/queryExchangeList', page, this);
+    name: 'footer-code',
+    props: ['data'],
+    data() {
+        return {};
     },
-    jumpDetail(tempId) {
-      this.$router.push({
-        path: '/details',
-        query: { tempId }
-      });
-    }
-  },
-  components: { TabBar: __WEBPACK_IMPORTED_MODULE_0__components_TabBar___default.a }
+    components: {},
+    created() {},
+    methods: {},
+    mounted() {},
+    destroyed() {}
 });
 
 /***/ }),
@@ -5986,41 +5977,124 @@ const queryList = __webpack_require__(69);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_awesome_swiper__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user_less__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__user_less__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'user',
+    props: ['data'],
+    data() {
+        return {};
+    },
+    props: ["my-value"],
+    components: {},
+    created() {},
+    methods: {},
+    mounted() {},
+    destroyed() {}
+});
+
+/***/ }),
+/* 87 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_Download__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_User__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_FooterCode__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_request_js__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__api_route_js__ = __webpack_require__(67);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'announcement',
+    props: ['id'],
+    data() {
+        return {
+            user: {},
+            theme: '',
+            url: '',
+            name: '',
+            avatar: ''
+        };
+    },
+    components: {
+        Download: __WEBPACK_IMPORTED_MODULE_0__common_Download__["a" /* default */],
+        FooterCode: __WEBPACK_IMPORTED_MODULE_2__common_FooterCode__["a" /* default */],
+        User: __WEBPACK_IMPORTED_MODULE_1__common_User__["a" /* default */]
+    },
+    created() {
+        this.getNotice();
+    },
+    computed: {},
+    methods: {
+        getNotice() {
+            let params = { 'noticeId': this.id };
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__api_route_js__["e" /* getNotice */])(params).then(res => {
+                let data = res.data;
+                let { user, club, theme, picture } = data.root;
+                this.user = user;
+                this.theme = theme;
+                this.url = picture.length > 0 ? picture[0] : false;
+                this.name = club.name;
+                this.avatar = club.avatar;
+            });
+        }
+    },
+    destroyed() {}
+});
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_awesome_swiper__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_awesome_swiper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_awesome_swiper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixin_wxShare_js__ = __webpack_require__(94);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixin_wxShare_js__ = __webpack_require__(95);
 //
 //
 //
@@ -6034,56 +6108,16 @@ var xxUrl = window.location.origin;
   name: "list",
   mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin_wxShare_js__["a" /* default */]],
   data() {
-    const onSlideChangeEnd = swiper => {
-      this.swiperChange(swiper.realIndex);
-    };
     let tempId = this.$route.query.tempId;
     let companys = this.$store.state.companys;
-    return {
-      companys: companys,
-      isBought: 0,
-      title: "",
-      isFromShare: false,
-      gzhCode: 9,
-      tempId,
-      swiperShow: true,
-      swiperOption: {
-        direction: "horizontal",
-        loop: false,
-        height: 400,
-        onSlideChangeEnd
-      },
-      //左右点击
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      index: 0,
-      pageSize: 0,
-      arrowImg: __webpack_require__(106),
-      backgroundMusic: "http://qqbxw.b0.upaiyun.com/2qbx/h5/201709049/ea041595589743b6a9cb3c38dc456a89.mp3",
-      backgroundImgStyle: `background: url(${__webpack_require__(108)}) no-repeat;background-size: 100% 100%;`,
-      musicStatus: "swiper-voice__ani",
-      pageList: [{
-        name: "",
-        idCard: "",
-        phone: "",
-        remarkes: ""
-      }, {
-        name: "",
-        idCard: "",
-        phone: "",
-        remarkes: ""
-      }],
-      userInfo: {}
-    };
+    return {};
   },
   beforeCreate() {
-    // 音乐自动播放
-    document.addEventListener("WeixinJSBridgeReady", function () {
-      var audio = document.getElementById("audio");
-      // audio.play();
-    }, false);
+    let clubId = this.$route.query.id || '';
+    this.$nextTick(function () {
+      this.clubId = clubId;
+    });
+    console.log(this.clubId, clubId);
   },
   created() {
     let signId = this.$route.query.signId || "";
@@ -6091,6 +6125,22 @@ var xxUrl = window.location.origin;
       this.$localStorage("signId", signId);
     }
     this.getInfo();
+    let formList = this.$localStorage("formList");
+    if (formList) {
+      this.formList = JSON.parse(formList);
+      console.log(JSON.parse(formList));
+    }
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper;
+    },
+    userCount() {
+      return this.formList.length;
+    },
+    amountMoney() {
+      return this.formList.length * 120;
+    }
   },
   mounted() {
     // 音乐触摸后播放
@@ -6105,6 +6155,10 @@ var xxUrl = window.location.origin;
     }
   },
   methods: {
+    getClubId(id) {
+      this.clubId = id;
+      console.log(id);
+    },
     xxLogin(custId, gzhCode) {
       if (custId || gzhCode) {
         // 分享页进来的标识 isFromShare
@@ -6203,27 +6257,6 @@ var xxUrl = window.location.origin;
         this.musicStatus = "";
       }
     },
-    // 滑块改变时监听
-    swiperChange(page) {
-      if (page !== this.pageSize) {
-        let index = this.index;
-        let p = this.index = page;
-        if (index !== this.pageSize) {
-          this.pageList[index]["pageContent"].map(item => {
-            item["cls"] = "hide";
-          });
-        }
-        this.pageList[p]["pageContent"].map(item => {
-          item["cls"] = item["class"];
-        });
-      } else {
-        let index = this.index;
-        this.index = page;
-        this.pageList[index]["pageContent"].map(item => {
-          item["cls"] = "hide";
-        });
-      }
-    },
     payCard() {
       // 从分享页进来 或者是小小金融时进行房地产公众号的授权（因为小小金融用的是房地产的支付）小小金融就多传个oldSignId
       if (this.gzhCode === 11 || this.isFromShare) {
@@ -6245,106 +6278,46 @@ var xxUrl = window.location.origin;
       } else {
         this.$router.push(`/pay?tempId=${this.tempId}`);
       }
+    },
+    addUser() {
+      // 增加用户
+      let objForm = {
+        name: '',
+        idCard: '',
+        phone: '',
+        remarkers: ''
+      };
+      console.log(this.formList);
+      let check = this.checkForm(this.formList[this.formList.length - 1]);
+      if (check) {
+        this.formList.push(objForm);
+        this.$localStorage('formList', JSON.stringify(this.formList));
+      } else {
+        console.log('请确认上一位输入完整信息');
+      }
+      this.$nextTick(function () {
+        this.swiper.slideTo(this.formList.length);
+      });
+    },
+    removeUser(index) {
+      // 删除用户
+      this.formList.splice(index, 1);
+    },
+    goPay() {
+      this.$rmLocalStorage('formList');
+    },
+    checkForm(obj) {
+      for (var key in obj) {
+        if (obj[key] !== '') {
+          return true;
+        }
+      }
     }
   },
   components: {
     swiper: __WEBPACK_IMPORTED_MODULE_0_vue_awesome_swiper__["swiper"],
-    swiperSlide: __WEBPACK_IMPORTED_MODULE_0_vue_awesome_swiper__["swiperSlide"]
-  }
-});
-
-/***/ }),
-/* 87 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-const qrcode = [{ gzh: 9, code: __webpack_require__(112) }, { gzh: 10, code: __webpack_require__(107) }, { gzh: 11, code: __webpack_require__(114) }];
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'follow',
-  data() {
-    return {
-      codeImg: ''
-    };
-  },
-  created() {
-    let gzhCode = this.$sessionStorage('gzhCode') || 9;
-    for (let i = 0; i < qrcode.length; i++) {
-      if (qrcode[i]['gzh'] === Number(gzhCode)) {
-        this.codeImg = qrcode[i]['code'];
-      }
-    }
-  }
-});
-
-/***/ }),
-/* 88 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-const qrcode = [{ gzh: 9, code: __webpack_require__(110) }, { gzh: 10, code: __webpack_require__(109) }, { gzh: 11, code: __webpack_require__(111) }];
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'follow',
-  data() {
-    let subscribe = this.$store.state.subscribe;
-    return {
-      codeImg: '',
-      subscribe: subscribe
-    };
-  },
-  methods: {
-    next() {
-      if (this.subscribe !== 1) {
-        this.$router.push('/follow');
-      } else {
-        this.$router.push('/user');
-      }
-    }
-  },
-  created() {
-    let gzhCode = this.$sessionStorage('gzhCode') || 9;
-    for (let i = 0; i < qrcode.length; i++) {
-      if (qrcode[i]['gzh'] === Number(gzhCode)) {
-        this.codeImg = qrcode[i]['code'];
-      }
-    }
+    swiperSlide: __WEBPACK_IMPORTED_MODULE_0_vue_awesome_swiper__["swiperSlide"],
+    VSelect
   }
 });
 
@@ -6354,8 +6327,10 @@ const qrcode = [{ gzh: 9, code: __webpack_require__(110) }, { gzh: 10, code: __w
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_TabBar__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_TabBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_TabBar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_Download__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_User__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_FooterCode__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__api_route__ = __webpack_require__(67);
 //
 //
 //
@@ -6370,6 +6345,168 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'announcement',
+    props: ['type', 'id'],
+    data() {
+        return {
+            user: {},
+            url: '',
+            description: '',
+            trackname: '',
+            icon: ''
+        };
+    },
+    components: {
+        Download: __WEBPACK_IMPORTED_MODULE_0__common_Download__["a" /* default */],
+        FooterCode: __WEBPACK_IMPORTED_MODULE_2__common_FooterCode__["a" /* default */],
+        User: __WEBPACK_IMPORTED_MODULE_1__common_User__["a" /* default */]
+    },
+    created() {
+        this.getTrack();
+    },
+    computed: {},
+    methods: {
+
+        getTrack() {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__api_route__["d" /* getTrack */])({ 'id': this.id }).then(res => {
+                console.log(res);
+                let data = res.data;
+                let { user, poiCount, poiProfileDTO, totalDay, totalDistance, theme } = data.root;
+                this.user = user || {};
+                this.url = poiProfileDTO.strokeCover.url;
+                this.description = poiProfileDTO.description;
+                this.totalDay = totalDay;
+                this.totalDistance = totalDistance;
+                this.trackname = poiProfileDTO.name;
+                this.poiCount = poiCount;
+                console.log(`../assets/images/icon_${poiProfileDTO.mainDimension}.png`);
+                this.icon = poiProfileDTO.mainDimension != '' && poiProfileDTO.mainDimension != null ? `../assets/images/icon_${poiProfileDTO.mainDimension}.png` : '/assets/images/icon_poiscan.png';
+                console.log(this.icon);
+            }).catch(res => {
+                console.log(res);
+            });
+        }
+    },
+    destroyed() {}
+});
+
+/***/ }),
+/* 90 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_Download__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_User__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_FooterCode__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__api_route__ = __webpack_require__(67);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'journey',
+    props: ['type', 'id'],
+    data() {
+        return {
+            url: '',
+            totalDay: '',
+            totalDistance: "",
+            theme: '',
+            poiCount: '',
+            user: {}
+        };
+    },
+    components: {
+        Download: __WEBPACK_IMPORTED_MODULE_0__common_Download__["a" /* default */],
+        FooterCode: __WEBPACK_IMPORTED_MODULE_2__common_FooterCode__["a" /* default */],
+        User: __WEBPACK_IMPORTED_MODULE_1__common_User__["a" /* default */]
+    },
+    created() {
+        if (this.type == 'travel') {
+            this.getTravelDetail();
+        }
+
+        if (this.type == 'poi') {
+            this.getPoi();
+        }
+        if (this.type == 'temp') {
+            this.getTemp();
+        }
+    },
+    computed: {},
+    methods: {
+        getTravelDetail() {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__api_route__["a" /* getTravelDetail */])({ 'travelId': '5ba488481dac530a304f777f' }).then(res => {
+                consoel.log(res);
+                let data = res.data;
+                let { user, poiCount, strokeCover, totalDay, totalDistance, theme } = data.root;
+                this.url = strokeCover.url;
+                this.totalDay = totalDay;
+                this.totalDistance = totalDistance;
+                this.theme = theme;
+                this.poiCount = poiCount;
+                this.user = user;
+            }).catch(res => {
+                console.log(res);
+            });
+        },
+        getPoi() {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__api_route__["b" /* getPoiDetail */])({
+                objectId: this.id
+            }).then(res => {
+                console.log(res);
+            });
+        },
+        getTemp() {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__api_route__["c" /* getTempDetail */])({
+                id: this.id
+            }).then(res => {
+                console.log(res);
+            });
+        }
+    },
+    destroyed() {}
+});
+
+/***/ }),
+/* 91 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
@@ -6379,58 +6516,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 let u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-const queryList = __webpack_require__(69);
-
+const queryList = __webpack_require__(74);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'list',
+  name: 'map',
   data() {
-    // return queryList.queryParam
+    return {};
   },
   beforeCreate() {
     let gzhCode = this.$route.query.gzhCode || '';
     if (gzhCode) this.$sessionStorage('gzhCode', gzhCode);
     let signId = this.$route.query.signId || '';
     if (signId) this.$localStorage('signId', signId);
-    // 隐藏那些分享按钮
-    // function onBridgeReady () {
-    //   window.WeixinJSBridge.call('hideOptionMenu')
-    // }
-    // if (typeof window.WeixinJSBridge === 'undefined') {
-    //   if (document.addEventListener) {
-    //     document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false)
-    //   } else if (document.attachEvent) {
-    //     document.attachEvent('WeixinJSBridgeReady', onBridgeReady)
-    //     document.attachEvent('onWeixinJSBridgeReady', onBridgeReady)
-    //   }
-    // } else {
-    //   onBridgeReady()
-    // }
   },
-  created() {
-    this.search(1);
-  },
-  methods: {
-    search(page) {
-      queryList.search('/animation/templateList', page, this);
-    },
-    jumpDetail(tempId) {
-      // ios第一次进入详情页强刷
-      if (isiOS && !this.$sessionStorage('refresh')) {
-        this.$sessionStorage('refresh', 1);
-        window.location.href = `${window.location.origin}/xxcard/details?tempId=${tempId}`;
-      } else {
-        this.$router.push({
-          path: '/details',
-          query: { tempId }
-        });
-      }
-    }
-  },
-  components: { TabBar: __WEBPACK_IMPORTED_MODULE_0__components_TabBar___default.a }
+  created() {},
+  methods: {},
+  components: {}
 });
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6453,182 +6557,63 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 91 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'pay',
-  data() {
-    let oldSignId = this.$route.query.oldSignId || null;
-    return {
-      bigLoading: false,
-      oldSignId: oldSignId
-    };
-  },
-  created() {
-    let signId = this.$route.query.signId || null;
-    if (signId) {
-      this.$localStorage('signId', signId);
-    }
-  },
-  methods: {
-    wxPay() {
-      this.bigLoading = true;
-      // 小小金融公众号支付要用到oldSignId
-      let form = { templateId: this.$route.query.tempId };
-      if (this.oldSignId) form['oldSignId'] = this.oldSignId;
-      this.$ajax({
-        url: '/animation/payCard',
-        data: form,
-        success: data => {
-          this.bigLoading = false;
-          // 没有关注公众号就去关注页 subscribe=1为关注
-          // autoReg 是否是自动注册的用户，为1 说明他没有设置名片信息
-          let subscribe = Number(data.attr.subscribe);
-          let autoReg = Number(data.attr.autoReg);
-          this.$store.commit('setScribe', subscribe);
-          this.$store.commit('setReg', autoReg);
-          this.$wxPay(data.attr.payParams, 'xxcard', autoReg, subscribe);
-        },
-        fail: err => {
-          // err.message 已购买过这套模板
-          this.bigLoading = false;
-          this.$messagebox.confirm(err.message || '支付失败').then(action => {
-            if (action === 'confirm') {
-              this.$router.back();
-            }
-          });
-        }
-      });
-    }
-  }
-});
-
-/***/ }),
-/* 92 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_SimpleCropper__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_SimpleCropper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_SimpleCropper__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'list',
-  data() {
-    return {
-      uploadParam: {
-        fileType: 'recruit',
-        uploadURL: this.$dataURL + 'uploadAction/qcloudImg',
-        scale: 4
-      },
-      bigLoading: false,
-      form: {
-        headImgUrl: '', // 头像
-        userName: '', // 用户名
-        telephone: '', // 电话
-        company: '', // 公司
-        personDesc: '' // 个人简介
-      }
-    };
-  },
-  created() {
-    this.$ajax({
-      url: '/animation/getCustInfo',
-      data: {},
-      success: data => {
-        let custInfo = data.attr.custInfo;
-        if (custInfo.customerId) {
-          this.form = custInfo;
-        } else {
-          this.form.headImgUrl = __webpack_require__(67);
-        }
-      }
-    });
-  },
-  methods: {
-    save() {
-      this.bigLoading = true;
-      this.$ajax({
-        url: '/animation/saveCust',
-        data: this.form,
-        success: data => {
-          this.bigLoading = false;
-          this.$messagebox.alert('保存成功!').then(action => {
-            if (action === 'confirm') {
-              this.$router.push('/bought');
-            }
-          });
-        },
-        fail: () => {
-          this.$toast('保存失败,请检查填写信息是否规范。');
-          this.bigLoading = false;
-        }
-      });
-    },
-    // 上传头像成功回调
-    uploadHandle(data) {
-      if (data.state === 'SUCCESS') {
-        this.$set(this.form, 'headImgUrl', data.fileId);
-      }
-    },
-    // 上传头像
-    upload() {
-      this.$refs['cropper'].upload();
-    }
-  },
-  components: {
-    SimpleCropper: __WEBPACK_IMPORTED_MODULE_0__components_SimpleCropper___default.a
-  }
-});
-
-/***/ }),
 /* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Announcement__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Announcement___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Announcement__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Footprint__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Footprint___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Footprint__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Journey__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Journey___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Journey__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_operation__ = __webpack_require__(97);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+ //公告
+ //足迹
+ //行程&POI
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'share',
+    data() {
+        return {
+            type: '',
+            id: ''
+        };
+    },
+    components: {
+        Announcement: __WEBPACK_IMPORTED_MODULE_0__Announcement___default.a,
+        Footprint: __WEBPACK_IMPORTED_MODULE_1__Footprint___default.a,
+        Journey: __WEBPACK_IMPORTED_MODULE_2__Journey___default.a
+    },
+    created() {
+        this.getQuery();
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__utils_operation__["a" /* setTitle */])('1234');
+    },
+    computed: {},
+    methods: {
+        getQuery() {
+            this.type = this.$route.query.type;
+            this.id = this.$route.query.id;
+        }
+    },
+    destroyed() {}
+});
+
+/***/ }),
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6656,7 +6641,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 let u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-const queryList = __webpack_require__(69);
+const queryList = __webpack_require__(74);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'signUp',
   data() {
@@ -6706,14 +6691,14 @@ const queryList = __webpack_require__(69);
 });
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_qs__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_qs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_qs__);
 
-const wx = __webpack_require__(132);
+const wx = __webpack_require__(128);
 /* harmony default export */ __webpack_exports__["a"] = ({
   methods: {
     wxReady(info) {
@@ -6776,3773 +6761,249 @@ const wx = __webpack_require__(132);
 });
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/*!
- * Cropper.js v1.4.1
- * https://fengyuanchen.github.io/cropperjs
- *
- * Copyright 2015-present Chen Fengyuan
- * Released under the MIT license
- *
- * Date: 2018-07-15T09:55:31.170Z
- */
-
-var IN_BROWSER = typeof window !== 'undefined';
-var WINDOW = IN_BROWSER ? window : {};
-var NAMESPACE = 'cropper';
-
-// Actions
-var ACTION_ALL = 'all';
-var ACTION_CROP = 'crop';
-var ACTION_MOVE = 'move';
-var ACTION_ZOOM = 'zoom';
-var ACTION_EAST = 'e';
-var ACTION_WEST = 'w';
-var ACTION_SOUTH = 's';
-var ACTION_NORTH = 'n';
-var ACTION_NORTH_EAST = 'ne';
-var ACTION_NORTH_WEST = 'nw';
-var ACTION_SOUTH_EAST = 'se';
-var ACTION_SOUTH_WEST = 'sw';
-
-// Classes
-var CLASS_CROP = NAMESPACE + '-crop';
-var CLASS_DISABLED = NAMESPACE + '-disabled';
-var CLASS_HIDDEN = NAMESPACE + '-hidden';
-var CLASS_HIDE = NAMESPACE + '-hide';
-var CLASS_INVISIBLE = NAMESPACE + '-invisible';
-var CLASS_MODAL = NAMESPACE + '-modal';
-var CLASS_MOVE = NAMESPACE + '-move';
-
-// Data keys
-var DATA_ACTION = NAMESPACE + 'Action';
-var DATA_PREVIEW = NAMESPACE + 'Preview';
-
-// Drag modes
-var DRAG_MODE_CROP = 'crop';
-var DRAG_MODE_MOVE = 'move';
-var DRAG_MODE_NONE = 'none';
-
-// Events
-var EVENT_CROP = 'crop';
-var EVENT_CROP_END = 'cropend';
-var EVENT_CROP_MOVE = 'cropmove';
-var EVENT_CROP_START = 'cropstart';
-var EVENT_DBLCLICK = 'dblclick';
-var EVENT_POINTER_DOWN = WINDOW.PointerEvent ? 'pointerdown' : 'touchstart mousedown';
-var EVENT_POINTER_MOVE = WINDOW.PointerEvent ? 'pointermove' : 'touchmove mousemove';
-var EVENT_POINTER_UP = WINDOW.PointerEvent ? 'pointerup pointercancel' : 'touchend touchcancel mouseup';
-var EVENT_READY = 'ready';
-var EVENT_RESIZE = 'resize';
-var EVENT_WHEEL = 'wheel mousewheel DOMMouseScroll';
-var EVENT_ZOOM = 'zoom';
-
-// RegExps
-var REGEXP_ACTIONS = /^(?:e|w|s|n|se|sw|ne|nw|all|crop|move|zoom)$/;
-var REGEXP_DATA_URL = /^data:/;
-var REGEXP_DATA_URL_JPEG = /^data:image\/jpeg;base64,/;
-var REGEXP_TAG_NAME = /^(?:img|canvas)$/i;
-
-var DEFAULTS = {
-  // Define the view mode of the cropper
-  viewMode: 0, // 0, 1, 2, 3
-
-  // Define the dragging mode of the cropper
-  dragMode: DRAG_MODE_CROP, // 'crop', 'move' or 'none'
-
-  // Define the initial aspect ratio of the crop box
-  initialAspectRatio: NaN,
-
-  // Define the aspect ratio of the crop box
-  aspectRatio: NaN,
-
-  // An object with the previous cropping result data
-  data: null,
-
-  // A selector for adding extra containers to preview
-  preview: '',
-
-  // Re-render the cropper when resize the window
-  responsive: true,
-
-  // Restore the cropped area after resize the window
-  restore: true,
-
-  // Check if the current image is a cross-origin image
-  checkCrossOrigin: true,
-
-  // Check the current image's Exif Orientation information
-  checkOrientation: true,
-
-  // Show the black modal
-  modal: true,
-
-  // Show the dashed lines for guiding
-  guides: true,
-
-  // Show the center indicator for guiding
-  center: true,
-
-  // Show the white modal to highlight the crop box
-  highlight: true,
-
-  // Show the grid background
-  background: true,
-
-  // Enable to crop the image automatically when initialize
-  autoCrop: true,
-
-  // Define the percentage of automatic cropping area when initializes
-  autoCropArea: 0.8,
-
-  // Enable to move the image
-  movable: true,
-
-  // Enable to rotate the image
-  rotatable: true,
-
-  // Enable to scale the image
-  scalable: true,
-
-  // Enable to zoom the image
-  zoomable: true,
-
-  // Enable to zoom the image by dragging touch
-  zoomOnTouch: true,
-
-  // Enable to zoom the image by wheeling mouse
-  zoomOnWheel: true,
-
-  // Define zoom ratio when zoom the image by wheeling mouse
-  wheelZoomRatio: 0.1,
-
-  // Enable to move the crop box
-  cropBoxMovable: true,
-
-  // Enable to resize the crop box
-  cropBoxResizable: true,
-
-  // Toggle drag mode between "crop" and "move" when click twice on the cropper
-  toggleDragModeOnDblclick: true,
-
-  // Size limitation
-  minCanvasWidth: 0,
-  minCanvasHeight: 0,
-  minCropBoxWidth: 0,
-  minCropBoxHeight: 0,
-  minContainerWidth: 200,
-  minContainerHeight: 100,
-
-  // Shortcuts of events
-  ready: null,
-  cropstart: null,
-  cropmove: null,
-  cropend: null,
-  crop: null,
-  zoom: null
-};
-
-var TEMPLATE = '<div class="cropper-container" touch-action="none">' + '<div class="cropper-wrap-box">' + '<div class="cropper-canvas"></div>' + '</div>' + '<div class="cropper-drag-box"></div>' + '<div class="cropper-crop-box">' + '<span class="cropper-view-box"></span>' + '<span class="cropper-dashed dashed-h"></span>' + '<span class="cropper-dashed dashed-v"></span>' + '<span class="cropper-center"></span>' + '<span class="cropper-face"></span>' + '<span class="cropper-line line-e" data-cropper-action="e"></span>' + '<span class="cropper-line line-n" data-cropper-action="n"></span>' + '<span class="cropper-line line-w" data-cropper-action="w"></span>' + '<span class="cropper-line line-s" data-cropper-action="s"></span>' + '<span class="cropper-point point-e" data-cropper-action="e"></span>' + '<span class="cropper-point point-n" data-cropper-action="n"></span>' + '<span class="cropper-point point-w" data-cropper-action="w"></span>' + '<span class="cropper-point point-s" data-cropper-action="s"></span>' + '<span class="cropper-point point-ne" data-cropper-action="ne"></span>' + '<span class="cropper-point point-nw" data-cropper-action="nw"></span>' + '<span class="cropper-point point-sw" data-cropper-action="sw"></span>' + '<span class="cropper-point point-se" data-cropper-action="se"></span>' + '</div>' + '</div>';
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-  return typeof obj;
-} : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-};
-
-var classCallCheck = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-var createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-var toConsumableArray = function (arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  } else {
-    return Array.from(arr);
-  }
-};
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppLink; });
 /**
- * Check if the given value is not a number.
+ * 浏览器的相关信息
  */
-var isNaN = Number.isNaN || WINDOW.isNaN;
-
-/**
- * Check if the given value is a number.
- * @param {*} value - The value to check.
- * @returns {boolean} Returns `true` if the given value is a number, else `false`.
- */
-function isNumber(value) {
-  return typeof value === 'number' && !isNaN(value);
-}
-
-/**
- * Check if the given value is undefined.
- * @param {*} value - The value to check.
- * @returns {boolean} Returns `true` if the given value is undefined, else `false`.
- */
-function isUndefined(value) {
-  return typeof value === 'undefined';
-}
-
-/**
- * Check if the given value is an object.
- * @param {*} value - The value to check.
- * @returns {boolean} Returns `true` if the given value is an object, else `false`.
- */
-function isObject(value) {
-  return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && value !== null;
-}
-
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-/**
- * Check if the given value is a plain object.
- * @param {*} value - The value to check.
- * @returns {boolean} Returns `true` if the given value is a plain object, else `false`.
- */
-
-function isPlainObject(value) {
-  if (!isObject(value)) {
-    return false;
-  }
-
-  try {
-    var _constructor = value.constructor;
-    var prototype = _constructor.prototype;
-
-
-    return _constructor && prototype && hasOwnProperty.call(prototype, 'isPrototypeOf');
-  } catch (e) {
-    return false;
-  }
-}
-
-/**
- * Check if the given value is a function.
- * @param {*} value - The value to check.
- * @returns {boolean} Returns `true` if the given value is a function, else `false`.
- */
-function isFunction(value) {
-  return typeof value === 'function';
-}
-
-/**
- * Iterate the given data.
- * @param {*} data - The data to iterate.
- * @param {Function} callback - The process function for each element.
- * @returns {*} The original data.
- */
-function forEach(data, callback) {
-  if (data && isFunction(callback)) {
-    if (Array.isArray(data) || isNumber(data.length) /* array-like */) {
-        var length = data.length;
-
-        var i = void 0;
-
-        for (i = 0; i < length; i += 1) {
-          if (callback.call(data, data[i], i, data) === false) {
-            break;
-          }
-        }
-      } else if (isObject(data)) {
-      Object.keys(data).forEach(function (key) {
-        callback.call(data, data[key], key, data);
-      });
-    }
-  }
-
-  return data;
-}
-
-/**
- * Extend the given object.
- * @param {*} obj - The object to be extended.
- * @param {*} args - The rest objects which will be merged to the first object.
- * @returns {Object} The extended object.
- */
-var assign = Object.assign || function assign(obj) {
-  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    args[_key - 1] = arguments[_key];
-  }
-
-  if (isObject(obj) && args.length > 0) {
-    args.forEach(function (arg) {
-      if (isObject(arg)) {
-        Object.keys(arg).forEach(function (key) {
-          obj[key] = arg[key];
-        });
-      }
-    });
-  }
-
-  return obj;
-};
-
-var REGEXP_DECIMALS = /\.\d*(?:0|9){12}\d*$/i;
-
-/**
- * Normalize decimal number.
- * Check out {@link http://0.30000000000000004.com/}
- * @param {number} value - The value to normalize.
- * @param {number} [times=100000000000] - The times for normalizing.
- * @returns {number} Returns the normalized number.
- */
-function normalizeDecimalNumber(value) {
-  var times = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100000000000;
-
-  return REGEXP_DECIMALS.test(value) ? Math.round(value * times) / times : value;
-}
-
-var REGEXP_SUFFIX = /^(?:width|height|left|top|marginLeft|marginTop)$/;
-
-/**
- * Apply styles to the given element.
- * @param {Element} element - The target element.
- * @param {Object} styles - The styles for applying.
- */
-function setStyle(element, styles) {
-  var style = element.style;
-
-
-  forEach(styles, function (value, property) {
-    if (REGEXP_SUFFIX.test(property) && isNumber(value)) {
-      value += 'px';
-    }
-
-    style[property] = value;
-  });
-}
-
-/**
- * Check if the given element has a special class.
- * @param {Element} element - The element to check.
- * @param {string} value - The class to search.
- * @returns {boolean} Returns `true` if the special class was found.
- */
-function hasClass(element, value) {
-  return element.classList ? element.classList.contains(value) : element.className.indexOf(value) > -1;
-}
-
-/**
- * Add classes to the given element.
- * @param {Element} element - The target element.
- * @param {string} value - The classes to be added.
- */
-function addClass(element, value) {
-  if (!value) {
-    return;
-  }
-
-  if (isNumber(element.length)) {
-    forEach(element, function (elem) {
-      addClass(elem, value);
-    });
-    return;
-  }
-
-  if (element.classList) {
-    element.classList.add(value);
-    return;
-  }
-
-  var className = element.className.trim();
-
-  if (!className) {
-    element.className = value;
-  } else if (className.indexOf(value) < 0) {
-    element.className = className + ' ' + value;
-  }
-}
-
-/**
- * Remove classes from the given element.
- * @param {Element} element - The target element.
- * @param {string} value - The classes to be removed.
- */
-function removeClass(element, value) {
-  if (!value) {
-    return;
-  }
-
-  if (isNumber(element.length)) {
-    forEach(element, function (elem) {
-      removeClass(elem, value);
-    });
-    return;
-  }
-
-  if (element.classList) {
-    element.classList.remove(value);
-    return;
-  }
-
-  if (element.className.indexOf(value) >= 0) {
-    element.className = element.className.replace(value, '');
-  }
-}
-
-/**
- * Add or remove classes from the given element.
- * @param {Element} element - The target element.
- * @param {string} value - The classes to be toggled.
- * @param {boolean} added - Add only.
- */
-function toggleClass(element, value, added) {
-  if (!value) {
-    return;
-  }
-
-  if (isNumber(element.length)) {
-    forEach(element, function (elem) {
-      toggleClass(elem, value, added);
-    });
-    return;
-  }
-
-  // IE10-11 doesn't support the second parameter of `classList.toggle`
-  if (added) {
-    addClass(element, value);
-  } else {
-    removeClass(element, value);
-  }
-}
-
-var REGEXP_HYPHENATE = /([a-z\d])([A-Z])/g;
-
-/**
- * Transform the given string from camelCase to kebab-case
- * @param {string} value - The value to transform.
- * @returns {string} The transformed value.
- */
-function hyphenate(value) {
-  return value.replace(REGEXP_HYPHENATE, '$1-$2').toLowerCase();
-}
-
-/**
- * Get data from the given element.
- * @param {Element} element - The target element.
- * @param {string} name - The data key to get.
- * @returns {string} The data value.
- */
-function getData(element, name) {
-  if (isObject(element[name])) {
-    return element[name];
-  }
-
-  if (element.dataset) {
-    return element.dataset[name];
-  }
-
-  return element.getAttribute('data-' + hyphenate(name));
-}
-
-/**
- * Set data to the given element.
- * @param {Element} element - The target element.
- * @param {string} name - The data key to set.
- * @param {string} data - The data value.
- */
-function setData(element, name, data) {
-  if (isObject(data)) {
-    element[name] = data;
-  } else if (element.dataset) {
-    element.dataset[name] = data;
-  } else {
-    element.setAttribute('data-' + hyphenate(name), data);
-  }
-}
-
-/**
- * Remove data from the given element.
- * @param {Element} element - The target element.
- * @param {string} name - The data key to remove.
- */
-function removeData(element, name) {
-  if (isObject(element[name])) {
-    try {
-      delete element[name];
-    } catch (e) {
-      element[name] = undefined;
-    }
-  } else if (element.dataset) {
-    // #128 Safari not allows to delete dataset property
-    try {
-      delete element.dataset[name];
-    } catch (e) {
-      element.dataset[name] = undefined;
-    }
-  } else {
-    element.removeAttribute('data-' + hyphenate(name));
-  }
-}
-
-var REGEXP_SPACES = /\s\s*/;
-var onceSupported = function () {
-  var supported = false;
-
-  if (IN_BROWSER) {
-    var once = false;
-    var listener = function listener() {};
-    var options = Object.defineProperty({}, 'once', {
-      get: function get$$1() {
-        supported = true;
-        return once;
-      },
-
-
-      /**
-       * This setter can fix a `TypeError` in strict mode
-       * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Getter_only}
-       * @param {boolean} value - The value to set
-       */
-      set: function set$$1(value) {
-        once = value;
-      }
-    });
-
-    WINDOW.addEventListener('test', listener, options);
-    WINDOW.removeEventListener('test', listener, options);
-  }
-
-  return supported;
-}();
-
-/**
- * Remove event listener from the target element.
- * @param {Element} element - The event target.
- * @param {string} type - The event type(s).
- * @param {Function} listener - The event listener.
- * @param {Object} options - The event options.
- */
-function removeListener(element, type, listener) {
-  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-
-  var handler = listener;
-
-  type.trim().split(REGEXP_SPACES).forEach(function (event) {
-    if (!onceSupported) {
-      var listeners = element.listeners;
-
-
-      if (listeners && listeners[event] && listeners[event][listener]) {
-        handler = listeners[event][listener];
-        delete listeners[event][listener];
-
-        if (Object.keys(listeners[event]).length === 0) {
-          delete listeners[event];
-        }
-
-        if (Object.keys(listeners).length === 0) {
-          delete element.listeners;
-        }
-      }
-    }
-
-    element.removeEventListener(event, handler, options);
-  });
-}
-
-/**
- * Add event listener to the target element.
- * @param {Element} element - The event target.
- * @param {string} type - The event type(s).
- * @param {Function} listener - The event listener.
- * @param {Object} options - The event options.
- */
-function addListener(element, type, listener) {
-  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-
-  var _handler = listener;
-
-  type.trim().split(REGEXP_SPACES).forEach(function (event) {
-    if (options.once && !onceSupported) {
-      var _element$listeners = element.listeners,
-          listeners = _element$listeners === undefined ? {} : _element$listeners;
-
-
-      _handler = function handler() {
-        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          args[_key2] = arguments[_key2];
-        }
-
-        delete listeners[event][listener];
-        element.removeEventListener(event, _handler, options);
-        listener.apply(element, args);
-      };
-
-      if (!listeners[event]) {
-        listeners[event] = {};
-      }
-
-      if (listeners[event][listener]) {
-        element.removeEventListener(event, listeners[event][listener], options);
-      }
-
-      listeners[event][listener] = _handler;
-      element.listeners = listeners;
-    }
-
-    element.addEventListener(event, _handler, options);
-  });
-}
-
-/**
- * Dispatch event on the target element.
- * @param {Element} element - The event target.
- * @param {string} type - The event type(s).
- * @param {Object} data - The additional event data.
- * @returns {boolean} Indicate if the event is default prevented or not.
- */
-function dispatchEvent(element, type, data) {
-  var event = void 0;
-
-  // Event and CustomEvent on IE9-11 are global objects, not constructors
-  if (isFunction(Event) && isFunction(CustomEvent)) {
-    event = new CustomEvent(type, {
-      detail: data,
-      bubbles: true,
-      cancelable: true
-    });
-  } else {
-    event = document.createEvent('CustomEvent');
-    event.initCustomEvent(type, true, true, data);
-  }
-
-  return element.dispatchEvent(event);
-}
-
-/**
- * Get the offset base on the document.
- * @param {Element} element - The target element.
- * @returns {Object} The offset data.
- */
-function getOffset(element) {
-  var box = element.getBoundingClientRect();
-
-  return {
-    left: box.left + (window.pageXOffset - document.documentElement.clientLeft),
-    top: box.top + (window.pageYOffset - document.documentElement.clientTop)
-  };
-}
-
-var location = WINDOW.location;
-
-var REGEXP_ORIGINS = /^(https?:)\/\/([^:/?#]+):?(\d*)/i;
-
-/**
- * Check if the given URL is a cross origin URL.
- * @param {string} url - The target URL.
- * @returns {boolean} Returns `true` if the given URL is a cross origin URL, else `false`.
- */
-function isCrossOriginURL(url) {
-  var parts = url.match(REGEXP_ORIGINS);
-
-  return parts && (parts[1] !== location.protocol || parts[2] !== location.hostname || parts[3] !== location.port);
-}
-
-/**
- * Add timestamp to the given URL.
- * @param {string} url - The target URL.
- * @returns {string} The result URL.
- */
-function addTimestamp(url) {
-  var timestamp = 'timestamp=' + new Date().getTime();
-
-  return url + (url.indexOf('?') === -1 ? '?' : '&') + timestamp;
-}
-
-/**
- * Get transforms base on the given object.
- * @param {Object} obj - The target object.
- * @returns {string} A string contains transform values.
- */
-function getTransforms(_ref) {
-  var rotate = _ref.rotate,
-      scaleX = _ref.scaleX,
-      scaleY = _ref.scaleY,
-      translateX = _ref.translateX,
-      translateY = _ref.translateY;
-
-  var values = [];
-
-  if (isNumber(translateX) && translateX !== 0) {
-    values.push('translateX(' + translateX + 'px)');
-  }
-
-  if (isNumber(translateY) && translateY !== 0) {
-    values.push('translateY(' + translateY + 'px)');
-  }
-
-  // Rotate should come first before scale to match orientation transform
-  if (isNumber(rotate) && rotate !== 0) {
-    values.push('rotate(' + rotate + 'deg)');
-  }
-
-  if (isNumber(scaleX) && scaleX !== 1) {
-    values.push('scaleX(' + scaleX + ')');
-  }
-
-  if (isNumber(scaleY) && scaleY !== 1) {
-    values.push('scaleY(' + scaleY + ')');
-  }
-
-  var transform = values.length ? values.join(' ') : 'none';
-
-  return {
-    WebkitTransform: transform,
-    msTransform: transform,
-    transform: transform
-  };
-}
-
-/**
- * Get the max ratio of a group of pointers.
- * @param {string} pointers - The target pointers.
- * @returns {number} The result ratio.
- */
-function getMaxZoomRatio(pointers) {
-  var pointers2 = assign({}, pointers);
-  var ratios = [];
-
-  forEach(pointers, function (pointer, pointerId) {
-    delete pointers2[pointerId];
-
-    forEach(pointers2, function (pointer2) {
-      var x1 = Math.abs(pointer.startX - pointer2.startX);
-      var y1 = Math.abs(pointer.startY - pointer2.startY);
-      var x2 = Math.abs(pointer.endX - pointer2.endX);
-      var y2 = Math.abs(pointer.endY - pointer2.endY);
-      var z1 = Math.sqrt(x1 * x1 + y1 * y1);
-      var z2 = Math.sqrt(x2 * x2 + y2 * y2);
-      var ratio = (z2 - z1) / z1;
-
-      ratios.push(ratio);
-    });
-  });
-
-  ratios.sort(function (a, b) {
-    return Math.abs(a) < Math.abs(b);
-  });
-
-  return ratios[0];
-}
-
-/**
- * Get a pointer from an event object.
- * @param {Object} event - The target event object.
- * @param {boolean} endOnly - Indicates if only returns the end point coordinate or not.
- * @returns {Object} The result pointer contains start and/or end point coordinates.
- */
-function getPointer(_ref2, endOnly) {
-  var pageX = _ref2.pageX,
-      pageY = _ref2.pageY;
-
-  var end = {
-    endX: pageX,
-    endY: pageY
-  };
-
-  return endOnly ? end : assign({
-    startX: pageX,
-    startY: pageY
-  }, end);
-}
-
-/**
- * Get the center point coordinate of a group of pointers.
- * @param {Object} pointers - The target pointers.
- * @returns {Object} The center point coordinate.
- */
-function getPointersCenter(pointers) {
-  var pageX = 0;
-  var pageY = 0;
-  var count = 0;
-
-  forEach(pointers, function (_ref3) {
-    var startX = _ref3.startX,
-        startY = _ref3.startY;
-
-    pageX += startX;
-    pageY += startY;
-    count += 1;
-  });
-
-  pageX /= count;
-  pageY /= count;
-
-  return {
-    pageX: pageX,
-    pageY: pageY
-  };
-}
-
-/**
- * Check if the given value is a finite number.
- */
-var isFinite = Number.isFinite || WINDOW.isFinite;
-
-/**
- * Get the max sizes in a rectangle under the given aspect ratio.
- * @param {Object} data - The original sizes.
- * @param {string} [type='contain'] - The adjust type.
- * @returns {Object} The result sizes.
- */
-function getAdjustedSizes(_ref4) // or 'cover'
-{
-  var aspectRatio = _ref4.aspectRatio,
-      height = _ref4.height,
-      width = _ref4.width;
-  var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'contain';
-
-  var isValidNumber = function isValidNumber(value) {
-    return isFinite(value) && value > 0;
-  };
-
-  if (isValidNumber(width) && isValidNumber(height)) {
-    var adjustedWidth = height * aspectRatio;
-
-    if (type === 'contain' && adjustedWidth > width || type === 'cover' && adjustedWidth < width) {
-      height = width / aspectRatio;
-    } else {
-      width = height * aspectRatio;
-    }
-  } else if (isValidNumber(width)) {
-    height = width / aspectRatio;
-  } else if (isValidNumber(height)) {
-    width = height * aspectRatio;
-  }
-
-  return {
-    width: width,
-    height: height
-  };
-}
-
-/**
- * Get the new sizes of a rectangle after rotated.
- * @param {Object} data - The original sizes.
- * @returns {Object} The result sizes.
- */
-function getRotatedSizes(_ref5) {
-  var width = _ref5.width,
-      height = _ref5.height,
-      degree = _ref5.degree;
-
-  degree = Math.abs(degree) % 180;
-
-  if (degree === 90) {
-    return {
-      width: height,
-      height: width
-    };
-  }
-
-  var arc = degree % 90 * Math.PI / 180;
-  var sinArc = Math.sin(arc);
-  var cosArc = Math.cos(arc);
-  var newWidth = width * cosArc + height * sinArc;
-  var newHeight = width * sinArc + height * cosArc;
-
-  return degree > 90 ? {
-    width: newHeight,
-    height: newWidth
-  } : {
-    width: newWidth,
-    height: newHeight
-  };
-}
-
-/**
- * Get a canvas which drew the given image.
- * @param {HTMLImageElement} image - The image for drawing.
- * @param {Object} imageData - The image data.
- * @param {Object} canvasData - The canvas data.
- * @param {Object} options - The options.
- * @returns {HTMLCanvasElement} The result canvas.
- */
-function getSourceCanvas(image, _ref6, _ref7, _ref8) {
-  var imageAspectRatio = _ref6.aspectRatio,
-      imageNaturalWidth = _ref6.naturalWidth,
-      imageNaturalHeight = _ref6.naturalHeight,
-      _ref6$rotate = _ref6.rotate,
-      rotate = _ref6$rotate === undefined ? 0 : _ref6$rotate,
-      _ref6$scaleX = _ref6.scaleX,
-      scaleX = _ref6$scaleX === undefined ? 1 : _ref6$scaleX,
-      _ref6$scaleY = _ref6.scaleY,
-      scaleY = _ref6$scaleY === undefined ? 1 : _ref6$scaleY;
-  var aspectRatio = _ref7.aspectRatio,
-      naturalWidth = _ref7.naturalWidth,
-      naturalHeight = _ref7.naturalHeight;
-  var _ref8$fillColor = _ref8.fillColor,
-      fillColor = _ref8$fillColor === undefined ? 'transparent' : _ref8$fillColor,
-      _ref8$imageSmoothingE = _ref8.imageSmoothingEnabled,
-      imageSmoothingEnabled = _ref8$imageSmoothingE === undefined ? true : _ref8$imageSmoothingE,
-      _ref8$imageSmoothingQ = _ref8.imageSmoothingQuality,
-      imageSmoothingQuality = _ref8$imageSmoothingQ === undefined ? 'low' : _ref8$imageSmoothingQ,
-      _ref8$maxWidth = _ref8.maxWidth,
-      maxWidth = _ref8$maxWidth === undefined ? Infinity : _ref8$maxWidth,
-      _ref8$maxHeight = _ref8.maxHeight,
-      maxHeight = _ref8$maxHeight === undefined ? Infinity : _ref8$maxHeight,
-      _ref8$minWidth = _ref8.minWidth,
-      minWidth = _ref8$minWidth === undefined ? 0 : _ref8$minWidth,
-      _ref8$minHeight = _ref8.minHeight,
-      minHeight = _ref8$minHeight === undefined ? 0 : _ref8$minHeight;
-
-  var canvas = document.createElement('canvas');
-  var context = canvas.getContext('2d');
-  var maxSizes = getAdjustedSizes({
-    aspectRatio: aspectRatio,
-    width: maxWidth,
-    height: maxHeight
-  });
-  var minSizes = getAdjustedSizes({
-    aspectRatio: aspectRatio,
-    width: minWidth,
-    height: minHeight
-  }, 'cover');
-  var width = Math.min(maxSizes.width, Math.max(minSizes.width, naturalWidth));
-  var height = Math.min(maxSizes.height, Math.max(minSizes.height, naturalHeight));
-
-  // Note: should always use image's natural sizes for drawing as
-  // imageData.naturalWidth === canvasData.naturalHeight when rotate % 180 === 90
-  var destMaxSizes = getAdjustedSizes({
-    aspectRatio: imageAspectRatio,
-    width: maxWidth,
-    height: maxHeight
-  });
-  var destMinSizes = getAdjustedSizes({
-    aspectRatio: imageAspectRatio,
-    width: minWidth,
-    height: minHeight
-  }, 'cover');
-  var destWidth = Math.min(destMaxSizes.width, Math.max(destMinSizes.width, imageNaturalWidth));
-  var destHeight = Math.min(destMaxSizes.height, Math.max(destMinSizes.height, imageNaturalHeight));
-  var params = [-destWidth / 2, -destHeight / 2, destWidth, destHeight];
-
-  canvas.width = normalizeDecimalNumber(width);
-  canvas.height = normalizeDecimalNumber(height);
-  context.fillStyle = fillColor;
-  context.fillRect(0, 0, width, height);
-  context.save();
-  context.translate(width / 2, height / 2);
-  context.rotate(rotate * Math.PI / 180);
-  context.scale(scaleX, scaleY);
-  context.imageSmoothingEnabled = imageSmoothingEnabled;
-  context.imageSmoothingQuality = imageSmoothingQuality;
-  context.drawImage.apply(context, [image].concat(toConsumableArray(params.map(function (param) {
-    return Math.floor(normalizeDecimalNumber(param));
-  }))));
-  context.restore();
-  return canvas;
-}
-
-var fromCharCode = String.fromCharCode;
-
-/**
- * Get string from char code in data view.
- * @param {DataView} dataView - The data view for read.
- * @param {number} start - The start index.
- * @param {number} length - The read length.
- * @returns {string} The read result.
- */
-
-function getStringFromCharCode(dataView, start, length) {
-  var str = '';
-  var i = void 0;
-
-  length += start;
-
-  for (i = start; i < length; i += 1) {
-    str += fromCharCode(dataView.getUint8(i));
-  }
-
-  return str;
-}
-
-var REGEXP_DATA_URL_HEAD = /^data:.*,/;
-
-/**
- * Transform Data URL to array buffer.
- * @param {string} dataURL - The Data URL to transform.
- * @returns {ArrayBuffer} The result array buffer.
- */
-function dataURLToArrayBuffer(dataURL) {
-  var base64 = dataURL.replace(REGEXP_DATA_URL_HEAD, '');
-  var binary = atob(base64);
-  var arrayBuffer = new ArrayBuffer(binary.length);
-  var uint8 = new Uint8Array(arrayBuffer);
-
-  forEach(uint8, function (value, i) {
-    uint8[i] = binary.charCodeAt(i);
-  });
-
-  return arrayBuffer;
-}
-
-/**
- * Transform array buffer to Data URL.
- * @param {ArrayBuffer} arrayBuffer - The array buffer to transform.
- * @param {string} mimeType - The mime type of the Data URL.
- * @returns {string} The result Data URL.
- */
-function arrayBufferToDataURL(arrayBuffer, mimeType) {
-  var uint8 = new Uint8Array(arrayBuffer);
-  var data = '';
-
-  // TypedArray.prototype.forEach is not supported in some browsers as IE.
-  if (isFunction(uint8.forEach)) {
-    // Use native `forEach` method first for better performance
-    uint8.forEach(function (value) {
-      data += fromCharCode(value);
-    });
-  } else {
-    forEach(uint8, function (value) {
-      data += fromCharCode(value);
-    });
-  }
-
-  return 'data:' + mimeType + ';base64,' + btoa(data);
-}
-
-/**
- * Get orientation value from given array buffer.
- * @param {ArrayBuffer} arrayBuffer - The array buffer to read.
- * @returns {number} The read orientation value.
- */
-function getOrientation(arrayBuffer) {
-  var dataView = new DataView(arrayBuffer);
-  var orientation = void 0;
-  var littleEndian = void 0;
-  var app1Start = void 0;
-  var ifdStart = void 0;
-
-  // Only handle JPEG image (start by 0xFFD8)
-  if (dataView.getUint8(0) === 0xFF && dataView.getUint8(1) === 0xD8) {
-    var length = dataView.byteLength;
-    var offset = 2;
-
-    while (offset < length) {
-      if (dataView.getUint8(offset) === 0xFF && dataView.getUint8(offset + 1) === 0xE1) {
-        app1Start = offset;
-        break;
-      }
-
-      offset += 1;
-    }
-  }
-
-  if (app1Start) {
-    var exifIDCode = app1Start + 4;
-    var tiffOffset = app1Start + 10;
-
-    if (getStringFromCharCode(dataView, exifIDCode, 4) === 'Exif') {
-      var endianness = dataView.getUint16(tiffOffset);
-
-      littleEndian = endianness === 0x4949;
-
-      if (littleEndian || endianness === 0x4D4D /* bigEndian */) {
-          if (dataView.getUint16(tiffOffset + 2, littleEndian) === 0x002A) {
-            var firstIFDOffset = dataView.getUint32(tiffOffset + 4, littleEndian);
-
-            if (firstIFDOffset >= 0x00000008) {
-              ifdStart = tiffOffset + firstIFDOffset;
-            }
-          }
-        }
-    }
-  }
-
-  if (ifdStart) {
-    var _length = dataView.getUint16(ifdStart, littleEndian);
-    var _offset = void 0;
-    var i = void 0;
-
-    for (i = 0; i < _length; i += 1) {
-      _offset = ifdStart + i * 12 + 2;
-
-      if (dataView.getUint16(_offset, littleEndian) === 0x0112 /* Orientation */) {
-          // 8 is the offset of the current tag's value
-          _offset += 8;
-
-          // Get the original orientation value
-          orientation = dataView.getUint16(_offset, littleEndian);
-
-          // Override the orientation with its default value
-          dataView.setUint16(_offset, 1, littleEndian);
-          break;
-        }
-    }
-  }
-
-  return orientation;
-}
-
-/**
- * Parse Exif Orientation value.
- * @param {number} orientation - The orientation to parse.
- * @returns {Object} The parsed result.
- */
-function parseOrientation(orientation) {
-  var rotate = 0;
-  var scaleX = 1;
-  var scaleY = 1;
-
-  switch (orientation) {
-    // Flip horizontal
-    case 2:
-      scaleX = -1;
-      break;
-
-    // Rotate left 180°
-    case 3:
-      rotate = -180;
-      break;
-
-    // Flip vertical
-    case 4:
-      scaleY = -1;
-      break;
-
-    // Flip vertical and rotate right 90°
-    case 5:
-      rotate = 90;
-      scaleY = -1;
-      break;
-
-    // Rotate right 90°
-    case 6:
-      rotate = 90;
-      break;
-
-    // Flip horizontal and rotate right 90°
-    case 7:
-      rotate = 90;
-      scaleX = -1;
-      break;
-
-    // Rotate left 90°
-    case 8:
-      rotate = -90;
-      break;
-
-    default:
-  }
-
-  return {
-    rotate: rotate,
-    scaleX: scaleX,
-    scaleY: scaleY
-  };
-}
-
-var render = {
-  render: function render() {
-    this.initContainer();
-    this.initCanvas();
-    this.initCropBox();
-    this.renderCanvas();
-
-    if (this.cropped) {
-      this.renderCropBox();
-    }
-  },
-  initContainer: function initContainer() {
-    var element = this.element,
-        options = this.options,
-        container = this.container,
-        cropper = this.cropper;
-
-
-    addClass(cropper, CLASS_HIDDEN);
-    removeClass(element, CLASS_HIDDEN);
-
-    var containerData = {
-      width: Math.max(container.offsetWidth, Number(options.minContainerWidth) || 200),
-      height: Math.max(container.offsetHeight, Number(options.minContainerHeight) || 100)
-    };
-
-    this.containerData = containerData;
-
-    setStyle(cropper, {
-      width: containerData.width,
-      height: containerData.height
-    });
-
-    addClass(element, CLASS_HIDDEN);
-    removeClass(cropper, CLASS_HIDDEN);
-  },
-
-
-  // Canvas (image wrapper)
-  initCanvas: function initCanvas() {
-    var containerData = this.containerData,
-        imageData = this.imageData;
-    var viewMode = this.options.viewMode;
-
-    var rotated = Math.abs(imageData.rotate) % 180 === 90;
-    var naturalWidth = rotated ? imageData.naturalHeight : imageData.naturalWidth;
-    var naturalHeight = rotated ? imageData.naturalWidth : imageData.naturalHeight;
-    var aspectRatio = naturalWidth / naturalHeight;
-    var canvasWidth = containerData.width;
-    var canvasHeight = containerData.height;
-
-    if (containerData.height * aspectRatio > containerData.width) {
-      if (viewMode === 3) {
-        canvasWidth = containerData.height * aspectRatio;
-      } else {
-        canvasHeight = containerData.width / aspectRatio;
-      }
-    } else if (viewMode === 3) {
-      canvasHeight = containerData.width / aspectRatio;
-    } else {
-      canvasWidth = containerData.height * aspectRatio;
-    }
-
-    var canvasData = {
-      aspectRatio: aspectRatio,
-      naturalWidth: naturalWidth,
-      naturalHeight: naturalHeight,
-      width: canvasWidth,
-      height: canvasHeight
-    };
-
-    canvasData.left = (containerData.width - canvasWidth) / 2;
-    canvasData.top = (containerData.height - canvasHeight) / 2;
-    canvasData.oldLeft = canvasData.left;
-    canvasData.oldTop = canvasData.top;
-
-    this.canvasData = canvasData;
-    this.limited = viewMode === 1 || viewMode === 2;
-    this.limitCanvas(true, true);
-    this.initialImageData = assign({}, imageData);
-    this.initialCanvasData = assign({}, canvasData);
-  },
-  limitCanvas: function limitCanvas(sizeLimited, positionLimited) {
-    var options = this.options,
-        containerData = this.containerData,
-        canvasData = this.canvasData,
-        cropBoxData = this.cropBoxData;
-    var viewMode = options.viewMode;
-    var aspectRatio = canvasData.aspectRatio;
-
-    var cropped = this.cropped && cropBoxData;
-
-    if (sizeLimited) {
-      var minCanvasWidth = Number(options.minCanvasWidth) || 0;
-      var minCanvasHeight = Number(options.minCanvasHeight) || 0;
-
-      if (viewMode > 1) {
-        minCanvasWidth = Math.max(minCanvasWidth, containerData.width);
-        minCanvasHeight = Math.max(minCanvasHeight, containerData.height);
-
-        if (viewMode === 3) {
-          if (minCanvasHeight * aspectRatio > minCanvasWidth) {
-            minCanvasWidth = minCanvasHeight * aspectRatio;
-          } else {
-            minCanvasHeight = minCanvasWidth / aspectRatio;
-          }
-        }
-      } else if (viewMode > 0) {
-        if (minCanvasWidth) {
-          minCanvasWidth = Math.max(minCanvasWidth, cropped ? cropBoxData.width : 0);
-        } else if (minCanvasHeight) {
-          minCanvasHeight = Math.max(minCanvasHeight, cropped ? cropBoxData.height : 0);
-        } else if (cropped) {
-          minCanvasWidth = cropBoxData.width;
-          minCanvasHeight = cropBoxData.height;
-
-          if (minCanvasHeight * aspectRatio > minCanvasWidth) {
-            minCanvasWidth = minCanvasHeight * aspectRatio;
-          } else {
-            minCanvasHeight = minCanvasWidth / aspectRatio;
-          }
-        }
-      }
-
-      var _getAdjustedSizes = getAdjustedSizes({
-        aspectRatio: aspectRatio,
-        width: minCanvasWidth,
-        height: minCanvasHeight
-      });
-
-      minCanvasWidth = _getAdjustedSizes.width;
-      minCanvasHeight = _getAdjustedSizes.height;
-
-
-      canvasData.minWidth = minCanvasWidth;
-      canvasData.minHeight = minCanvasHeight;
-      canvasData.maxWidth = Infinity;
-      canvasData.maxHeight = Infinity;
-    }
-
-    if (positionLimited) {
-      if (viewMode > (cropped ? 0 : 1)) {
-        var newCanvasLeft = containerData.width - canvasData.width;
-        var newCanvasTop = containerData.height - canvasData.height;
-
-        canvasData.minLeft = Math.min(0, newCanvasLeft);
-        canvasData.minTop = Math.min(0, newCanvasTop);
-        canvasData.maxLeft = Math.max(0, newCanvasLeft);
-        canvasData.maxTop = Math.max(0, newCanvasTop);
-
-        if (cropped && this.limited) {
-          canvasData.minLeft = Math.min(cropBoxData.left, cropBoxData.left + (cropBoxData.width - canvasData.width));
-          canvasData.minTop = Math.min(cropBoxData.top, cropBoxData.top + (cropBoxData.height - canvasData.height));
-          canvasData.maxLeft = cropBoxData.left;
-          canvasData.maxTop = cropBoxData.top;
-
-          if (viewMode === 2) {
-            if (canvasData.width >= containerData.width) {
-              canvasData.minLeft = Math.min(0, newCanvasLeft);
-              canvasData.maxLeft = Math.max(0, newCanvasLeft);
-            }
-
-            if (canvasData.height >= containerData.height) {
-              canvasData.minTop = Math.min(0, newCanvasTop);
-              canvasData.maxTop = Math.max(0, newCanvasTop);
-            }
-          }
-        }
-      } else {
-        canvasData.minLeft = -canvasData.width;
-        canvasData.minTop = -canvasData.height;
-        canvasData.maxLeft = containerData.width;
-        canvasData.maxTop = containerData.height;
-      }
-    }
-  },
-  renderCanvas: function renderCanvas(changed, transformed) {
-    var canvasData = this.canvasData,
-        imageData = this.imageData;
-
-
-    if (transformed) {
-      var _getRotatedSizes = getRotatedSizes({
-        width: imageData.naturalWidth * Math.abs(imageData.scaleX || 1),
-        height: imageData.naturalHeight * Math.abs(imageData.scaleY || 1),
-        degree: imageData.rotate || 0
-      }),
-          naturalWidth = _getRotatedSizes.width,
-          naturalHeight = _getRotatedSizes.height;
-
-      var width = canvasData.width * (naturalWidth / canvasData.naturalWidth);
-      var height = canvasData.height * (naturalHeight / canvasData.naturalHeight);
-
-      canvasData.left -= (width - canvasData.width) / 2;
-      canvasData.top -= (height - canvasData.height) / 2;
-      canvasData.width = width;
-      canvasData.height = height;
-      canvasData.aspectRatio = naturalWidth / naturalHeight;
-      canvasData.naturalWidth = naturalWidth;
-      canvasData.naturalHeight = naturalHeight;
-      this.limitCanvas(true, false);
-    }
-
-    if (canvasData.width > canvasData.maxWidth || canvasData.width < canvasData.minWidth) {
-      canvasData.left = canvasData.oldLeft;
-    }
-
-    if (canvasData.height > canvasData.maxHeight || canvasData.height < canvasData.minHeight) {
-      canvasData.top = canvasData.oldTop;
-    }
-
-    canvasData.width = Math.min(Math.max(canvasData.width, canvasData.minWidth), canvasData.maxWidth);
-    canvasData.height = Math.min(Math.max(canvasData.height, canvasData.minHeight), canvasData.maxHeight);
-
-    this.limitCanvas(false, true);
-
-    canvasData.left = Math.min(Math.max(canvasData.left, canvasData.minLeft), canvasData.maxLeft);
-    canvasData.top = Math.min(Math.max(canvasData.top, canvasData.minTop), canvasData.maxTop);
-    canvasData.oldLeft = canvasData.left;
-    canvasData.oldTop = canvasData.top;
-
-    setStyle(this.canvas, assign({
-      width: canvasData.width,
-      height: canvasData.height
-    }, getTransforms({
-      translateX: canvasData.left,
-      translateY: canvasData.top
-    })));
-
-    this.renderImage(changed);
-
-    if (this.cropped && this.limited) {
-      this.limitCropBox(true, true);
-    }
-  },
-  renderImage: function renderImage(changed) {
-    var canvasData = this.canvasData,
-        imageData = this.imageData;
-
-    var width = imageData.naturalWidth * (canvasData.width / canvasData.naturalWidth);
-    var height = imageData.naturalHeight * (canvasData.height / canvasData.naturalHeight);
-
-    assign(imageData, {
-      width: width,
-      height: height,
-      left: (canvasData.width - width) / 2,
-      top: (canvasData.height - height) / 2
-    });
-    setStyle(this.image, assign({
-      width: imageData.width,
-      height: imageData.height
-    }, getTransforms(assign({
-      translateX: imageData.left,
-      translateY: imageData.top
-    }, imageData))));
-
-    if (changed) {
-      this.output();
-    }
-  },
-  initCropBox: function initCropBox() {
-    var options = this.options,
-        canvasData = this.canvasData;
-
-    var aspectRatio = options.aspectRatio || options.initialAspectRatio;
-    var autoCropArea = Number(options.autoCropArea) || 0.8;
-    var cropBoxData = {
-      width: canvasData.width,
-      height: canvasData.height
-    };
-
-    if (aspectRatio) {
-      if (canvasData.height * aspectRatio > canvasData.width) {
-        cropBoxData.height = cropBoxData.width / aspectRatio;
-      } else {
-        cropBoxData.width = cropBoxData.height * aspectRatio;
-      }
-    }
-
-    this.cropBoxData = cropBoxData;
-    this.limitCropBox(true, true);
-
-    // Initialize auto crop area
-    cropBoxData.width = Math.min(Math.max(cropBoxData.width, cropBoxData.minWidth), cropBoxData.maxWidth);
-    cropBoxData.height = Math.min(Math.max(cropBoxData.height, cropBoxData.minHeight), cropBoxData.maxHeight);
-
-    // The width/height of auto crop area must large than "minWidth/Height"
-    cropBoxData.width = Math.max(cropBoxData.minWidth, cropBoxData.width * autoCropArea);
-    cropBoxData.height = Math.max(cropBoxData.minHeight, cropBoxData.height * autoCropArea);
-    cropBoxData.left = canvasData.left + (canvasData.width - cropBoxData.width) / 2;
-    cropBoxData.top = canvasData.top + (canvasData.height - cropBoxData.height) / 2;
-    cropBoxData.oldLeft = cropBoxData.left;
-    cropBoxData.oldTop = cropBoxData.top;
-
-    this.initialCropBoxData = assign({}, cropBoxData);
-  },
-  limitCropBox: function limitCropBox(sizeLimited, positionLimited) {
-    var options = this.options,
-        containerData = this.containerData,
-        canvasData = this.canvasData,
-        cropBoxData = this.cropBoxData,
-        limited = this.limited;
-    var aspectRatio = options.aspectRatio;
-
-
-    if (sizeLimited) {
-      var minCropBoxWidth = Number(options.minCropBoxWidth) || 0;
-      var minCropBoxHeight = Number(options.minCropBoxHeight) || 0;
-      var maxCropBoxWidth = limited ? Math.min(containerData.width, canvasData.width, canvasData.width + canvasData.left, containerData.width - canvasData.left) : containerData.width;
-      var maxCropBoxHeight = limited ? Math.min(containerData.height, canvasData.height, canvasData.height + canvasData.top, containerData.height - canvasData.top) : containerData.height;
-
-      // The min/maxCropBoxWidth/Height must be less than container's width/height
-      minCropBoxWidth = Math.min(minCropBoxWidth, containerData.width);
-      minCropBoxHeight = Math.min(minCropBoxHeight, containerData.height);
-
-      if (aspectRatio) {
-        if (minCropBoxWidth && minCropBoxHeight) {
-          if (minCropBoxHeight * aspectRatio > minCropBoxWidth) {
-            minCropBoxHeight = minCropBoxWidth / aspectRatio;
-          } else {
-            minCropBoxWidth = minCropBoxHeight * aspectRatio;
-          }
-        } else if (minCropBoxWidth) {
-          minCropBoxHeight = minCropBoxWidth / aspectRatio;
-        } else if (minCropBoxHeight) {
-          minCropBoxWidth = minCropBoxHeight * aspectRatio;
-        }
-
-        if (maxCropBoxHeight * aspectRatio > maxCropBoxWidth) {
-          maxCropBoxHeight = maxCropBoxWidth / aspectRatio;
-        } else {
-          maxCropBoxWidth = maxCropBoxHeight * aspectRatio;
-        }
-      }
-
-      // The minWidth/Height must be less than maxWidth/Height
-      cropBoxData.minWidth = Math.min(minCropBoxWidth, maxCropBoxWidth);
-      cropBoxData.minHeight = Math.min(minCropBoxHeight, maxCropBoxHeight);
-      cropBoxData.maxWidth = maxCropBoxWidth;
-      cropBoxData.maxHeight = maxCropBoxHeight;
-    }
-
-    if (positionLimited) {
-      if (limited) {
-        cropBoxData.minLeft = Math.max(0, canvasData.left);
-        cropBoxData.minTop = Math.max(0, canvasData.top);
-        cropBoxData.maxLeft = Math.min(containerData.width, canvasData.left + canvasData.width) - cropBoxData.width;
-        cropBoxData.maxTop = Math.min(containerData.height, canvasData.top + canvasData.height) - cropBoxData.height;
-      } else {
-        cropBoxData.minLeft = 0;
-        cropBoxData.minTop = 0;
-        cropBoxData.maxLeft = containerData.width - cropBoxData.width;
-        cropBoxData.maxTop = containerData.height - cropBoxData.height;
-      }
-    }
-  },
-  renderCropBox: function renderCropBox() {
-    var options = this.options,
-        containerData = this.containerData,
-        cropBoxData = this.cropBoxData;
-
-
-    if (cropBoxData.width > cropBoxData.maxWidth || cropBoxData.width < cropBoxData.minWidth) {
-      cropBoxData.left = cropBoxData.oldLeft;
-    }
-
-    if (cropBoxData.height > cropBoxData.maxHeight || cropBoxData.height < cropBoxData.minHeight) {
-      cropBoxData.top = cropBoxData.oldTop;
-    }
-
-    cropBoxData.width = Math.min(Math.max(cropBoxData.width, cropBoxData.minWidth), cropBoxData.maxWidth);
-    cropBoxData.height = Math.min(Math.max(cropBoxData.height, cropBoxData.minHeight), cropBoxData.maxHeight);
-
-    this.limitCropBox(false, true);
-
-    cropBoxData.left = Math.min(Math.max(cropBoxData.left, cropBoxData.minLeft), cropBoxData.maxLeft);
-    cropBoxData.top = Math.min(Math.max(cropBoxData.top, cropBoxData.minTop), cropBoxData.maxTop);
-    cropBoxData.oldLeft = cropBoxData.left;
-    cropBoxData.oldTop = cropBoxData.top;
-
-    if (options.movable && options.cropBoxMovable) {
-      // Turn to move the canvas when the crop box is equal to the container
-      setData(this.face, DATA_ACTION, cropBoxData.width >= containerData.width && cropBoxData.height >= containerData.height ? ACTION_MOVE : ACTION_ALL);
-    }
-
-    setStyle(this.cropBox, assign({
-      width: cropBoxData.width,
-      height: cropBoxData.height
-    }, getTransforms({
-      translateX: cropBoxData.left,
-      translateY: cropBoxData.top
-    })));
-
-    if (this.cropped && this.limited) {
-      this.limitCanvas(true, true);
-    }
-
-    if (!this.disabled) {
-      this.output();
-    }
-  },
-  output: function output() {
-    this.preview();
-    dispatchEvent(this.element, EVENT_CROP, this.getData());
-  }
-};
-
-var preview = {
-  initPreview: function initPreview() {
-    var crossOrigin = this.crossOrigin;
-    var preview = this.options.preview;
-
-    var url = crossOrigin ? this.crossOriginUrl : this.url;
-    var image = document.createElement('img');
-
-    if (crossOrigin) {
-      image.crossOrigin = crossOrigin;
-    }
-
-    image.src = url;
-    this.viewBox.appendChild(image);
-    this.viewBoxImage = image;
-
-    if (!preview) {
-      return;
-    }
-
-    var previews = preview;
-
-    if (typeof preview === 'string') {
-      previews = this.element.ownerDocument.querySelectorAll(preview);
-    } else if (preview.querySelector) {
-      previews = [preview];
-    }
-
-    this.previews = previews;
-
-    forEach(previews, function (el) {
-      var img = document.createElement('img');
-
-      // Save the original size for recover
-      setData(el, DATA_PREVIEW, {
-        width: el.offsetWidth,
-        height: el.offsetHeight,
-        html: el.innerHTML
-      });
-
-      if (crossOrigin) {
-        img.crossOrigin = crossOrigin;
-      }
-
-      img.src = url;
-
-      /**
-       * Override img element styles
-       * Add `display:block` to avoid margin top issue
-       * Add `height:auto` to override `height` attribute on IE8
-       * (Occur only when margin-top <= -height)
-       */
-      img.style.cssText = 'display:block;' + 'width:100%;' + 'height:auto;' + 'min-width:0!important;' + 'min-height:0!important;' + 'max-width:none!important;' + 'max-height:none!important;' + 'image-orientation:0deg!important;"';
-
-      el.innerHTML = '';
-      el.appendChild(img);
-    });
-  },
-  resetPreview: function resetPreview() {
-    forEach(this.previews, function (element) {
-      var data = getData(element, DATA_PREVIEW);
-
-      setStyle(element, {
-        width: data.width,
-        height: data.height
-      });
-
-      element.innerHTML = data.html;
-      removeData(element, DATA_PREVIEW);
-    });
-  },
-  preview: function preview() {
-    var imageData = this.imageData,
-        canvasData = this.canvasData,
-        cropBoxData = this.cropBoxData;
-    var cropBoxWidth = cropBoxData.width,
-        cropBoxHeight = cropBoxData.height;
-    var width = imageData.width,
-        height = imageData.height;
-
-    var left = cropBoxData.left - canvasData.left - imageData.left;
-    var top = cropBoxData.top - canvasData.top - imageData.top;
-
-    if (!this.cropped || this.disabled) {
-      return;
-    }
-
-    setStyle(this.viewBoxImage, assign({
-      width: width,
-      height: height
-    }, getTransforms(assign({
-      translateX: -left,
-      translateY: -top
-    }, imageData))));
-
-    forEach(this.previews, function (element) {
-      var data = getData(element, DATA_PREVIEW);
-      var originalWidth = data.width;
-      var originalHeight = data.height;
-      var newWidth = originalWidth;
-      var newHeight = originalHeight;
-      var ratio = 1;
-
-      if (cropBoxWidth) {
-        ratio = originalWidth / cropBoxWidth;
-        newHeight = cropBoxHeight * ratio;
-      }
-
-      if (cropBoxHeight && newHeight > originalHeight) {
-        ratio = originalHeight / cropBoxHeight;
-        newWidth = cropBoxWidth * ratio;
-        newHeight = originalHeight;
-      }
-
-      setStyle(element, {
-        width: newWidth,
-        height: newHeight
-      });
-
-      setStyle(element.getElementsByTagName('img')[0], assign({
-        width: width * ratio,
-        height: height * ratio
-      }, getTransforms(assign({
-        translateX: -left * ratio,
-        translateY: -top * ratio
-      }, imageData))));
-    });
-  }
-};
-
-var events = {
-  bind: function bind() {
-    var element = this.element,
-        options = this.options,
-        cropper = this.cropper;
-
-
-    if (isFunction(options.cropstart)) {
-      addListener(element, EVENT_CROP_START, options.cropstart);
-    }
-
-    if (isFunction(options.cropmove)) {
-      addListener(element, EVENT_CROP_MOVE, options.cropmove);
-    }
-
-    if (isFunction(options.cropend)) {
-      addListener(element, EVENT_CROP_END, options.cropend);
-    }
-
-    if (isFunction(options.crop)) {
-      addListener(element, EVENT_CROP, options.crop);
-    }
-
-    if (isFunction(options.zoom)) {
-      addListener(element, EVENT_ZOOM, options.zoom);
-    }
-
-    addListener(cropper, EVENT_POINTER_DOWN, this.onCropStart = this.cropStart.bind(this));
-
-    if (options.zoomable && options.zoomOnWheel) {
-      addListener(cropper, EVENT_WHEEL, this.onWheel = this.wheel.bind(this));
-    }
-
-    if (options.toggleDragModeOnDblclick) {
-      addListener(cropper, EVENT_DBLCLICK, this.onDblclick = this.dblclick.bind(this));
-    }
-
-    addListener(element.ownerDocument, EVENT_POINTER_MOVE, this.onCropMove = this.cropMove.bind(this));
-    addListener(element.ownerDocument, EVENT_POINTER_UP, this.onCropEnd = this.cropEnd.bind(this));
-
-    if (options.responsive) {
-      addListener(window, EVENT_RESIZE, this.onResize = this.resize.bind(this));
-    }
-  },
-  unbind: function unbind() {
-    var element = this.element,
-        options = this.options,
-        cropper = this.cropper;
-
-
-    if (isFunction(options.cropstart)) {
-      removeListener(element, EVENT_CROP_START, options.cropstart);
-    }
-
-    if (isFunction(options.cropmove)) {
-      removeListener(element, EVENT_CROP_MOVE, options.cropmove);
-    }
-
-    if (isFunction(options.cropend)) {
-      removeListener(element, EVENT_CROP_END, options.cropend);
-    }
-
-    if (isFunction(options.crop)) {
-      removeListener(element, EVENT_CROP, options.crop);
-    }
-
-    if (isFunction(options.zoom)) {
-      removeListener(element, EVENT_ZOOM, options.zoom);
-    }
-
-    removeListener(cropper, EVENT_POINTER_DOWN, this.onCropStart);
-
-    if (options.zoomable && options.zoomOnWheel) {
-      removeListener(cropper, EVENT_WHEEL, this.onWheel);
-    }
-
-    if (options.toggleDragModeOnDblclick) {
-      removeListener(cropper, EVENT_DBLCLICK, this.onDblclick);
-    }
-
-    removeListener(element.ownerDocument, EVENT_POINTER_MOVE, this.onCropMove);
-    removeListener(element.ownerDocument, EVENT_POINTER_UP, this.onCropEnd);
-
-    if (options.responsive) {
-      removeListener(window, EVENT_RESIZE, this.onResize);
-    }
-  }
-};
-
-var handlers = {
-  resize: function resize() {
-    var options = this.options,
-        container = this.container,
-        containerData = this.containerData;
-
-    var minContainerWidth = Number(options.minContainerWidth) || 200;
-    var minContainerHeight = Number(options.minContainerHeight) || 100;
-
-    if (this.disabled || containerData.width <= minContainerWidth || containerData.height <= minContainerHeight) {
-      return;
-    }
-
-    var ratio = container.offsetWidth / containerData.width;
-
-    // Resize when width changed or height changed
-    if (ratio !== 1 || container.offsetHeight !== containerData.height) {
-      var canvasData = void 0;
-      var cropBoxData = void 0;
-
-      if (options.restore) {
-        canvasData = this.getCanvasData();
-        cropBoxData = this.getCropBoxData();
-      }
-
-      this.render();
-
-      if (options.restore) {
-        this.setCanvasData(forEach(canvasData, function (n, i) {
-          canvasData[i] = n * ratio;
-        }));
-        this.setCropBoxData(forEach(cropBoxData, function (n, i) {
-          cropBoxData[i] = n * ratio;
-        }));
-      }
-    }
-  },
-  dblclick: function dblclick() {
-    if (this.disabled || this.options.dragMode === DRAG_MODE_NONE) {
-      return;
-    }
-
-    this.setDragMode(hasClass(this.dragBox, CLASS_CROP) ? DRAG_MODE_MOVE : DRAG_MODE_CROP);
-  },
-  wheel: function wheel(e) {
-    var _this = this;
-
-    var ratio = Number(this.options.wheelZoomRatio) || 0.1;
-    var delta = 1;
-
-    if (this.disabled) {
-      return;
-    }
-
-    e.preventDefault();
-
-    // Limit wheel speed to prevent zoom too fast (#21)
-    if (this.wheeling) {
-      return;
-    }
-
-    this.wheeling = true;
-
-    setTimeout(function () {
-      _this.wheeling = false;
-    }, 50);
-
-    if (e.deltaY) {
-      delta = e.deltaY > 0 ? 1 : -1;
-    } else if (e.wheelDelta) {
-      delta = -e.wheelDelta / 120;
-    } else if (e.detail) {
-      delta = e.detail > 0 ? 1 : -1;
-    }
-
-    this.zoom(-delta * ratio, e);
-  },
-  cropStart: function cropStart(e) {
-    if (this.disabled) {
-      return;
-    }
-
-    var options = this.options,
-        pointers = this.pointers;
-
-    var action = void 0;
-
-    if (e.changedTouches) {
-      // Handle touch event
-      forEach(e.changedTouches, function (touch) {
-        pointers[touch.identifier] = getPointer(touch);
-      });
-    } else {
-      // Handle mouse event and pointer event
-      pointers[e.pointerId || 0] = getPointer(e);
-    }
-
-    if (Object.keys(pointers).length > 1 && options.zoomable && options.zoomOnTouch) {
-      action = ACTION_ZOOM;
-    } else {
-      action = getData(e.target, DATA_ACTION);
-    }
-
-    if (!REGEXP_ACTIONS.test(action)) {
-      return;
-    }
-
-    if (dispatchEvent(this.element, EVENT_CROP_START, {
-      originalEvent: e,
-      action: action
-    }) === false) {
-      return;
-    }
-
-    // This line is required for preventing page zooming in iOS browsers
-    e.preventDefault();
-
-    this.action = action;
-    this.cropping = false;
-
-    if (action === ACTION_CROP) {
-      this.cropping = true;
-      addClass(this.dragBox, CLASS_MODAL);
-    }
-  },
-  cropMove: function cropMove(e) {
-    var action = this.action;
-
-
-    if (this.disabled || !action) {
-      return;
-    }
-
-    var pointers = this.pointers;
-
-
-    e.preventDefault();
-
-    if (dispatchEvent(this.element, EVENT_CROP_MOVE, {
-      originalEvent: e,
-      action: action
-    }) === false) {
-      return;
-    }
-
-    if (e.changedTouches) {
-      forEach(e.changedTouches, function (touch) {
-        assign(pointers[touch.identifier], getPointer(touch, true));
-      });
-    } else {
-      assign(pointers[e.pointerId || 0], getPointer(e, true));
-    }
-
-    this.change(e);
-  },
-  cropEnd: function cropEnd(e) {
-    if (this.disabled) {
-      return;
-    }
-
-    var action = this.action,
-        pointers = this.pointers;
-
-
-    if (e.changedTouches) {
-      forEach(e.changedTouches, function (touch) {
-        delete pointers[touch.identifier];
-      });
-    } else {
-      delete pointers[e.pointerId || 0];
-    }
-
-    if (!action) {
-      return;
-    }
-
-    e.preventDefault();
-
-    if (!Object.keys(pointers).length) {
-      this.action = '';
-    }
-
-    if (this.cropping) {
-      this.cropping = false;
-      toggleClass(this.dragBox, CLASS_MODAL, this.cropped && this.options.modal);
-    }
-
-    dispatchEvent(this.element, EVENT_CROP_END, {
-      originalEvent: e,
-      action: action
-    });
-  }
-};
-
-var change = {
-  change: function change(e) {
-    var options = this.options,
-        canvasData = this.canvasData,
-        containerData = this.containerData,
-        cropBoxData = this.cropBoxData,
-        pointers = this.pointers;
-    var action = this.action;
-    var aspectRatio = options.aspectRatio;
-    var left = cropBoxData.left,
-        top = cropBoxData.top,
-        width = cropBoxData.width,
-        height = cropBoxData.height;
-
-    var right = left + width;
-    var bottom = top + height;
-    var minLeft = 0;
-    var minTop = 0;
-    var maxWidth = containerData.width;
-    var maxHeight = containerData.height;
-    var renderable = true;
-    var offset = void 0;
-
-    // Locking aspect ratio in "free mode" by holding shift key
-    if (!aspectRatio && e.shiftKey) {
-      aspectRatio = width && height ? width / height : 1;
-    }
-
-    if (this.limited) {
-      minLeft = cropBoxData.minLeft;
-      minTop = cropBoxData.minTop;
-
-      maxWidth = minLeft + Math.min(containerData.width, canvasData.width, canvasData.left + canvasData.width);
-      maxHeight = minTop + Math.min(containerData.height, canvasData.height, canvasData.top + canvasData.height);
-    }
-
-    var pointer = pointers[Object.keys(pointers)[0]];
-    var range = {
-      x: pointer.endX - pointer.startX,
-      y: pointer.endY - pointer.startY
-    };
-    var check = function check(side) {
-      switch (side) {
-        case ACTION_EAST:
-          if (right + range.x > maxWidth) {
-            range.x = maxWidth - right;
-          }
-
-          break;
-
-        case ACTION_WEST:
-          if (left + range.x < minLeft) {
-            range.x = minLeft - left;
-          }
-
-          break;
-
-        case ACTION_NORTH:
-          if (top + range.y < minTop) {
-            range.y = minTop - top;
-          }
-
-          break;
-
-        case ACTION_SOUTH:
-          if (bottom + range.y > maxHeight) {
-            range.y = maxHeight - bottom;
-          }
-
-          break;
-
-        default:
-      }
-    };
-
-    switch (action) {
-      // Move crop box
-      case ACTION_ALL:
-        left += range.x;
-        top += range.y;
-        break;
-
-      // Resize crop box
-      case ACTION_EAST:
-        if (range.x >= 0 && (right >= maxWidth || aspectRatio && (top <= minTop || bottom >= maxHeight))) {
-          renderable = false;
-          break;
-        }
-
-        check(ACTION_EAST);
-        width += range.x;
-
-        if (width < 0) {
-          action = ACTION_WEST;
-          width = -width;
-          left -= width;
-        }
-
-        if (aspectRatio) {
-          height = width / aspectRatio;
-          top += (cropBoxData.height - height) / 2;
-        }
-
-        break;
-
-      case ACTION_NORTH:
-        if (range.y <= 0 && (top <= minTop || aspectRatio && (left <= minLeft || right >= maxWidth))) {
-          renderable = false;
-          break;
-        }
-
-        check(ACTION_NORTH);
-        height -= range.y;
-        top += range.y;
-
-        if (height < 0) {
-          action = ACTION_SOUTH;
-          height = -height;
-          top -= height;
-        }
-
-        if (aspectRatio) {
-          width = height * aspectRatio;
-          left += (cropBoxData.width - width) / 2;
-        }
-
-        break;
-
-      case ACTION_WEST:
-        if (range.x <= 0 && (left <= minLeft || aspectRatio && (top <= minTop || bottom >= maxHeight))) {
-          renderable = false;
-          break;
-        }
-
-        check(ACTION_WEST);
-        width -= range.x;
-        left += range.x;
-
-        if (width < 0) {
-          action = ACTION_EAST;
-          width = -width;
-          left -= width;
-        }
-
-        if (aspectRatio) {
-          height = width / aspectRatio;
-          top += (cropBoxData.height - height) / 2;
-        }
-
-        break;
-
-      case ACTION_SOUTH:
-        if (range.y >= 0 && (bottom >= maxHeight || aspectRatio && (left <= minLeft || right >= maxWidth))) {
-          renderable = false;
-          break;
-        }
-
-        check(ACTION_SOUTH);
-        height += range.y;
-
-        if (height < 0) {
-          action = ACTION_NORTH;
-          height = -height;
-          top -= height;
-        }
-
-        if (aspectRatio) {
-          width = height * aspectRatio;
-          left += (cropBoxData.width - width) / 2;
-        }
-
-        break;
-
-      case ACTION_NORTH_EAST:
-        if (aspectRatio) {
-          if (range.y <= 0 && (top <= minTop || right >= maxWidth)) {
-            renderable = false;
-            break;
-          }
-
-          check(ACTION_NORTH);
-          height -= range.y;
-          top += range.y;
-          width = height * aspectRatio;
-        } else {
-          check(ACTION_NORTH);
-          check(ACTION_EAST);
-
-          if (range.x >= 0) {
-            if (right < maxWidth) {
-              width += range.x;
-            } else if (range.y <= 0 && top <= minTop) {
-              renderable = false;
-            }
-          } else {
-            width += range.x;
-          }
-
-          if (range.y <= 0) {
-            if (top > minTop) {
-              height -= range.y;
-              top += range.y;
-            }
-          } else {
-            height -= range.y;
-            top += range.y;
-          }
-        }
-
-        if (width < 0 && height < 0) {
-          action = ACTION_SOUTH_WEST;
-          height = -height;
-          width = -width;
-          top -= height;
-          left -= width;
-        } else if (width < 0) {
-          action = ACTION_NORTH_WEST;
-          width = -width;
-          left -= width;
-        } else if (height < 0) {
-          action = ACTION_SOUTH_EAST;
-          height = -height;
-          top -= height;
-        }
-
-        break;
-
-      case ACTION_NORTH_WEST:
-        if (aspectRatio) {
-          if (range.y <= 0 && (top <= minTop || left <= minLeft)) {
-            renderable = false;
-            break;
-          }
-
-          check(ACTION_NORTH);
-          height -= range.y;
-          top += range.y;
-          width = height * aspectRatio;
-          left += cropBoxData.width - width;
-        } else {
-          check(ACTION_NORTH);
-          check(ACTION_WEST);
-
-          if (range.x <= 0) {
-            if (left > minLeft) {
-              width -= range.x;
-              left += range.x;
-            } else if (range.y <= 0 && top <= minTop) {
-              renderable = false;
-            }
-          } else {
-            width -= range.x;
-            left += range.x;
-          }
-
-          if (range.y <= 0) {
-            if (top > minTop) {
-              height -= range.y;
-              top += range.y;
-            }
-          } else {
-            height -= range.y;
-            top += range.y;
-          }
-        }
-
-        if (width < 0 && height < 0) {
-          action = ACTION_SOUTH_EAST;
-          height = -height;
-          width = -width;
-          top -= height;
-          left -= width;
-        } else if (width < 0) {
-          action = ACTION_NORTH_EAST;
-          width = -width;
-          left -= width;
-        } else if (height < 0) {
-          action = ACTION_SOUTH_WEST;
-          height = -height;
-          top -= height;
-        }
-
-        break;
-
-      case ACTION_SOUTH_WEST:
-        if (aspectRatio) {
-          if (range.x <= 0 && (left <= minLeft || bottom >= maxHeight)) {
-            renderable = false;
-            break;
-          }
-
-          check(ACTION_WEST);
-          width -= range.x;
-          left += range.x;
-          height = width / aspectRatio;
-        } else {
-          check(ACTION_SOUTH);
-          check(ACTION_WEST);
-
-          if (range.x <= 0) {
-            if (left > minLeft) {
-              width -= range.x;
-              left += range.x;
-            } else if (range.y >= 0 && bottom >= maxHeight) {
-              renderable = false;
-            }
-          } else {
-            width -= range.x;
-            left += range.x;
-          }
-
-          if (range.y >= 0) {
-            if (bottom < maxHeight) {
-              height += range.y;
-            }
-          } else {
-            height += range.y;
-          }
-        }
-
-        if (width < 0 && height < 0) {
-          action = ACTION_NORTH_EAST;
-          height = -height;
-          width = -width;
-          top -= height;
-          left -= width;
-        } else if (width < 0) {
-          action = ACTION_SOUTH_EAST;
-          width = -width;
-          left -= width;
-        } else if (height < 0) {
-          action = ACTION_NORTH_WEST;
-          height = -height;
-          top -= height;
-        }
-
-        break;
-
-      case ACTION_SOUTH_EAST:
-        if (aspectRatio) {
-          if (range.x >= 0 && (right >= maxWidth || bottom >= maxHeight)) {
-            renderable = false;
-            break;
-          }
-
-          check(ACTION_EAST);
-          width += range.x;
-          height = width / aspectRatio;
-        } else {
-          check(ACTION_SOUTH);
-          check(ACTION_EAST);
-
-          if (range.x >= 0) {
-            if (right < maxWidth) {
-              width += range.x;
-            } else if (range.y >= 0 && bottom >= maxHeight) {
-              renderable = false;
-            }
-          } else {
-            width += range.x;
-          }
-
-          if (range.y >= 0) {
-            if (bottom < maxHeight) {
-              height += range.y;
-            }
-          } else {
-            height += range.y;
-          }
-        }
-
-        if (width < 0 && height < 0) {
-          action = ACTION_NORTH_WEST;
-          height = -height;
-          width = -width;
-          top -= height;
-          left -= width;
-        } else if (width < 0) {
-          action = ACTION_SOUTH_WEST;
-          width = -width;
-          left -= width;
-        } else if (height < 0) {
-          action = ACTION_NORTH_EAST;
-          height = -height;
-          top -= height;
-        }
-
-        break;
-
-      // Move canvas
-      case ACTION_MOVE:
-        this.move(range.x, range.y);
-        renderable = false;
-        break;
-
-      // Zoom canvas
-      case ACTION_ZOOM:
-        this.zoom(getMaxZoomRatio(pointers), e);
-        renderable = false;
-        break;
-
-      // Create crop box
-      case ACTION_CROP:
-        if (!range.x || !range.y) {
-          renderable = false;
-          break;
-        }
-
-        offset = getOffset(this.cropper);
-        left = pointer.startX - offset.left;
-        top = pointer.startY - offset.top;
-        width = cropBoxData.minWidth;
-        height = cropBoxData.minHeight;
-
-        if (range.x > 0) {
-          action = range.y > 0 ? ACTION_SOUTH_EAST : ACTION_NORTH_EAST;
-        } else if (range.x < 0) {
-          left -= width;
-          action = range.y > 0 ? ACTION_SOUTH_WEST : ACTION_NORTH_WEST;
-        }
-
-        if (range.y < 0) {
-          top -= height;
-        }
-
-        // Show the crop box if is hidden
-        if (!this.cropped) {
-          removeClass(this.cropBox, CLASS_HIDDEN);
-          this.cropped = true;
-
-          if (this.limited) {
-            this.limitCropBox(true, true);
-          }
-        }
-
-        break;
-
-      default:
-    }
-
-    if (renderable) {
-      cropBoxData.width = width;
-      cropBoxData.height = height;
-      cropBoxData.left = left;
-      cropBoxData.top = top;
-      this.action = action;
-      this.renderCropBox();
-    }
-
-    // Override
-    forEach(pointers, function (p) {
-      p.startX = p.endX;
-      p.startY = p.endY;
-    });
-  }
-};
-
-var methods = {
-  // Show the crop box manually
-  crop: function crop() {
-    if (this.ready && !this.cropped && !this.disabled) {
-      this.cropped = true;
-      this.limitCropBox(true, true);
-
-      if (this.options.modal) {
-        addClass(this.dragBox, CLASS_MODAL);
-      }
-
-      removeClass(this.cropBox, CLASS_HIDDEN);
-      this.setCropBoxData(this.initialCropBoxData);
-    }
-
-    return this;
-  },
-
-
-  // Reset the image and crop box to their initial states
-  reset: function reset() {
-    if (this.ready && !this.disabled) {
-      this.imageData = assign({}, this.initialImageData);
-      this.canvasData = assign({}, this.initialCanvasData);
-      this.cropBoxData = assign({}, this.initialCropBoxData);
-      this.renderCanvas();
-
-      if (this.cropped) {
-        this.renderCropBox();
-      }
-    }
-
-    return this;
-  },
-
-
-  // Clear the crop box
-  clear: function clear() {
-    if (this.cropped && !this.disabled) {
-      assign(this.cropBoxData, {
-        left: 0,
-        top: 0,
-        width: 0,
-        height: 0
-      });
-
-      this.cropped = false;
-      this.renderCropBox();
-      this.limitCanvas(true, true);
-
-      // Render canvas after crop box rendered
-      this.renderCanvas();
-      removeClass(this.dragBox, CLASS_MODAL);
-      addClass(this.cropBox, CLASS_HIDDEN);
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Replace the image's src and rebuild the cropper
-   * @param {string} url - The new URL.
-   * @param {boolean} [hasSameSize] - Indicate if the new image has the same size as the old one.
-   * @returns {Cropper} this
-   */
-  replace: function replace(url) {
-    var hasSameSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-    if (!this.disabled && url) {
-      if (this.isImg) {
-        this.element.src = url;
-      }
-
-      if (hasSameSize) {
-        this.url = url;
-        this.image.src = url;
-
-        if (this.ready) {
-          this.viewBoxImage.src = url;
-
-          forEach(this.previews, function (element) {
-            element.getElementsByTagName('img')[0].src = url;
-          });
-        }
-      } else {
-        if (this.isImg) {
-          this.replaced = true;
-        }
-
-        this.options.data = null;
-        this.uncreate();
-        this.load(url);
-      }
-    }
-
-    return this;
-  },
-
-
-  // Enable (unfreeze) the cropper
-  enable: function enable() {
-    if (this.ready && this.disabled) {
-      this.disabled = false;
-      removeClass(this.cropper, CLASS_DISABLED);
-    }
-
-    return this;
-  },
-
-
-  // Disable (freeze) the cropper
-  disable: function disable() {
-    if (this.ready && !this.disabled) {
-      this.disabled = true;
-      addClass(this.cropper, CLASS_DISABLED);
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Destroy the cropper and remove the instance from the image
-   * @returns {Cropper} this
-   */
-  destroy: function destroy() {
-    var element = this.element;
-
-
-    if (!getData(element, NAMESPACE)) {
-      return this;
-    }
-
-    if (this.isImg && this.replaced) {
-      element.src = this.originalUrl;
-    }
-
-    this.uncreate();
-    removeData(element, NAMESPACE);
-
-    return this;
-  },
-
-
-  /**
-   * Move the canvas with relative offsets
-   * @param {number} offsetX - The relative offset distance on the x-axis.
-   * @param {number} [offsetY=offsetX] - The relative offset distance on the y-axis.
-   * @returns {Cropper} this
-   */
-  move: function move(offsetX) {
-    var offsetY = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : offsetX;
-    var _canvasData = this.canvasData,
-        left = _canvasData.left,
-        top = _canvasData.top;
-
-
-    return this.moveTo(isUndefined(offsetX) ? offsetX : left + Number(offsetX), isUndefined(offsetY) ? offsetY : top + Number(offsetY));
-  },
-
-
-  /**
-   * Move the canvas to an absolute point
-   * @param {number} x - The x-axis coordinate.
-   * @param {number} [y=x] - The y-axis coordinate.
-   * @returns {Cropper} this
-   */
-  moveTo: function moveTo(x) {
-    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : x;
-    var canvasData = this.canvasData;
-
-    var changed = false;
-
-    x = Number(x);
-    y = Number(y);
-
-    if (this.ready && !this.disabled && this.options.movable) {
-      if (isNumber(x)) {
-        canvasData.left = x;
-        changed = true;
-      }
-
-      if (isNumber(y)) {
-        canvasData.top = y;
-        changed = true;
-      }
-
-      if (changed) {
-        this.renderCanvas(true);
-      }
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Zoom the canvas with a relative ratio
-   * @param {number} ratio - The target ratio.
-   * @param {Event} _originalEvent - The original event if any.
-   * @returns {Cropper} this
-   */
-  zoom: function zoom(ratio, _originalEvent) {
-    var canvasData = this.canvasData;
-
-
-    ratio = Number(ratio);
-
-    if (ratio < 0) {
-      ratio = 1 / (1 - ratio);
-    } else {
-      ratio = 1 + ratio;
-    }
-
-    return this.zoomTo(canvasData.width * ratio / canvasData.naturalWidth, null, _originalEvent);
-  },
-
-
-  /**
-   * Zoom the canvas to an absolute ratio
-   * @param {number} ratio - The target ratio.
-   * @param {Object} pivot - The zoom pivot point coordinate.
-   * @param {Event} _originalEvent - The original event if any.
-   * @returns {Cropper} this
-   */
-  zoomTo: function zoomTo(ratio, pivot, _originalEvent) {
-    var options = this.options,
-        canvasData = this.canvasData;
-    var width = canvasData.width,
-        height = canvasData.height,
-        naturalWidth = canvasData.naturalWidth,
-        naturalHeight = canvasData.naturalHeight;
-
-
-    ratio = Number(ratio);
-
-    if (ratio >= 0 && this.ready && !this.disabled && options.zoomable) {
-      var newWidth = naturalWidth * ratio;
-      var newHeight = naturalHeight * ratio;
-
-      if (dispatchEvent(this.element, EVENT_ZOOM, {
-        ratio: ratio,
-        oldRatio: width / naturalWidth,
-        originalEvent: _originalEvent
-      }) === false) {
-        return this;
-      }
-
-      if (_originalEvent) {
-        var pointers = this.pointers;
-
-        var offset = getOffset(this.cropper);
-        var center = pointers && Object.keys(pointers).length ? getPointersCenter(pointers) : {
-          pageX: _originalEvent.pageX,
-          pageY: _originalEvent.pageY
+var Browser = /** @class */function () {
+    function Browser() {}
+    /**
+     * 获取浏览器数据
+     */
+    Browser.getBrowser = function () {
+        var UA = navigator.userAgent || '';
+        var isAndroid = function () {
+            return UA.match(/Android/i) ? true : false;
+        }();
+        var isQQ = function () {
+            return (/(iPad|iPhone|iPod).*? (IPad)?QQ\/([\d\.]+)/.test(UA) || /\bV1_AND_SQI?_([\d\.]+)(.*? QQ\/([\d\.]+))?/.test(UA)
+            );
+        }();
+        var isIOS = function () {
+            return UA.match(/iPhone|iPad|iPod/i) ? true : false;
+        }();
+        var isSafari = function () {
+            return (/iPhone|iPad|iPod\/([\w.]+).*(safari).*/i.test(UA)
+            );
+        }();
+        var isWx = function () {
+            return UA.match(/micromessenger/i) ? true : false;
+        }();
+        var isWb = function () {
+            return UA.match(/weibo/i) ? true : false;
+        }();
+        var isAndroidChrome = function () {
+            return (UA.match(/Chrome\/([\d.]+)/) || UA.match(/CriOS\/([\d.]+)/)) && isAndroid && !isQQ;
+        }();
+        var isQZ = function () {
+            return UA.indexOf('Qzone/') !== -1;
+        }();
+        var browser = {
+            isAndroid: isAndroid,
+            isIOS: isIOS,
+            isSafari: isSafari,
+            isQQ: isQQ,
+            isWb: isWb,
+            isWx: isWx,
+            isQZ: isQZ,
+            isAndroidChrome: isAndroidChrome
         };
-
-        // Zoom from the triggering point of the event
-        canvasData.left -= (newWidth - width) * ((center.pageX - offset.left - canvasData.left) / width);
-        canvasData.top -= (newHeight - height) * ((center.pageY - offset.top - canvasData.top) / height);
-      } else if (isPlainObject(pivot) && isNumber(pivot.x) && isNumber(pivot.y)) {
-        canvasData.left -= (newWidth - width) * ((pivot.x - canvasData.left) / width);
-        canvasData.top -= (newHeight - height) * ((pivot.y - canvasData.top) / height);
-      } else {
-        // Zoom from the center of the canvas
-        canvasData.left -= (newWidth - width) / 2;
-        canvasData.top -= (newHeight - height) / 2;
-      }
-
-      canvasData.width = newWidth;
-      canvasData.height = newHeight;
-      this.renderCanvas(true);
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Rotate the canvas with a relative degree
-   * @param {number} degree - The rotate degree.
-   * @returns {Cropper} this
-   */
-  rotate: function rotate(degree) {
-    return this.rotateTo((this.imageData.rotate || 0) + Number(degree));
-  },
-
-
-  /**
-   * Rotate the canvas to an absolute degree
-   * @param {number} degree - The rotate degree.
-   * @returns {Cropper} this
-   */
-  rotateTo: function rotateTo(degree) {
-    degree = Number(degree);
-
-    if (isNumber(degree) && this.ready && !this.disabled && this.options.rotatable) {
-      this.imageData.rotate = degree % 360;
-      this.renderCanvas(true, true);
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Scale the image on the x-axis.
-   * @param {number} scaleX - The scale ratio on the x-axis.
-   * @returns {Cropper} this
-   */
-  scaleX: function scaleX(_scaleX) {
-    var scaleY = this.imageData.scaleY;
-
-
-    return this.scale(_scaleX, isNumber(scaleY) ? scaleY : 1);
-  },
-
-
-  /**
-   * Scale the image on the y-axis.
-   * @param {number} scaleY - The scale ratio on the y-axis.
-   * @returns {Cropper} this
-   */
-  scaleY: function scaleY(_scaleY) {
-    var scaleX = this.imageData.scaleX;
-
-
-    return this.scale(isNumber(scaleX) ? scaleX : 1, _scaleY);
-  },
-
-
-  /**
-   * Scale the image
-   * @param {number} scaleX - The scale ratio on the x-axis.
-   * @param {number} [scaleY=scaleX] - The scale ratio on the y-axis.
-   * @returns {Cropper} this
-   */
-  scale: function scale(scaleX) {
-    var scaleY = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : scaleX;
-    var imageData = this.imageData;
-
-    var transformed = false;
-
-    scaleX = Number(scaleX);
-    scaleY = Number(scaleY);
-
-    if (this.ready && !this.disabled && this.options.scalable) {
-      if (isNumber(scaleX)) {
-        imageData.scaleX = scaleX;
-        transformed = true;
-      }
-
-      if (isNumber(scaleY)) {
-        imageData.scaleY = scaleY;
-        transformed = true;
-      }
-
-      if (transformed) {
-        this.renderCanvas(true, true);
-      }
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Get the cropped area position and size data (base on the original image)
-   * @param {boolean} [rounded=false] - Indicate if round the data values or not.
-   * @returns {Object} The result cropped data.
-   */
-  getData: function getData$$1() {
-    var rounded = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-    var options = this.options,
-        imageData = this.imageData,
-        canvasData = this.canvasData,
-        cropBoxData = this.cropBoxData;
-
-    var data = void 0;
-
-    if (this.ready && this.cropped) {
-      data = {
-        x: cropBoxData.left - canvasData.left,
-        y: cropBoxData.top - canvasData.top,
-        width: cropBoxData.width,
-        height: cropBoxData.height
-      };
-
-      var ratio = imageData.width / imageData.naturalWidth;
-
-      forEach(data, function (n, i) {
-        data[i] = n / ratio;
-      });
-
-      if (rounded) {
-        // In case rounding off leads to extra 1px in right or bottom border
-        // we should round the top-left corner and the dimension (#343).
-        var bottom = Math.round(data.y + data.height);
-        var right = Math.round(data.x + data.width);
-
-        data.x = Math.round(data.x);
-        data.y = Math.round(data.y);
-        data.width = right - data.x;
-        data.height = bottom - data.y;
-      }
-    } else {
-      data = {
-        x: 0,
-        y: 0,
-        width: 0,
-        height: 0
-      };
-    }
-
-    if (options.rotatable) {
-      data.rotate = imageData.rotate || 0;
-    }
-
-    if (options.scalable) {
-      data.scaleX = imageData.scaleX || 1;
-      data.scaleY = imageData.scaleY || 1;
-    }
-
-    return data;
-  },
-
-
-  /**
-   * Set the cropped area position and size with new data
-   * @param {Object} data - The new data.
-   * @returns {Cropper} this
-   */
-  setData: function setData$$1(data) {
-    var options = this.options,
-        imageData = this.imageData,
-        canvasData = this.canvasData;
-
-    var cropBoxData = {};
-
-    if (this.ready && !this.disabled && isPlainObject(data)) {
-      var transformed = false;
-
-      if (options.rotatable) {
-        if (isNumber(data.rotate) && data.rotate !== imageData.rotate) {
-          imageData.rotate = data.rotate;
-          transformed = true;
-        }
-      }
-
-      if (options.scalable) {
-        if (isNumber(data.scaleX) && data.scaleX !== imageData.scaleX) {
-          imageData.scaleX = data.scaleX;
-          transformed = true;
-        }
-
-        if (isNumber(data.scaleY) && data.scaleY !== imageData.scaleY) {
-          imageData.scaleY = data.scaleY;
-          transformed = true;
-        }
-      }
-
-      if (transformed) {
-        this.renderCanvas(true, true);
-      }
-
-      var ratio = imageData.width / imageData.naturalWidth;
-
-      if (isNumber(data.x)) {
-        cropBoxData.left = data.x * ratio + canvasData.left;
-      }
-
-      if (isNumber(data.y)) {
-        cropBoxData.top = data.y * ratio + canvasData.top;
-      }
-
-      if (isNumber(data.width)) {
-        cropBoxData.width = data.width * ratio;
-      }
-
-      if (isNumber(data.height)) {
-        cropBoxData.height = data.height * ratio;
-      }
-
-      this.setCropBoxData(cropBoxData);
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Get the container size data.
-   * @returns {Object} The result container data.
-   */
-  getContainerData: function getContainerData() {
-    return this.ready ? assign({}, this.containerData) : {};
-  },
-
-
-  /**
-   * Get the image position and size data.
-   * @returns {Object} The result image data.
-   */
-  getImageData: function getImageData() {
-    return this.sized ? assign({}, this.imageData) : {};
-  },
-
-
-  /**
-   * Get the canvas position and size data.
-   * @returns {Object} The result canvas data.
-   */
-  getCanvasData: function getCanvasData() {
-    var canvasData = this.canvasData;
-
-    var data = {};
-
-    if (this.ready) {
-      forEach(['left', 'top', 'width', 'height', 'naturalWidth', 'naturalHeight'], function (n) {
-        data[n] = canvasData[n];
-      });
-    }
-
-    return data;
-  },
-
-
-  /**
-   * Set the canvas position and size with new data.
-   * @param {Object} data - The new canvas data.
-   * @returns {Cropper} this
-   */
-  setCanvasData: function setCanvasData(data) {
-    var canvasData = this.canvasData;
-    var aspectRatio = canvasData.aspectRatio;
-
-
-    if (this.ready && !this.disabled && isPlainObject(data)) {
-      if (isNumber(data.left)) {
-        canvasData.left = data.left;
-      }
-
-      if (isNumber(data.top)) {
-        canvasData.top = data.top;
-      }
-
-      if (isNumber(data.width)) {
-        canvasData.width = data.width;
-        canvasData.height = data.width / aspectRatio;
-      } else if (isNumber(data.height)) {
-        canvasData.height = data.height;
-        canvasData.width = data.height * aspectRatio;
-      }
-
-      this.renderCanvas(true);
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Get the crop box position and size data.
-   * @returns {Object} The result crop box data.
-   */
-  getCropBoxData: function getCropBoxData() {
-    var cropBoxData = this.cropBoxData;
-
-    var data = void 0;
-
-    if (this.ready && this.cropped) {
-      data = {
-        left: cropBoxData.left,
-        top: cropBoxData.top,
-        width: cropBoxData.width,
-        height: cropBoxData.height
-      };
-    }
-
-    return data || {};
-  },
-
-
-  /**
-   * Set the crop box position and size with new data.
-   * @param {Object} data - The new crop box data.
-   * @returns {Cropper} this
-   */
-  setCropBoxData: function setCropBoxData(data) {
-    var cropBoxData = this.cropBoxData;
-    var aspectRatio = this.options.aspectRatio;
-
-    var widthChanged = void 0;
-    var heightChanged = void 0;
-
-    if (this.ready && this.cropped && !this.disabled && isPlainObject(data)) {
-      if (isNumber(data.left)) {
-        cropBoxData.left = data.left;
-      }
-
-      if (isNumber(data.top)) {
-        cropBoxData.top = data.top;
-      }
-
-      if (isNumber(data.width) && data.width !== cropBoxData.width) {
-        widthChanged = true;
-        cropBoxData.width = data.width;
-      }
-
-      if (isNumber(data.height) && data.height !== cropBoxData.height) {
-        heightChanged = true;
-        cropBoxData.height = data.height;
-      }
-
-      if (aspectRatio) {
-        if (widthChanged) {
-          cropBoxData.height = cropBoxData.width / aspectRatio;
-        } else if (heightChanged) {
-          cropBoxData.width = cropBoxData.height * aspectRatio;
-        }
-      }
-
-      this.renderCropBox();
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Get a canvas drawn the cropped image.
-   * @param {Object} [options={}] - The config options.
-   * @returns {HTMLCanvasElement} - The result canvas.
-   */
-  getCroppedCanvas: function getCroppedCanvas() {
-    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-    if (!this.ready || !window.HTMLCanvasElement) {
-      return null;
-    }
-
-    var canvasData = this.canvasData;
-
-    var source = getSourceCanvas(this.image, this.imageData, canvasData, options);
-
-    // Returns the source canvas if it is not cropped.
-    if (!this.cropped) {
-      return source;
-    }
-
-    var _getData = this.getData(),
-        initialX = _getData.x,
-        initialY = _getData.y,
-        initialWidth = _getData.width,
-        initialHeight = _getData.height;
-
-    var ratio = source.width / Math.floor(canvasData.naturalWidth);
-
-    if (ratio !== 1) {
-      initialX *= ratio;
-      initialY *= ratio;
-      initialWidth *= ratio;
-      initialHeight *= ratio;
-    }
-
-    var aspectRatio = initialWidth / initialHeight;
-    var maxSizes = getAdjustedSizes({
-      aspectRatio: aspectRatio,
-      width: options.maxWidth || Infinity,
-      height: options.maxHeight || Infinity
-    });
-    var minSizes = getAdjustedSizes({
-      aspectRatio: aspectRatio,
-      width: options.minWidth || 0,
-      height: options.minHeight || 0
-    }, 'cover');
-
-    var _getAdjustedSizes = getAdjustedSizes({
-      aspectRatio: aspectRatio,
-      width: options.width || (ratio !== 1 ? source.width : initialWidth),
-      height: options.height || (ratio !== 1 ? source.height : initialHeight)
-    }),
-        width = _getAdjustedSizes.width,
-        height = _getAdjustedSizes.height;
-
-    width = Math.min(maxSizes.width, Math.max(minSizes.width, width));
-    height = Math.min(maxSizes.height, Math.max(minSizes.height, height));
-
-    var canvas = document.createElement('canvas');
-    var context = canvas.getContext('2d');
-
-    canvas.width = normalizeDecimalNumber(width);
-    canvas.height = normalizeDecimalNumber(height);
-
-    context.fillStyle = options.fillColor || 'transparent';
-    context.fillRect(0, 0, width, height);
-
-    var _options$imageSmoothi = options.imageSmoothingEnabled,
-        imageSmoothingEnabled = _options$imageSmoothi === undefined ? true : _options$imageSmoothi,
-        imageSmoothingQuality = options.imageSmoothingQuality;
-
-
-    context.imageSmoothingEnabled = imageSmoothingEnabled;
-
-    if (imageSmoothingQuality) {
-      context.imageSmoothingQuality = imageSmoothingQuality;
-    }
-
-    // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D.drawImage
-    var sourceWidth = source.width;
-    var sourceHeight = source.height;
-
-    // Source canvas parameters
-    var srcX = initialX;
-    var srcY = initialY;
-    var srcWidth = void 0;
-    var srcHeight = void 0;
-
-    // Destination canvas parameters
-    var dstX = void 0;
-    var dstY = void 0;
-    var dstWidth = void 0;
-    var dstHeight = void 0;
-
-    if (srcX <= -initialWidth || srcX > sourceWidth) {
-      srcX = 0;
-      srcWidth = 0;
-      dstX = 0;
-      dstWidth = 0;
-    } else if (srcX <= 0) {
-      dstX = -srcX;
-      srcX = 0;
-      srcWidth = Math.min(sourceWidth, initialWidth + srcX);
-      dstWidth = srcWidth;
-    } else if (srcX <= sourceWidth) {
-      dstX = 0;
-      srcWidth = Math.min(initialWidth, sourceWidth - srcX);
-      dstWidth = srcWidth;
-    }
-
-    if (srcWidth <= 0 || srcY <= -initialHeight || srcY > sourceHeight) {
-      srcY = 0;
-      srcHeight = 0;
-      dstY = 0;
-      dstHeight = 0;
-    } else if (srcY <= 0) {
-      dstY = -srcY;
-      srcY = 0;
-      srcHeight = Math.min(sourceHeight, initialHeight + srcY);
-      dstHeight = srcHeight;
-    } else if (srcY <= sourceHeight) {
-      dstY = 0;
-      srcHeight = Math.min(initialHeight, sourceHeight - srcY);
-      dstHeight = srcHeight;
-    }
-
-    var params = [srcX, srcY, srcWidth, srcHeight];
-
-    // Avoid "IndexSizeError"
-    if (dstWidth > 0 && dstHeight > 0) {
-      var scale = width / initialWidth;
-
-      params.push(dstX * scale, dstY * scale, dstWidth * scale, dstHeight * scale);
-    }
-
-    // All the numerical parameters should be integer for `drawImage`
-    // https://github.com/fengyuanchen/cropper/issues/476
-    context.drawImage.apply(context, [source].concat(toConsumableArray(params.map(function (param) {
-      return Math.floor(normalizeDecimalNumber(param));
-    }))));
-
-    return canvas;
-  },
-
-
-  /**
-   * Change the aspect ratio of the crop box.
-   * @param {number} aspectRatio - The new aspect ratio.
-   * @returns {Cropper} this
-   */
-  setAspectRatio: function setAspectRatio(aspectRatio) {
-    var options = this.options;
-
-
-    if (!this.disabled && !isUndefined(aspectRatio)) {
-      // 0 -> NaN
-      options.aspectRatio = Math.max(0, aspectRatio) || NaN;
-
-      if (this.ready) {
-        this.initCropBox();
-
-        if (this.cropped) {
-          this.renderCropBox();
-        }
-      }
-    }
-
-    return this;
-  },
-
-
-  /**
-   * Change the drag mode.
-   * @param {string} mode - The new drag mode.
-   * @returns {Cropper} this
-   */
-  setDragMode: function setDragMode(mode) {
-    var options = this.options,
-        dragBox = this.dragBox,
-        face = this.face;
-
-
-    if (this.ready && !this.disabled) {
-      var croppable = mode === DRAG_MODE_CROP;
-      var movable = options.movable && mode === DRAG_MODE_MOVE;
-
-      mode = croppable || movable ? mode : DRAG_MODE_NONE;
-
-      options.dragMode = mode;
-      setData(dragBox, DATA_ACTION, mode);
-      toggleClass(dragBox, CLASS_CROP, croppable);
-      toggleClass(dragBox, CLASS_MOVE, movable);
-
-      if (!options.cropBoxMovable) {
-        // Sync drag mode to crop box when it is not movable
-        setData(face, DATA_ACTION, mode);
-        toggleClass(face, CLASS_CROP, croppable);
-        toggleClass(face, CLASS_MOVE, movable);
-      }
-    }
-
-    return this;
-  }
-};
-
-var AnotherCropper = WINDOW.Cropper;
-
-var Cropper = function () {
-  /**
-   * Create a new Cropper.
-   * @param {Element} element - The target element for cropping.
-   * @param {Object} [options={}] - The configuration options.
-   */
-  function Cropper(element) {
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    classCallCheck(this, Cropper);
-
-    if (!element || !REGEXP_TAG_NAME.test(element.tagName)) {
-      throw new Error('The first argument is required and must be an <img> or <canvas> element.');
-    }
-
-    this.element = element;
-    this.options = assign({}, DEFAULTS, isPlainObject(options) && options);
-    this.cropped = false;
-    this.disabled = false;
-    this.pointers = {};
-    this.ready = false;
-    this.reloading = false;
-    this.replaced = false;
-    this.sized = false;
-    this.sizing = false;
-    this.init();
-  }
-
-  createClass(Cropper, [{
-    key: 'init',
-    value: function init() {
-      var element = this.element;
-
-      var tagName = element.tagName.toLowerCase();
-      var url = void 0;
-
-      if (getData(element, NAMESPACE)) {
-        return;
-      }
-
-      setData(element, NAMESPACE, this);
-
-      if (tagName === 'img') {
-        this.isImg = true;
-
-        // e.g.: "img/picture.jpg"
-        url = element.getAttribute('src') || '';
-        this.originalUrl = url;
-
-        // Stop when it's a blank image
-        if (!url) {
-          return;
-        }
-
-        // e.g.: "http://example.com/img/picture.jpg"
-        url = element.src;
-      } else if (tagName === 'canvas' && window.HTMLCanvasElement) {
-        url = element.toDataURL();
-      }
-
-      this.load(url);
-    }
-  }, {
-    key: 'load',
-    value: function load(url) {
-      var _this = this;
-
-      if (!url) {
-        return;
-      }
-
-      this.url = url;
-      this.imageData = {};
-
-      var element = this.element,
-          options = this.options;
-
-
-      if (!options.rotatable && !options.scalable) {
-        options.checkOrientation = false;
-      }
-
-      if (!options.checkOrientation || !window.ArrayBuffer) {
-        this.clone();
-        return;
-      }
-
-      // XMLHttpRequest disallows to open a Data URL in some browsers like IE11 and Safari
-      if (REGEXP_DATA_URL.test(url)) {
-        if (REGEXP_DATA_URL_JPEG.test(url)) {
-          this.read(dataURLToArrayBuffer(url));
-        } else {
-          this.clone();
-        }
-
-        return;
-      }
-
-      var xhr = new XMLHttpRequest();
-
-      this.reloading = true;
-      this.xhr = xhr;
-
-      var done = function done() {
-        _this.reloading = false;
-        _this.xhr = null;
-      };
-
-      xhr.ontimeout = done;
-      xhr.onabort = done;
-      xhr.onerror = function () {
-        done();
-        _this.clone();
-      };
-
-      xhr.onload = function () {
-        done();
-        _this.read(xhr.response);
-      };
-
-      // Bust cache when there is a "crossOrigin" property
-      if (options.checkCrossOrigin && isCrossOriginURL(url) && element.crossOrigin) {
-        url = addTimestamp(url);
-      }
-
-      xhr.open('get', url);
-      xhr.responseType = 'arraybuffer';
-      xhr.withCredentials = element.crossOrigin === 'use-credentials';
-      xhr.send();
-    }
-  }, {
-    key: 'read',
-    value: function read(arrayBuffer) {
-      var options = this.options,
-          imageData = this.imageData;
-
-      var orientation = getOrientation(arrayBuffer);
-      var rotate = 0;
-      var scaleX = 1;
-      var scaleY = 1;
-
-      if (orientation > 1) {
-        this.url = arrayBufferToDataURL(arrayBuffer, 'image/jpeg');
-
-        var _parseOrientation = parseOrientation(orientation);
-
-        rotate = _parseOrientation.rotate;
-        scaleX = _parseOrientation.scaleX;
-        scaleY = _parseOrientation.scaleY;
-      }
-
-      if (options.rotatable) {
-        imageData.rotate = rotate;
-      }
-
-      if (options.scalable) {
-        imageData.scaleX = scaleX;
-        imageData.scaleY = scaleY;
-      }
-
-      this.clone();
-    }
-  }, {
-    key: 'clone',
-    value: function clone() {
-      var element = this.element,
-          url = this.url;
-
-      var crossOrigin = void 0;
-      var crossOriginUrl = void 0;
-
-      if (this.options.checkCrossOrigin && isCrossOriginURL(url)) {
-        crossOrigin = element.crossOrigin;
-
-
-        if (crossOrigin) {
-          crossOriginUrl = url;
-        } else {
-          crossOrigin = 'anonymous';
-
-          // Bust cache when there is not a "crossOrigin" property
-          crossOriginUrl = addTimestamp(url);
-        }
-      }
-
-      this.crossOrigin = crossOrigin;
-      this.crossOriginUrl = crossOriginUrl;
-
-      var image = document.createElement('img');
-
-      if (crossOrigin) {
-        image.crossOrigin = crossOrigin;
-      }
-
-      image.src = crossOriginUrl || url;
-      this.image = image;
-      image.onload = this.start.bind(this);
-      image.onerror = this.stop.bind(this);
-      addClass(image, CLASS_HIDE);
-      element.parentNode.insertBefore(image, element.nextSibling);
-    }
-  }, {
-    key: 'start',
-    value: function start() {
-      var _this2 = this;
-
-      var image = this.isImg ? this.element : this.image;
-
-      image.onload = null;
-      image.onerror = null;
-      this.sizing = true;
-
-      var IS_SAFARI = WINDOW.navigator && /(Macintosh|iPhone|iPod|iPad).*AppleWebKit/i.test(WINDOW.navigator.userAgent);
-      var done = function done(naturalWidth, naturalHeight) {
-        assign(_this2.imageData, {
-          naturalWidth: naturalWidth,
-          naturalHeight: naturalHeight,
-          aspectRatio: naturalWidth / naturalHeight
-        });
-        _this2.sizing = false;
-        _this2.sized = true;
-        _this2.build();
-      };
-
-      // Modern browsers (except Safari)
-      if (image.naturalWidth && !IS_SAFARI) {
-        done(image.naturalWidth, image.naturalHeight);
-        return;
-      }
-
-      var sizingImage = document.createElement('img');
-      var body = document.body || document.documentElement;
-
-      this.sizingImage = sizingImage;
-
-      sizingImage.onload = function () {
-        done(sizingImage.width, sizingImage.height);
-
-        if (!IS_SAFARI) {
-          body.removeChild(sizingImage);
-        }
-      };
-
-      sizingImage.src = image.src;
-
-      // iOS Safari will convert the image automatically
-      // with its orientation once append it into DOM (#279)
-      if (!IS_SAFARI) {
-        sizingImage.style.cssText = 'left:0;' + 'max-height:none!important;' + 'max-width:none!important;' + 'min-height:0!important;' + 'min-width:0!important;' + 'opacity:0;' + 'position:absolute;' + 'top:0;' + 'z-index:-1;';
-        body.appendChild(sizingImage);
-      }
-    }
-  }, {
-    key: 'stop',
-    value: function stop() {
-      var image = this.image;
-
-
-      image.onload = null;
-      image.onerror = null;
-      image.parentNode.removeChild(image);
-      this.image = null;
-    }
-  }, {
-    key: 'build',
-    value: function build() {
-      if (!this.sized || this.ready) {
-        return;
-      }
-
-      var element = this.element,
-          options = this.options,
-          image = this.image;
-
-      // Create cropper elements
-
-      var container = element.parentNode;
-      var template = document.createElement('div');
-
-      template.innerHTML = TEMPLATE;
-
-      var cropper = template.querySelector('.' + NAMESPACE + '-container');
-      var canvas = cropper.querySelector('.' + NAMESPACE + '-canvas');
-      var dragBox = cropper.querySelector('.' + NAMESPACE + '-drag-box');
-      var cropBox = cropper.querySelector('.' + NAMESPACE + '-crop-box');
-      var face = cropBox.querySelector('.' + NAMESPACE + '-face');
-
-      this.container = container;
-      this.cropper = cropper;
-      this.canvas = canvas;
-      this.dragBox = dragBox;
-      this.cropBox = cropBox;
-      this.viewBox = cropper.querySelector('.' + NAMESPACE + '-view-box');
-      this.face = face;
-
-      canvas.appendChild(image);
-
-      // Hide the original image
-      addClass(element, CLASS_HIDDEN);
-
-      // Inserts the cropper after to the current image
-      container.insertBefore(cropper, element.nextSibling);
-
-      // Show the image if is hidden
-      if (!this.isImg) {
-        removeClass(image, CLASS_HIDE);
-      }
-
-      this.initPreview();
-      this.bind();
-
-      options.initialAspectRatio = Math.max(0, options.initialAspectRatio) || NaN;
-      options.aspectRatio = Math.max(0, options.aspectRatio) || NaN;
-      options.viewMode = Math.max(0, Math.min(3, Math.round(options.viewMode))) || 0;
-
-      addClass(cropBox, CLASS_HIDDEN);
-
-      if (!options.guides) {
-        addClass(cropBox.getElementsByClassName(NAMESPACE + '-dashed'), CLASS_HIDDEN);
-      }
-
-      if (!options.center) {
-        addClass(cropBox.getElementsByClassName(NAMESPACE + '-center'), CLASS_HIDDEN);
-      }
-
-      if (options.background) {
-        addClass(cropper, NAMESPACE + '-bg');
-      }
-
-      if (!options.highlight) {
-        addClass(face, CLASS_INVISIBLE);
-      }
-
-      if (options.cropBoxMovable) {
-        addClass(face, CLASS_MOVE);
-        setData(face, DATA_ACTION, ACTION_ALL);
-      }
-
-      if (!options.cropBoxResizable) {
-        addClass(cropBox.getElementsByClassName(NAMESPACE + '-line'), CLASS_HIDDEN);
-        addClass(cropBox.getElementsByClassName(NAMESPACE + '-point'), CLASS_HIDDEN);
-      }
-
-      this.render();
-      this.ready = true;
-      this.setDragMode(options.dragMode);
-
-      if (options.autoCrop) {
-        this.crop();
-      }
-
-      this.setData(options.data);
-
-      if (isFunction(options.ready)) {
-        addListener(element, EVENT_READY, options.ready, {
-          once: true
-        });
-      }
-
-      dispatchEvent(element, EVENT_READY);
-    }
-  }, {
-    key: 'unbuild',
-    value: function unbuild() {
-      if (!this.ready) {
-        return;
-      }
-
-      this.ready = false;
-      this.unbind();
-      this.resetPreview();
-      this.cropper.parentNode.removeChild(this.cropper);
-      removeClass(this.element, CLASS_HIDDEN);
-    }
-  }, {
-    key: 'uncreate',
-    value: function uncreate() {
-      if (this.ready) {
-        this.unbuild();
-        this.ready = false;
-        this.cropped = false;
-      } else if (this.sizing) {
-        this.sizingImage.onload = null;
-        this.sizing = false;
-        this.sized = false;
-      } else if (this.reloading) {
-        this.xhr.abort();
-      } else if (this.image) {
-        this.stop();
-      }
-    }
-
-    /**
-     * Get the no conflict cropper class.
-     * @returns {Cropper} The cropper class.
-     */
-
-  }], [{
-    key: 'noConflict',
-    value: function noConflict() {
-      window.Cropper = AnotherCropper;
-      return Cropper;
-    }
-
-    /**
-     * Change the default options.
-     * @param {Object} options - The new default options.
-     */
-
-  }, {
-    key: 'setDefaults',
-    value: function setDefaults(options) {
-      assign(DEFAULTS, isPlainObject(options) && options);
-    }
-  }]);
-  return Cropper;
+        return browser;
+    };
+    return Browser;
 }();
 
-assign(Cropper.prototype, render, preview, events, handlers, change, methods);
-
-/* harmony default export */ __webpack_exports__["a"] = (Cropper);
-
-
-/***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(65)(false);
-// imports
-
-
-// module
-exports.push([module.i, "/*!\n * Cropper.js v1.4.1\n * https://fengyuanchen.github.io/cropperjs\n *\n * Copyright 2015-present Chen Fengyuan\n * Released under the MIT license\n *\n * Date: 2018-07-15T09:54:43.167Z\n */.cropper-container{-moz-user-select:none;-ms-touch-action:none;-ms-user-select:none;-webkit-user-select:none;direction:ltr;font-size:0;line-height:0;position:relative;touch-action:none;user-select:none}.cropper-container img{display:block;height:100%;image-orientation:0deg;max-height:none!important;max-width:none!important;min-height:0!important;min-width:0!important;width:100%}.cropper-canvas,.cropper-crop-box,.cropper-drag-box,.cropper-modal,.cropper-wrap-box{bottom:0;left:0;position:absolute;right:0;top:0}.cropper-canvas,.cropper-wrap-box{overflow:hidden}.cropper-drag-box{background-color:#fff;opacity:0}.cropper-modal{background-color:#000;opacity:.5}.cropper-view-box{display:block;height:100%;outline:1px solid #39f;outline-color:rgba(51,153,255,.75);overflow:hidden;width:100%}.cropper-dashed{border:0 dashed #eee;display:block;opacity:.5;position:absolute}.cropper-dashed.dashed-h{border-bottom-width:1px;border-top-width:1px;height:33.33333%;left:0;top:33.33333%;width:100%}.cropper-dashed.dashed-v{border-left-width:1px;border-right-width:1px;height:100%;left:33.33333%;top:0;width:33.33333%}.cropper-center{display:block;height:0;left:50%;opacity:.75;position:absolute;top:50%;width:0}.cropper-center:after,.cropper-center:before{background-color:#eee;content:\" \";display:block;position:absolute}.cropper-center:before{height:1px;left:-3px;top:0;width:7px}.cropper-center:after{height:7px;left:0;top:-3px;width:1px}.cropper-face,.cropper-line,.cropper-point{display:block;height:100%;opacity:.1;position:absolute;width:100%}.cropper-face{background-color:#fff;left:0;top:0}.cropper-line{background-color:#39f}.cropper-line.line-e{cursor:ew-resize;right:-3px;top:0;width:5px}.cropper-line.line-n{cursor:ns-resize;height:5px;left:0;top:-3px}.cropper-line.line-w{cursor:ew-resize;left:-3px;top:0;width:5px}.cropper-line.line-s{bottom:-3px;cursor:ns-resize;height:5px;left:0}.cropper-point{background-color:#39f;height:5px;opacity:.75;width:5px}.cropper-point.point-e{cursor:ew-resize;margin-top:-3px;right:-3px;top:50%}.cropper-point.point-n{cursor:ns-resize;left:50%;margin-left:-3px;top:-3px}.cropper-point.point-w{cursor:ew-resize;left:-3px;margin-top:-3px;top:50%}.cropper-point.point-s{bottom:-3px;cursor:s-resize;left:50%;margin-left:-3px}.cropper-point.point-ne{cursor:nesw-resize;right:-3px;top:-3px}.cropper-point.point-nw{cursor:nwse-resize;left:-3px;top:-3px}.cropper-point.point-sw{bottom:-3px;cursor:nesw-resize;left:-3px}.cropper-point.point-se{bottom:-3px;cursor:nwse-resize;height:20px;opacity:1;right:-3px;width:20px}@media (min-width:768px){.cropper-point.point-se{height:15px;width:15px}}@media (min-width:992px){.cropper-point.point-se{height:10px;width:10px}}@media (min-width:1200px){.cropper-point.point-se{height:5px;opacity:.75;width:5px}}.cropper-point.point-se:before{background-color:#39f;bottom:-50%;content:\" \";display:block;height:200%;opacity:0;position:absolute;right:-50%;width:200%}.cropper-invisible{opacity:0}.cropper-bg{background-image:url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC\")}.cropper-hide{display:block;height:0;position:absolute;width:0}.cropper-hidden{display:none!important}.cropper-move{cursor:move}.cropper-crop{cursor:crosshair}.cropper-disabled .cropper-drag-box,.cropper-disabled .cropper-face,.cropper-disabled .cropper-line,.cropper-disabled .cropper-point{cursor:not-allowed}", ""]);
-
-// exports
-
+/**
+ * AppLink:H5唤起APP的所有方法
+ */
+var AppLink = /** @class */function () {
+    /**
+     * 类的contructor方法
+     * @param config IAppLink类型的config文件
+     */
+    function AppLink(config) {
+        /**
+         * UA
+         */
+        this.UA = {};
+        /**
+         * 传入的config数据，以接口约束
+         */
+        this.config = {};
+        this.UA = navigator.userAgent || '';
+        this.config = config;
+    }
+    /**
+     * 跳转函数
+     * @param url 链接
+     */
+    AppLink.prototype.go = function (url) {
+        window.location.href = url;
+    };
+    /**
+     * 检查是否唤起
+     * @param cb 回调函数
+     */
+    AppLink.prototype.checkOpen = function (cb) {
+        var inter = null;
+        var statue = false;
+        var count = 0;
+        inter = window.setInterval(function () {
+            count++;
+            statue = document.hidden || document.webkitHidden;
+            if (statue || count > 40) {
+                cb(statue);
+                clearInterval(inter);
+            }
+        }, 50);
+    };
+    /**
+     * 外部调用的入口函数
+     */
+    AppLink.prototype.open = function () {
+        var _this = this;
+        var browser = Browser.getBrowser();
+        var config = this.config;
+        // 微信直接跳 应用宝
+        if (browser.isWx) {
+            this.go(this.config.yyb);
+        } else if (browser.isQQ) {
+            if (browser.isIOS) {
+                // 没有下载
+                this.checkOpen(function (isSuccess) {
+                    if (!isSuccess) {
+                        _this.go(_this.config.appstore);
+                    }
+                });
+            }
+            // iOS跳到AppStore
+            if (browser.isAndroid) {
+                // 使用scheme唤起
+                this.tryCallApp(this.config.schema);
+                // 唤起失败 跳到应用宝
+                this.checkOpen(function (isSuccess) {
+                    if (!isSuccess) {
+                        _this.go(_this.config.yyb);
+                    }
+                });
+            }
+        } else if (browser.isWb) {
+            // 使用scheme唤起
+            this.tryCallApp(this.config.schema);
+            // 微博：唤起失败，也不跳转，会有引导功能
+        } else if (browser.isSafari) {
+            var version = this.getIOSVersion();
+            // iOS10以下不支持直接跳转到AppStore，跳到应用宝
+            if (version < 10) {
+                this.go(this.config.yyb);
+            } else {
+                this.go(this.config.appstore);
+            }
+        } else {
+            // 其他情况，直接跳应用宝
+            this.go(this.config.yyb);
+        }
+    };
+    /**
+     * 下载按钮的url地址
+     */
+    AppLink.prototype.getDownloadUrl = function () {
+        var browser = Browser.getBrowser();
+        var config = this.config;
+        var url = '';
+        if (browser.isQQ) {
+            if (browser.isIOS) {
+                url = this.config.appstore;
+            } else {
+                url = this.config.yyb;
+            }
+        } else if (browser.isSafari) {
+            var version = this.getIOSVersion();
+            if (version < 10) {
+                url = this.config.yyb;
+            } else {
+                url = this.config.appstore;
+            }
+        } else if (browser.isWb) {
+            url = '';
+        } else {
+            url = this.config.yyb;
+        }
+        return url;
+    };
+    /**
+     * 尝试唤起APP
+     * @param scheme 唤起的scheme
+     */
+    AppLink.prototype.tryCallApp = function (scheme) {
+        var aLink = document.createElement('a'),
+            body = document.body;
+        aLink.href = scheme;
+        body.appendChild(aLink);
+        aLink.click();
+    };
+    /**
+     * 判断iOS版本
+     */
+    AppLink.prototype.getIOSVersion = function () {
+        var ver = navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+        var version = parseInt(ver[1], 10);
+        return version;
+    };
+    return AppLink;
+}();
 
 /***/ }),
 /* 97 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return setTitle; });
+let setTitle = title => {
+    setTimeout(function () {
+        //利用iframe的onload事件刷新页面
+        document.title = title || '标题';
+        var iframe = document.createElement('iframe');
+        iframe.style.visibility = 'hidden';
+        iframe.style.width = '1px';
+        iframe.style.height = '1px';
+        iframe.onload = function () {
+            setTimeout(function () {
+                document.body.removeChild(iframe);
+            }, 0);
+        };
+        document.body.appendChild(iframe);
+    }, 0);
+};
+
+/***/ }),
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(66);
-exports = module.exports = __webpack_require__(65)(false);
+exports = module.exports = __webpack_require__(64)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".followPage .qr-code{width:3rem;height:3rem;position:absolute;top:2.5rem;left:1.7rem}.followPage .qr-code img{width:100%;height:100%}.follow-top{padding-top:1rem;background:#06bc07;height:2rem;position:relative;margin-bottom:3rem}.follow-top .pay-success{line-height:.6rem;background:url(" + escape(__webpack_require__(113)) + ") no-repeat 0;background-size:.6rem;padding-left:.7rem;width:1.32rem;margin:0 auto;color:#fff;font-size:.3rem}.follow-txt{font-size:.3rem;font-weight:600;text-align:center;margin-bottom:.5rem}.follow-tips{padding:0 .2rem}", ""]);
+exports.push([module.i, ".download{background-color:rgba(0,0,0,.97);padding:.6rem .75rem}.download .d-left .d-logo{width:2rem;height:2rem;overflow:hidden;margin-right:.45rem}.download .d-left .d-logo img{width:100%;height:100%}.download .d-left .d-text{font-family:PingFangSC-Semibold;font-size:.75rem;color:#fff;letter-spacing:0}.download .d-left .d-text dd{font-family:PingFangSC-Regular;font-size:.65rem;letter-spacing:0;line-height:1.05rem}.download .d-right button{width:4.3rem;height:1.8rem;border-radius:.9rem;background:#ffd446;font-family:PingFangSC-Medium;font-size:.65rem;color:#000;letter-spacing:0}", ""]);
 
 // exports
 
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed: \n\n  font-size: .24rem;\n  .border-1px('#ccc');\n^\n.border-1px is undefined\n      in /Users/wangyuxiao/Downloads/kmind_public/src/view/Details.vue (line 317, column 2)");
 
 /***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(65)(false);
+exports = module.exports = __webpack_require__(64)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".v-simple-cropper .file{display:none}.v-simple-cropper .v-cropper-layer{position:fixed;top:0;bottom:0;left:0;right:0;background:#fff;z-index:99999;display:none}.v-simple-cropper .v-cropper-layer .layer-header{position:absolute;top:0;left:0;z-index:99999;background:#fff;width:100%;height:.8rem;padding:0 .2rem;box-sizing:border-box}.v-simple-cropper .v-cropper-layer .layer-header span{padding-left:.3rem;color:red}.v-simple-cropper .v-cropper-layer .cancel,.v-simple-cropper .v-cropper-layer .confirm{line-height:.8rem;font-size:.28rem;background:inherit;border:0;outline:0;float:left}.v-simple-cropper .v-cropper-layer .confirm{float:right}.v-simple-cropper .v-cropper-layer img{position:inherit!important;border-radius:inherit!important;float:inherit!important}", ""]);
+exports.push([module.i, ".footer-code dl dt{width:3.25rem;height:3.25rem;margin-right:.5rem}.footer-code dl dd p{font-family:PingFangSC-Regular;font-size:.55rem;color:#8b9096;letter-spacing:.69px;line-height:.9rem}.footer-code dl dd p span{color:#000}", ""]);
 
 // exports
 
@@ -10551,12 +7012,12 @@ exports.push([module.i, ".v-simple-cropper .file{display:none}.v-simple-cropper 
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(65)(false);
+exports = module.exports = __webpack_require__(64)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".guidePage{background:#f2f2f2}.guidePage h3{font-size:.26rem}.guide-img,.guidePage h3{text-align:center}.margin_auto{display:block;margin:0 auto}.guide-img img{width:5rem}.follow-tips{padding:0 .2rem}", ""]);
+exports.push([module.i, ".user-wrap dl dt{width:2rem;height:2rem;margin-right:.5rem}.user-wrap dl dt img{border-radius:50%}.user-wrap dl dd{font-family:PingFangSC-Regular;font-size:.7rem;letter-spacing:.88px}.user-wrap dl dd p.p-name{line-height:1rem}.user-wrap dl dd p.p-desc{font-size:.55rem;color:#8b9096;letter-spacing:.69px}.user-wrap dl dd p.p-desc span{font-family:PingFangSC-Semibold;color:#000;font-size:.55rem;letter-spacing:.69px;line-height:.75rem}", ""]);
 
 // exports
 
@@ -10565,30 +7026,18 @@ exports.push([module.i, ".guidePage{background:#f2f2f2}.guidePage h3{font-size:.
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+exports = module.exports = __webpack_require__(64)(false);
+// imports
 
-// load the styles
-var content = __webpack_require__(96);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(64)("448e2910", content, true, {});
+
+// module
+exports.push([module.i, "html[data-v-318baef2]{font-size:20px}@media only screen and (min-width:320px){html[data-v-318baef2]{font-size:17.06666667px!important}}@media only screen and (min-width:360px){html[data-v-318baef2]{font-size:19.2px!important}}@media only screen and (min-width:375px){html[data-v-318baef2]{font-size:20px!important}}@media only screen and (min-width:400px){html[data-v-318baef2]{font-size:21.33333333px!important}}@media only screen and (min-width:414px){html[data-v-318baef2]{font-size:22.08px!important}}@media only screen and (min-width:480px){html[data-v-318baef2]{font-size:25.6px!important}}[data-v-318baef2]{-webkit-tap-highlight-color:rgba(0,0,0,0);box-sizing:border-box;word-break:break-all;word-wrap:break-word;margin:0;padding:0;-webkit-tap-highlight-color:transparent;outline:0;vertical-align:baseline}img[data-v-318baef2]{border:0 none;vertical-align:top;display:inline-block;width:100%;height:auto}button[data-v-318baef2]{outline:none;text-decoration:none;text-align:center;display:block;border-radius:.25rem;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;background:none;padding:0 .5rem;margin:0;white-space:nowrap;position:relative;text-overflow:ellipsis;font-size:.7rem;font-family:inherit;cursor:pointer;border:none}input[data-v-318baef2],textarea[data-v-318baef2]{text-rendering:auto;color:#333;font-size:.8rem;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-shadow:none;display:inline-block;text-align:start;outline:none;border:none;resize:none}input[data-v-318baef2]::-webkit-input-placeholder{font-size:.6rem}input[data-v-318baef2]:-moz-placeholder,input[data-v-318baef2]::-moz-placeholder{font-size:.6rem}input[data-v-318baef2]:-ms-input-placeholder{font-size:.6rem}body[data-v-318baef2]{font-family:Hiragino Sans GB,Microsoft YaHei,sans-serif;margin:0 auto;min-width:320px;max-width:640px;background:#f3f3f3;color:#666;font-size:.7rem;text-size-adjust:100%!important}#app[data-v-318baef2],body[data-v-318baef2]{position:absolute;top:0;right:0;bottom:0;left:0}#app[data-v-318baef2]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-overflow-scrolling:touch;overflow:auto}.btn-primary[data-v-318baef2]{background:#1d72c0;box-shadow:0 1px 6px 0 #61b3ff;border-radius:3px;color:#fff}.btn-primary[data-v-318baef2]:disabled{color:#aaa}.btn-default[data-v-318baef2]{background-color:#f3f3f3;border-radius:3px}.ellipsis[data-v-318baef2]{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}[v-cloak][data-v-318baef2]{display:none}[flex-box][data-v-318baef2],[flex][data-v-318baef2]{overflow:hidden}.mint-indicator-wrapper[data-v-318baef2]{z-index:10}.slide-enter-active[data-v-318baef2],.slide-leave-active[data-v-318baef2]{transition:all .5s ease}.slide-enter[data-v-318baef2]{transform:translateX(33%);opacity:0}.slide-leave-active[data-v-318baef2],.slide-leave-to[data-v-318baef2]{transform:translate(-33%);opacity:0}.share-mask[data-v-318baef2]{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:1000}.share-mask .div[data-v-318baef2]{position:absolute;color:#000;width:100%;height:30%;top:5px;right:0;text-align:center}.slide-fade-enter-active[data-v-318baef2],.slide-fade-enter-to[data-v-318baef2],.slide-fade-leave-active[data-v-318baef2]{transition:all .3s ease}.slide-fade-enter[data-v-318baef2],.slide-fade-leave-active[data-v-318baef2],.slide-fade-leave-to[data-v-318baef2]{transform:translateY(-100%)}.mask[data-v-318baef2]{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:1000}.mask .div[data-v-318baef2]{margin-top:5px}.mask .div .img[data-v-318baef2]{width:100%}.detail-box[data-v-318baef2]{display:flex;flex-direction:column}.banner[data-v-318baef2]{height:2rem;line-height:2rem;text-align:center;font-size:.3rem}.user-num[data-v-318baef2]{display:flex;justify-content:center;align-items:center;font-size:.4rem;font-weight:900}.formList[data-v-318baef2]{position:relative;padding:.3rem 0;width:80%;margin:0 auto}.formList .form-remove[data-v-318baef2]{box-sizing:border-box;position:absolute;top:0;right:-.2rem;width:.46rem;height:.46rem;font-size:.4rem;color:red;line-height:.44rem;text-align:center;border:1px solid #ccc;border-radius:50%}.swiper-button-next[data-v-318baef2],.swiper-button-prev[data-v-318baef2]{right:.1rem;width:.25rem;height:.4rem;margin-top:-.2rem;background-size:.25rem .4rem}.add-user[data-v-318baef2]{box-sizing:border-box;display:flex;justify-content:center;align-items:center;margin:0 auto;width:.6rem;height:.6rem;text-align:center;font-size:.4rem;border:1px solid #ccc;border-radius:50%}.btn-wrapper[data-v-318baef2]{position:fixed;left:0;bottom:0;display:flex;flex-direction:row;justify-content:center;align-items:center;width:100%;border-top:1px solid #ccc}.btn-wrapper .amount-money[data-v-318baef2]{width:70%;height:.88rem;line-height:.88rem;text-align:center;border-right:1px solid #ccc}.btn-wrapper .pay-btn[data-v-318baef2]{width:30%;height:.88rem}", ""]);
+
+// exports
+
 
 /***/ }),
 /* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(97);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(64)("336ada2f", content, true, {});
-
-/***/ }),
-/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -10598,10 +7047,10 @@ var content = __webpack_require__(98);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(64)("23491613", content, true, {});
+var update = __webpack_require__(65)("602cb454", content, true, {});
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -10611,10 +7060,10 @@ var content = __webpack_require__(99);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(64)("2852b240", content, true, {});
+var update = __webpack_require__(65)("7af1af60", content, true, {});
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -10624,64 +7073,41 @@ var content = __webpack_require__(100);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(64)("d05e471e", content, true, {});
+var update = __webpack_require__(65)("6049bdda", content, true, {});
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(101);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(65)("754e2f44", content, true, {});
 
 /***/ }),
 /* 106 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAyCAYAAAADQbYqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMDU0MzdFRjA0MDkxMUU0QUE3MDg3MDA2MTdCQTQ5OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMDU0MzdGMDA0MDkxMUU0QUE3MDg3MDA2MTdCQTQ5OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjMwNTQzN0VEMDQwOTExRTRBQTcwODcwMDYxN0JBNDk5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMwNTQzN0VFMDQwOTExRTRBQTcwODcwMDYxN0JBNDk5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+5t6gMQAABNBJREFUeNrcmf1rVXUcx91pTu0B29zctJml/RBp1HKID3NM93jvXHNMsRCR9SASIRWE/QsJokTEhChC/NEfBHXzaWratBnlNKqVqWGBSg+zcnPL7fb+wucLZx8/59zvebj33Hs/8ILtu/u533Ne5/N9OstLJBKTIooisBjkg3HQCwajuJC8iCQUgziYamsbBgfAX+m+GCsiAc1MgIppYDUozHUJWsAUh79HIiKdEkroBrmAa4KIFpozckpCCVVAAWs/A46APtY+lYTNyBUJM10EfEc/XwBfCiKa0yHCSoOAuCDgtE2Ajn5wLgoRqZRQ6iDgc/C9Q85FFxHF2bZPUAJiTECCBAwY5D8LlrK2EXAQ/J4NlVAWUICKS+Asa5uSqoqwMlCAXUSvIGJ12CKsFAiYzASc8iFAx7fgC9ZWQCJKMm1OKKNJMJ8JOAl+CuH7nwFVrG0UHAK3MqESZjkIOBGSgEm0nJ4RKiJOy3CkEmbTEJAEXA55vnETURqVBCWgKYCAhXR0Vp/vBk8bijgtiIgFEeF3TngMNAoCesDPBvkV4CjbCd4Eq4SdpBRKWLUwRyiZN9JRCZIA9WbouKGAF8AxYStcSlWxwOA7fqBlV6qIslRLKHcQoCrgikH+IhJQ5HLWOEFDxUTEKapAHZP9iLA8CmgIIKCSBBSyIbRfOHb30NY5WQxQRXARcS8iTCXMcRkCpgLUHPAoE/AGWAPeE0So737OUASviHwSMSssCXOoAh5gAtRTvWqQv5g+KwnopN/fB9sEESrveYM+fnQQEaNVLJAENwHXDC5uCb05ms4EbLEJ0LEdvMvaiqmvCkMRJwURTclEuC2Rj5MAy6eAZbSt5QI2g49d8t4BO1jbH6AefGPQ71Ngpbo3W9s9cBj85kXCXOqUC1Dj+hefAlT+6+ATg/y3wE7W9idd09dhi7A8CDhiKGA56AogQMUu8DYr7SKqwkUG+ZdpqeVDo5FWOddKeALUCQKUwesGnVdRBTxiaxsjAZ/62JhtJSH2JzpID+krg/z5tAvlFaEe6K+SBEnAGCWYCFhBAh5m+a+CzwKcUd4EH7AbuU0izhvkzyMRjvelJTwJagMKUEPgIZbfAfaEcIJUy+mHggg1cfcFFaEkSKvAfSXjEtVUAVzAJrA3xKO0kwi1BJ4LIKLbogONXwE1DhUQtgAVH5EI+yQ2nU6Oywzyr9AudNzWpvY/lRZ7PeVFgLKqXoE/yARsTIEAHZ200eIiumhVShZXaYUZn7AHwXCwwBIQB2VqjjCgFtxJTIx7YL1hflBeA+Os/9tguWF+OWgDK0C+nwuoEwT8B9alSYCbiL9Bldfv8tpxQ4YI0LwCxtj1/ENPOCUSGsEQ63AUrI1IgKaDhqI9/gXVYUtoAsOsoxHQHrEAzSZBxB1TEUEEtGWIgGQiaoJKiIG7goA1GSZAs9FBxCq/EprphrmA1gwVoNngIKLOq4QWBwEtGS5A87KDiHpTCS86CGjOEgHJRDQkk9DqICCWZQI06wURQ7TcixLaBAF3s1iAZh1t6OwxTKveBAntgoAJH8xy1tLGTnzAehUYTVYyOSyiVv3xrMnkkSNIFd9rsddTQ6CN3inkYuwDL9G/8XX0KzsFYAc47PX0lcWood4HdoNp/wswAEEu53Sik1PDAAAAAElFTkSuQmCCLyogIHx4R3YwMHxjM2ZiMjgzZWZhNDhjZjlhMzAzMjk0NzJmOTUxMmU4YSAqLw=="
+module.exports = __webpack_require__.p + "static/img/hero.6a72088.jpg";
 
 /***/ }),
 /* 107 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "static/img/bbzs_code.dd96fe7.jpg";
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAACrFBMVEUAAAD9/f3//////9j/////////swP/////////////////////////////////////////////swL/sgL/////swL/swP/swT/swP/tgT/tA//vxD/swL/swP/swP/sgP/tAP///8AAAD/sgL/rwBLS0v+/v61tbUzMzP/9d//3Un/vy7/sQAEAwL/10eEhIQvLy8ODg5lZWXm5uaYmJhwcHD/2khLPxXk5OT/20j/2EehoaFPT0//4Er//fj/y1MSEhL/swj//PP/2oR2dnfyykL/xT//tQ4RDgQJBwLPz8//6bb/5q3/yUz/1EZBQUENCgP//vv/1XRNTU01NTWojC4JCQkGBgb5+fnz8/Pt7e3ExMS8vLz/3pHguj2ZgCr/vCT/+/DU1NTAwMBoaGjbtzy1lzH/uyAfHx8YGBg8MhAeGQj/6LH/0WiYfyooKCj/txP/7cP/4Zv/13z/zVxGRkbmvz//uRo4Lw8hGwn/rAD/9Nv/78r/5ahxcXFYWFj/x0eagyuGbyR0YSBqWR1TRRcuJgwZFQb7+/vZ2dn/89aurq7/35X/02//z2L/30n4z0SihywrKyszKw4pIgv/uAH6+vr/+OjCwsK3t7elpaX/46KZmZmPj4+JiYltbW1fX19TU1P/5Uv/4krqxEH/wzrNrDnIpjctLS2Seig/NBHTlQIhFwD19fXy8vL/9+Lb29vX19fGxsazs7N/f39sbGz600b0y0M9PT3/xDzRrjm9nTS5mjOtkC+BbCMjIyNvXR5hURpGOhNBNhL/++vh4eHe3t6ioqKdnZ3/wjX/viiLdCYcHBxZShhJPBQVEQXo6OjR0dH/8M7tx0Ljvj7BoDV4ZCHMzMy5ubmUlJRbW1snJyclJSVDORPMw6xzc3N4blj/xzTXmQbVlAOSpaKpAAAAIXRSTlMA/r8D2cW9upBdUTsREPPWoqH78/LZxZBROxEQ1qKhXVz2yMWaAAAJgklEQVRo3rTV6WvTcBjA8dX7PvE+n/RZtTRjHhMER2IaacC0SKt4F1onVKHFXlLooX05Z9sXgpu6eb0YDHTOE9wr38xjQ1B8pSie/4hJ7fZLmh9di+n3hbgG9tmT/PK0Rdui+ctnzFoC9ccNorWuVq6as3nr+hZ6C2ZY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"
 
 /***/ }),
 /* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/img/detail_bg.81cc3a0.jpg";
+module.exports = __webpack_require__.p + "static/img/wxxcx.a024391.jpg";
 
 /***/ }),
 /* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/guide_bbzs.f8c7f32.gif";
-
-/***/ }),
-/* 110 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/guide_fang.1c37be8.gif";
-
-/***/ }),
-/* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/guide_xxjr.a3f44ae.gif";
-
-/***/ }),
-/* 112 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-/* 113 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADvElEQVRoQ82ajXHUMBCFdyuAVECogKQCoAKSCiAVABVAKiBUQFIBoQKSCrhUQFIBUMEyn0byyDrLXvtsXzRzc5lYlt9bPe2fT2WGYWZPReSNiByKyKv4zd/5uBcRPjfx+4eq/t318Tp1gQj6rYi8E5GjietsRORSRK6mkhlNwMyw7PsIHMvPMdgJiHxVVXbJPUYRMLNPIvJBROYCXgKFyIWqnnsZuAiYGRL5toNUvHjSPKR16tmNQQJmhsa/LGj1Gjl246OqIq3q6CUQwWP5fY6zPhJVAo8EfDJclUQngUcGPpHgTFyXUtgiEA/szz1ofkimnInj8mB3Efi1orfpA/1PRJ4UEzaqepz/r0XAzD6LCL5+nwPg4CCgfe8Acq6qXA+jIRAjLNZfKkh5jHJLhE8yMTNIPCtubEkpJ3ARUwTPg5aYg88HQxgDjqTZhUAgJma/92T9BxE5UVWirwc8c9iF5ySAiQD5DdF27XFFbpVnoiNceIgNicA+PE9LMg7ZlMYNHkmjfP6saHq8DJKhsGmGmVEIEX/GjAMIkKytle9s6T1anmx3SvA8hcBa3ueOcrOsvHZ03+cQYCtfjtm3CXPx78imVQNH+WL5qSXpLQRwn2UBPgFj9RbqXWS6NcwM6XZecwK4h4A5JnflJY7bQrFeAz+L6/YQCP7WzKiM6EJ4Rx/4KR6n87l9BLA6h25MhEwP6QNPrjVb1K8RaEJ1STvWCxQWZZKVptKwOqltk5mRYVave7c3zYNAV8bH9UtVPascPqwIidJ7dbrKtIaZzaL7DNPDkButkogBKI8hQ+DxdHOn68GNDgWyIRJ4GQqMVkbZIT38PYd3zhECmSeV6CUxhGgB6aRHhlQCPXuSuVYpNwQ60/0S0knLH6R0Glf5wgGqt8lUOfBLSIdH3anq0ZSCxk1iYorssGOY0ipokBHutGxj1BZzkVgwzyLIHjYlZYdL9Fihl8TCLZp2UR8JcNg4C95daLaxw2XOmi4U62P9o9R6maOxtbUTa1kfYl2tRa9Hyg3TkFi4RRM8T/7gWnOXKm2MlFiTxutmQeu3pJNIzNleJ4N9HfuZS1R4vvZ6FkE9KYbHW80xZ9wLjkdGYtorpowExQfl5Ngzsavl0Tyd6q23Mr2HuJLPoGkW8uRLuwIPeU5Mzwdfeg++Zs3RRA9DVbXUbmB1XnQ3LzCGrDGKQBaxIcEhn4tIAB7L2EGrj5ZQRVakC5DgM1VaSAXg16v92KOHDOUiUTL93KbsWtDYTT+3IdrfTAWdY/gPztG6EYM6IecAAAAASUVORK5CYII="
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/xxjr_qrcode.bcf661e.jpg";
-
-/***/ }),
-/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -10689,9 +7115,9 @@ module.exports = __webpack_require__.p + "static/img/xxjr_qrcode.bcf661e.jpg";
  * @author Surmon.me
  */
 
-var Swiper = __webpack_require__(70)
-var SwiperComponent = __webpack_require__(117)
-var SlideComponent = __webpack_require__(116)
+var Swiper = __webpack_require__(76)
+var SwiperComponent = __webpack_require__(111)
+var SlideComponent = __webpack_require__(110)
 SwiperComponent = SwiperComponent.default || SwiperComponent
 SlideComponent = SlideComponent.default || SlideComponent
 if (typeof window !== 'undefined') {
@@ -10712,27 +7138,7 @@ module.exports = swiper
 
 
 /***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(4)(
-  /* script */
-  __webpack_require__(81),
-  /* template */
-  __webpack_require__(130),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 117 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(4)(
@@ -10752,19 +7158,16 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 118 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
-function injectStyle (ssrContext) {
-  __webpack_require__(104)
-}
 var Component = __webpack_require__(4)(
   /* script */
   __webpack_require__(83),
   /* template */
   __webpack_require__(123),
   /* styles */
-  injectStyle,
+  null,
   /* scopeId */
   null,
   /* moduleIdentifier (server only) */
@@ -10775,190 +7178,202 @@ module.exports = Component.exports
 
 
 /***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(4)(
+  /* script */
+  __webpack_require__(84),
+  /* template */
+  __webpack_require__(127),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(4)(
+  /* script */
+  __webpack_require__(85),
+  /* template */
+  __webpack_require__(120),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(4)(
+  /* script */
+  __webpack_require__(86),
+  /* template */
+  __webpack_require__(115),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "user-wrap"
+  }, [_c('dl', {
+    attrs: {
+      "flex": "cross:center"
+    }
+  }, [_c('dt', [_c('img', {
+    attrs: {
+      "src": _vm.myValue.avatar
+    }
+  })]), _vm._v(" "), _c('dd', [_c('p', {
+    staticClass: "p-name"
+  }, [_vm._v(_vm._s(_vm.myValue.nickName))]), _vm._v(" "), _vm._m(0)])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', {
+    staticClass: "p-desc"
+  }, [_vm._v("正在"), _c('span', [_vm._v("出去APP")]), _vm._v("上看这个精彩内容")])
+}]}
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "share-wrap"
+  }, [_c('download'), _vm._v(" "), _c('div', {
+    staticClass: "banner"
+  }, [(!_vm.url) ? _c('img', {
+    attrs: {
+      "src": __webpack_require__(106)
+    }
+  }) : _vm._e(), _vm._v(" "), (_vm.url) ? _c('img', {
+    attrs: {
+      "src": _vm.url
+    }
+  }) : _vm._e()]), _vm._v(" "), _c('div', {
+    staticClass: "share-dowmm"
+  }, [_c('user', {
+    attrs: {
+      "my-value": _vm.user
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "cont-title"
+  }, [_vm._v(_vm._s(_vm.theme))]), _vm._v(" "), _c('dl', {
+    staticClass: "cont-biao",
+    attrs: {
+      "flex": "cross:center"
+    }
+  }, [_c('dt', [_c('img', {
+    attrs: {
+      "src": _vm.avatar
+    }
+  })]), _vm._v(" "), _c('dd', [_vm._v(_vm._s(_vm.name))])])]), _vm._v(" "), _c('footer-code')], 1)], 1)
+},staticRenderFns: []}
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c("div")
+},staticRenderFns: []}
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "share-wrap footprint"
+  }, [_c('download'), _vm._v(" "), _c('div', {
+    staticClass: "banner"
+  }, [_c('img', {
+    attrs: {
+      "src": _vm.url
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "share-dowmm"
+  }, [_c('user', {
+    attrs: {
+      "my-value": _vm.user
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "cont-title"
+  }, [_vm._v(_vm._s(_vm.description))]), _vm._v(" "), _c('dl', {
+    staticClass: "cont-biao",
+    attrs: {
+      "flex": "cross:center"
+    }
+  }, [_c('dt', [_c('img', {
+    attrs: {
+      "src": _vm.icon
+    }
+  })]), _vm._v(" "), _c('dd', [_vm._v(_vm._s(_vm.trackname))])])]), _vm._v(" "), _c('footer-code')], 1)], 1)
+},staticRenderFns: []}
+
+/***/ }),
 /* 119 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "followPage"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "qr-code"
-  }, [_c('img', {
-    attrs: {
-      "src": _vm.codeImg,
-      "alt": ""
+    staticStyle: {
+      "padding-bottom": ".8rem"
     }
-  })]), _vm._v(" "), _c('p', {
-    staticClass: "follow-txt"
-  }, [_vm._v("长按关注公众号，完善名片信息")]), _vm._v(" "), _vm._m(1)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "follow-top"
-  }, [_c('div', {
-    staticClass: "pay-success"
-  }, [_vm._v("支付成功")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "follow-tips"
-  }, [_c('p', [_vm._v("1、公众号菜单中找到【动态名片】")]), _vm._v(" "), _c('p', [_vm._v("2、修改你的名片信息")]), _vm._v(" "), _c('p', [_vm._v("3、分享“购买记录”中的名片")]), _vm._v(" "), _c('p', [_vm._v("3、如有问题请直接到公众号咨询")])])
-}]}
+  })
+},staticRenderFns: []}
 
 /***/ }),
 /* 120 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    ref: "detail",
-    staticClass: "detail-box",
+    staticClass: "footer-code"
+  }, [_c('dl', {
     attrs: {
-      "id": "detail"
+      "flex": "cross:center"
     }
-  }, [_c('div', {
-    staticClass: "banner"
-  }, [_vm._v("英雄会")]), _vm._v(" "), _c('div', {
-    staticClass: "swiper-box"
-  }, [_c('swiper', {
+  }, [_c('dt', [_c('img', {
     attrs: {
-      "options": _vm.swiperOption
+      "src": __webpack_require__(108)
     }
-  }, [_vm._l((_vm.pageList), function(item, index) {
-    return _c('swiper-slide', {
-      key: index
-    }, [_c('ul', {
-      staticClass: "formList"
-    }, [_c('li', {
-      staticClass: "user-cell"
-    }, [_c('p', {
-      staticClass: "user-cell__label"
-    }, [_vm._v("姓名：")]), _vm._v(" "), _c('input', {
-      directives: [{
-        name: "model",
-        rawName: "v-model",
-        value: (item.name),
-        expression: "item.name"
-      }],
-      staticClass: "user-cell__input",
-      attrs: {
-        "placeholder": "请输入您的姓名"
-      },
-      domProps: {
-        "value": (item.name)
-      },
-      on: {
-        "input": function($event) {
-          if ($event.target.composing) { return; }
-          _vm.$set(item, "name", $event.target.value)
-        }
-      }
-    })]), _vm._v(" "), _c('li', {
-      staticClass: "user-cell"
-    }, [_c('p', {
-      staticClass: "user-cell__label"
-    }, [_vm._v("身份证：")]), _vm._v(" "), _c('input', {
-      directives: [{
-        name: "model",
-        rawName: "v-model",
-        value: (item.idCard),
-        expression: "item.idCard"
-      }],
-      staticClass: "user-cell__input",
-      attrs: {
-        "maxlength": "18",
-        "placeholder": "请输入您的身份证号"
-      },
-      domProps: {
-        "value": (item.idCard)
-      },
-      on: {
-        "input": function($event) {
-          if ($event.target.composing) { return; }
-          _vm.$set(item, "idCard", $event.target.value)
-        }
-      }
-    })]), _vm._v(" "), _c('li', {
-      staticClass: "user-cell"
-    }, [_c('p', {
-      staticClass: "user-cell__label"
-    }, [_vm._v("手机号：")]), _vm._v(" "), _c('input', {
-      directives: [{
-        name: "model",
-        rawName: "v-model",
-        value: (item.phone),
-        expression: "item.phone"
-      }],
-      staticClass: "user-cell__input",
-      attrs: {
-        "maxlength": "11",
-        "placeholder": "请输入您的手机号"
-      },
-      domProps: {
-        "value": (item.phone)
-      },
-      on: {
-        "input": function($event) {
-          if ($event.target.composing) { return; }
-          _vm.$set(item, "phone", $event.target.value)
-        }
-      }
-    })]), _vm._v(" "), _c('li', {
-      staticClass: "user-cell"
-    }, [_c('p', {
-      staticClass: "user-cell__label"
-    }, [_vm._v("备注：")]), _vm._v(" "), _c('input', {
-      directives: [{
-        name: "model",
-        rawName: "v-model",
-        value: (item.remarks),
-        expression: "item.remarks"
-      }],
-      staticClass: "user-cell__input",
-      attrs: {
-        "maxlength": "11",
-        "placeholder": ""
-      },
-      domProps: {
-        "value": (item.remarks)
-      },
-      on: {
-        "input": function($event) {
-          if ($event.target.composing) { return; }
-          _vm.$set(item, "remarks", $event.target.value)
-        }
-      }
-    })])])])
-  }), _vm._v(" "), _c('div', {
-    staticClass: "swiper-button-prev swiper-button-black",
-    attrs: {
-      "slot": "button-prev"
-    },
-    slot: "button-prev"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "swiper-button-next swiper-button-black",
-    attrs: {
-      "slot": "button-next"
-    },
-    slot: "button-next"
-  })], 2), _vm._v(" "), _c('audio', {
-    ref: "myAudio",
-    attrs: {
-      "id": "audio",
-      "autoplay": "",
-      "loop": ""
-    }
-  }), _vm._v(" "), _c('button', {
-    staticClass: "swiper-voice__btn",
-    class: _vm.musicStatus,
-    on: {
-      "click": function($event) {
-        $event.stopPropagation();
-        return _vm.playAudio($event)
-      }
-    }
-  })], 1), _vm._v(" "), _c('div', {
-    staticClass: "add-user"
-  }, [_vm._v("+")])])
-},staticRenderFns: []}
+  })]), _vm._v(" "), _c('dd', [_c('p', [_vm._v("长按识别小程序"), _c('br'), _vm._v("在"), _c('span', [_vm._v("出去APP")]), _vm._v("中查看详情")])])])])
+}]}
 
 /***/ }),
 /* 121 */
@@ -10966,144 +7381,86 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "userPage"
-  }, [_c('div', {
-    staticClass: "user-form"
-  }, [_c('p', {
-    staticClass: "user__title"
-  }, [_vm._v("基本信息")]), _vm._v(" "), _c('div', {
-    staticClass: "user-cell avatar-cell",
     staticStyle: {
-      "height": "1.72rem"
+      "padding-bottom": ".8rem"
     }
-  }, [_c('p', {
-    staticClass: "user-cell__label"
-  }, [_vm._v("头像")]), _vm._v(" "), _c('simple-cropper', {
-    ref: "cropper",
-    attrs: {
-      "initParam": _vm.uploadParam,
-      "successCallback": _vm.uploadHandle
-    }
-  }, [_c('img', {
-    staticClass: "user-cell__avatar",
-    attrs: {
-      "src": _vm.form.headImgUrl
-    },
-    on: {
-      "click": _vm.upload
-    }
-  })])], 1), _vm._v(" "), _c('div', {
-    staticClass: "user-cell"
-  }, [_c('p', {
-    staticClass: "user-cell__label"
-  }, [_vm._v("姓名")]), _vm._v(" "), _c('input', {
+  }, [_c('ul', {
     directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.form.userName),
-      expression: "form.userName"
+      name: "infinite-scroll",
+      rawName: "v-infinite-scroll",
+      value: (_vm.search),
+      expression: "search"
     }],
-    staticClass: "user-cell__input",
+    staticClass: "list-box clearfix",
     attrs: {
-      "placeholder": "请输入您的姓名"
-    },
-    domProps: {
-      "value": (_vm.form.userName)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.form, "userName", $event.target.value)
-      }
+      "infinite-scroll-disabled": "loading",
+      "infinite-scroll-distance": "10"
     }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "user-cell"
-  }, [_c('p', {
-    staticClass: "user-cell__label"
-  }, [_vm._v("手机号")]), _vm._v(" "), _c('input', {
+  }, _vm._l((_vm.listData), function(item, index) {
+    return _c('li', {
+      key: index,
+      staticClass: "list-item fl",
+      on: {
+        "click": function($event) {
+          _vm.jumpDetail(item.templateId)
+        }
+      }
+    }, [_c('img', {
+      staticClass: "item__img",
+      attrs: {
+        "src": item.coverUrl
+      }
+    }), _vm._v(" "), _c('p', {
+      staticClass: "item__text ellipsis"
+    }, [_vm._v(_vm._s(item.title))]), _vm._v(" "), (item.isBought > 0) ? _c('span', {
+      staticClass: "is-bought"
+    }, [_vm._v("已购")]) : _vm._e()])
+  })), _vm._v(" "), _c('p', {
     directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.form.telephone),
-      expression: "form.telephone"
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.loadingImg),
+      expression: "loadingImg"
     }],
-    staticClass: "user-cell__input",
+    staticClass: "page-infinite-loading"
+  }, [_c('mt-spinner', {
     attrs: {
-      "maxlength": "15",
-      "placeholder": "请输入您的手机号"
-    },
-    domProps: {
-      "value": (_vm.form.telephone)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.form, "telephone", $event.target.value)
-      }
+      "type": "snake",
+      "color": "#247FC5"
     }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "user-cell"
-  }, [_c('p', {
-    staticClass: "user-cell__label"
-  }, [_vm._v("公司名称")]), _vm._v(" "), _c('input', {
+  })], 1), _vm._v(" "), _c('div', {
     directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.form.company),
-      expression: "form.company"
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.noResult),
+      expression: "noResult"
     }],
-    staticClass: "user-cell__input",
-    attrs: {
-      "placeholder": "请输入您的公司名称"
-    },
-    domProps: {
-      "value": (_vm.form.company)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.form, "company", $event.target.value)
-      }
-    }
-  })]), _vm._v(" "), _c('p', {
-    staticClass: "user__title"
-  }, [_vm._v("个人简介")]), _vm._v(" "), _c('textarea', {
+    staticClass: "no-resulte"
+  }, [_c('div', {
+    staticClass: "publish-text"
+  }, [_vm._v("暂无数据~")])]), _vm._v(" "), _c('p', {
     directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.form.personDesc),
-      expression: "form.personDesc"
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.isOver),
+      expression: "isOver"
     }],
-    staticClass: "user-cell__textarea",
-    attrs: {
-      "placeholder": "请输入您的个人简介"
-    },
-    domProps: {
-      "value": (_vm.form.personDesc)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.form, "personDesc", $event.target.value)
-      }
-    }
-  }), _vm._v(" "), _c('button', {
-    staticClass: "save__btn default__btn",
-    on: {
-      "click": function($event) {
-        _vm.save()
-      }
-    }
-  }, [_vm._v("保存到已购动画")])]), _vm._v(" "), _c('big-loading', {
-    attrs: {
-      "bigLoading": _vm.bigLoading,
-      "text": "保存中，请稍等..."
-    }
-  })], 1)
+    staticClass: "load-down"
+  }, [_vm._v("--加载完毕--")]), _vm._v(" "), _c('tab-bar')], 1)
 },staticRenderFns: []}
 
 /***/ }),
 /* 122 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    class: _vm.slideClass
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+
+/***/ }),
+/* 123 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -11115,307 +7472,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 123 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "v-simple-cropper"
-  }, [_vm._t("default", [_c('button', {
-    on: {
-      "click": _vm.upload
-    }
-  }, [_vm._v("上传图片")])]), _vm._v(" "), _c('input', {
-    ref: "file",
-    staticClass: "file",
-    attrs: {
-      "type": "file",
-      "accept": "image/*"
-    },
-    on: {
-      "change": _vm.uploadChange
-    }
-  }), _vm._v(" "), _c('div', {
-    ref: "layer",
-    staticClass: "v-cropper-layer"
-  }, [_c('div', {
-    staticClass: "layer-header"
-  }, [_c('button', {
-    staticClass: "cancel",
-    on: {
-      "click": _vm.cancelHandle
-    }
-  }, [_vm._v("取消")]), _vm._v(" "), _c('span', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.disabled),
-      expression: "disabled"
-    }],
-    staticClass: "cancel"
-  }, [_vm._v("上传中请稍等...")]), _vm._v(" "), _c('button', {
-    staticClass: "confirm",
-    attrs: {
-      "disabled": _vm.disabled
-    },
-    on: {
-      "click": _vm.confirmHandle
-    }
-  }, [_vm._v("裁剪")])]), _vm._v(" "), _c('img', {
-    ref: "cropperImg"
-  })])], 2)
-},staticRenderFns: []}
-
-/***/ }),
 /* 124 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticStyle: {
-      "padding-bottom": ".8rem"
-    }
-  }, [_c('ul', {
-    directives: [{
-      name: "infinite-scroll",
-      rawName: "v-infinite-scroll",
-      value: (_vm.search),
-      expression: "search"
-    }],
-    staticClass: "list-box clearfix",
-    attrs: {
-      "infinite-scroll-disabled": "loading",
-      "infinite-scroll-distance": "10"
-    }
-  }, _vm._l((_vm.listData), function(item, index) {
-    return _c('li', {
-      key: index,
-      staticClass: "list-item fl",
-      on: {
-        "click": function($event) {
-          _vm.jumpDetail(item.templateId)
-        }
-      }
-    }, [_c('img', {
-      staticClass: "item__img",
-      attrs: {
-        "src": item.coverUrl
-      }
-    }), _vm._v(" "), _c('p', {
-      staticClass: "item__text ellipsis"
-    }, [_vm._v(_vm._s(item.title))]), _vm._v(" "), (item.isBought > 0) ? _c('span', {
-      staticClass: "is-bought"
-    }, [_vm._v("已购")]) : _vm._e()])
-  })), _vm._v(" "), _c('p', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.loadingImg),
-      expression: "loadingImg"
-    }],
-    staticClass: "page-infinite-loading"
-  }, [_c('mt-spinner', {
-    attrs: {
-      "type": "snake",
-      "color": "#247FC5"
-    }
-  })], 1), _vm._v(" "), _c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.noResult),
-      expression: "noResult"
-    }],
-    staticClass: "no-resulte"
-  }, [_c('div', {
-    staticClass: "publish-text"
-  }, [_vm._v("暂无数据~")])]), _vm._v(" "), _c('p', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.isOver),
-      expression: "isOver"
-    }],
-    staticClass: "load-down"
-  }, [_vm._v("--加载完毕--")]), _vm._v(" "), _c('tab-bar')], 1)
-},staticRenderFns: []}
-
-/***/ }),
-/* 125 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticStyle: {
-      "padding-bottom": ".8rem"
-    }
-  }, [_c('ul', {
-    directives: [{
-      name: "infinite-scroll",
-      rawName: "v-infinite-scroll",
-      value: (_vm.search),
-      expression: "search"
-    }],
-    staticClass: "list-box clearfix",
-    attrs: {
-      "infinite-scroll-disabled": "loading",
-      "infinite-scroll-distance": "10"
-    }
-  }, _vm._l((_vm.listData), function(item, index) {
-    return _c('li', {
-      key: index,
-      staticClass: "list-item fl",
-      on: {
-        "click": function($event) {
-          _vm.jumpDetail(item.templateId)
-        }
-      }
-    }, [_c('img', {
-      staticClass: "item__img",
-      attrs: {
-        "src": item.coverUrl
-      }
-    }), _vm._v(" "), _c('p', {
-      staticClass: "item__text ellipsis"
-    }, [_vm._v(_vm._s(item.title))])])
-  })), _vm._v(" "), _c('p', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.loadingImg),
-      expression: "loadingImg"
-    }],
-    staticClass: "page-infinite-loading"
-  }, [_c('mt-spinner', {
-    attrs: {
-      "type": "snake",
-      "color": "#247FC5"
-    }
-  })], 1), _vm._v(" "), _c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.noResult),
-      expression: "noResult"
-    }],
-    staticClass: "no-resulte"
-  }, [_c('div', {
-    staticClass: "text"
-  }, [_vm._v("暂无数据~")])]), _vm._v(" "), _c('p', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.isOver),
-      expression: "isOver"
-    }],
-    staticClass: "load-down"
-  }, [_vm._v("--加载完毕--")]), _vm._v(" "), _c('tab-bar')], 1)
-},staticRenderFns: []}
-
-/***/ }),
-/* 126 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "pay-box"
-  }, [_c('div', {
-    staticClass: "pay__icon"
-  }), _vm._v(" "), _c('p', {
-    staticClass: "pay__title"
-  }, [_vm._v("等待支付")]), _vm._v(" "), _c('p', {
-    staticClass: "pay__text"
-  }, [_vm._v("支付完成后您就可以自定义名片")]), _vm._v(" "), _c('p', {
-    staticClass: "pay__text"
-  }, [_vm._v("请尽快支付以推广您的名片~")]), _vm._v(" "), _c('button', {
-    staticClass: "pay__btn default__btn",
-    on: {
-      "click": _vm.wxPay
-    }
-  }, [_vm._v("微信支付")]), _vm._v(" "), _c('big-loading', {
-    attrs: {
-      "bigLoading": _vm.bigLoading,
-      "text": "请稍等..."
-    }
-  })], 1)
-},staticRenderFns: []}
-
-/***/ }),
-/* 127 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticStyle: {
-      "padding-bottom": ".8rem"
-    }
-  }, [_c('ul', {
-    directives: [{
-      name: "infinite-scroll",
-      rawName: "v-infinite-scroll",
-      value: (_vm.search),
-      expression: "search"
-    }],
-    staticClass: "list-box clearfix",
-    attrs: {
-      "infinite-scroll-disabled": "loading",
-      "infinite-scroll-distance": "10"
-    }
-  }, _vm._l((_vm.listData), function(item, index) {
-    return _c('li', {
-      key: index,
-      staticClass: "list-item fl",
-      on: {
-        "click": function($event) {
-          _vm.jumpDetail(item.templateId)
-        }
-      }
-    }, [_c('img', {
-      staticClass: "item__img",
-      attrs: {
-        "src": item.coverUrl
-      }
-    }), _vm._v(" "), _c('p', {
-      staticClass: "item__text ellipsis"
-    }, [_vm._v(_vm._s(item.title))]), _vm._v(" "), (item.isBought > 0) ? _c('span', {
-      staticClass: "is-bought"
-    }, [_vm._v("已购")]) : _vm._e()])
-  })), _vm._v(" "), _c('p', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.loadingImg),
-      expression: "loadingImg"
-    }],
-    staticClass: "page-infinite-loading"
-  }, [_c('mt-spinner', {
-    attrs: {
-      "type": "snake",
-      "color": "#247FC5"
-    }
-  })], 1), _vm._v(" "), _c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.noResult),
-      expression: "noResult"
-    }],
-    staticClass: "no-resulte"
-  }, [_c('div', {
-    staticClass: "publish-text"
-  }, [_vm._v("暂无数据~")])]), _vm._v(" "), _c('p', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.isOver),
-      expression: "isOver"
-    }],
-    staticClass: "load-down"
-  }, [_vm._v("--加载完毕--")]), _vm._v(" "), _c('tab-bar')], 1)
-},staticRenderFns: []}
-
-/***/ }),
-/* 128 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -11432,80 +7489,104 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 129 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('mt-tabbar', {
-    staticClass: "tabbar-box",
-    attrs: {
-      "fixed": ""
-    },
-    model: {
-      value: (_vm.routeName),
-      callback: function($$v) {
-        _vm.routeName = $$v
-      },
-      expression: "routeName"
-    }
-  }, [_c('mt-tab-item', {
-    staticClass: "list-item",
-    attrs: {
-      "id": "list"
-    }
-  }, [_vm._v("动态名片")]), _vm._v(" "), _c('mt-tab-item', {
-    staticClass: "bought-item",
-    attrs: {
-      "id": "bought"
-    }
-  }, [_vm._v("购买记录")]), _vm._v(" "), _c('mt-tab-item', {
-    staticClass: "user-item",
-    attrs: {
-      "id": "user"
-    }
-  }, [_vm._v("修改名片")])], 1)
-},staticRenderFns: []}
-
-/***/ }),
-/* 130 */
+/* 125 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    class: _vm.slideClass
-  }, [_vm._t("default")], 2)
-},staticRenderFns: []}
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "guidePage"
-  }, [_c('h3', [_vm._v("请先观看操作流程示意图")]), _vm._v(" "), _c('div', {
-    staticClass: "guide-img"
+    staticClass: "share-wrap journey"
+  }, [_c('download'), _vm._v(" "), _c('div', {
+    staticClass: "banner"
   }, [_c('img', {
     attrs: {
-      "src": _vm.codeImg,
-      "alt": ""
+      "src": _vm.url
     }
-  })]), _vm._v(" "), _c('button', {
-    staticClass: "default__btn margin_auto",
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "share-dowmm"
+  }, [_c('user', {
+    attrs: {
+      "my-value": _vm.user
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "cont-title"
+  }, [_vm._v(_vm._s(_vm.theme))]), _vm._v(" "), _c('p', {
+    staticClass: "cont-desc"
+  }, [_vm._v(_vm._s(_vm.totalDay) + "天 | " + _vm._s(_vm.poiCount) + "地点 | " + _vm._s(_vm.totalDistance) + "公里")])]), _vm._v(" "), _c('footer-code')], 1)], 1)
+},staticRenderFns: []}
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "h5-share-wrapper",
+    staticStyle: {
+      "height": "100%",
+      "overflow-y": "auto"
+    }
+  }, [(_vm.type == 'club') ? _c('announcement', {
+    attrs: {
+      "type": _vm.type,
+      "id": _vm.id
+    }
+  }) : _vm._e(), _vm._v(" "), (_vm.type == 'track') ? _c('footprint', {
+    attrs: {
+      "type": _vm.type,
+      "id": _vm.id
+    }
+  }) : _vm._e(), _vm._v(" "), (_vm.type == 'travel' || _vm.type == 'poi' || _vm.type == 'temp') ? _c('journey', {
+    attrs: {
+      "type": _vm.type,
+      "id": _vm.id
+    }
+  }) : _vm._e()], 1)
+},staticRenderFns: []}
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "download",
+    attrs: {
+      "flex": "main:justify"
+    }
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "d-right",
+    attrs: {
+      "flex": "cross:center"
+    }
+  }, [_c('button', {
     on: {
       "click": function($event) {
-        _vm.next()
+        $event.stopPropagation();
+        return _vm.download($event)
       }
     }
-  }, [_vm._v("我已清楚操作流程，点击进入下一步")]), _vm._v(" "), _vm._m(0)])
+  }, [_vm._v("下载体验")])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "follow-tips"
-  }, [_c('p', [_vm._v("1、公众号菜单中找到【动态名片】")]), _vm._v(" "), _c('p', [_vm._v("2、修改你的名片信息")]), _vm._v(" "), _c('p', [_vm._v("3、分享“购买记录”中的名片")]), _vm._v(" "), _c('p', [_vm._v("4、如有问题请直接到公众号咨询")])])
+    staticClass: "d-left",
+    attrs: {
+      "flex": "cross:center"
+    }
+  }, [_c('div', {
+    staticClass: "d-logo"
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(107)
+    }
+  })]), _vm._v(" "), _c('dl', {
+    staticClass: "d-text"
+  }, [_c('dt', [_vm._v("出去-你的专属出行智能")]), _vm._v(" "), _c('dd', [_vm._v("世界很大 我要出去")])])])
 }]}
 
 /***/ }),
-/* 132 */
+/* 128 */
 /***/ (function(module, exports) {
 
 ! function (e, n) {
