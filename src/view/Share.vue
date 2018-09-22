@@ -13,6 +13,7 @@
     import Announcement from './Announcement';//公告
     import Footprint from './Footprint';//足迹
     import Journey from './Journey';//行程&POI
+    import { setTitle } from '../utils/operation';
     export default {
         name: 'share',
         data(){
@@ -28,6 +29,7 @@
         },
         created(){
             this.getQuery();
+            setTitle('1234')
         },
         computed: {
         },

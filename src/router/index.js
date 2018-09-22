@@ -25,14 +25,8 @@ const router = new Router({
     return { x: 0, y: 0 }
   },
   routes: [
-    {path: '/', name: 'App', redirect: '/map'},
-    {path: '/map', name: 'Map', component: Map},
-    {path: '/details', name: 'Details', component: Details},
-    {path: '/announcement', name: 'announcement', component: Announcement},
-    {path: '/footprint', name: 'footprint', component: Footprint},
-    {path: '/poi', name: 'poi', component: Journey},
-    {path: '/journey', name: 'journey', component: Journey},
-    {path: '/share', name: 'share', component: Share},
+    {path: '/', name: 'share', redirect: '/share'},
+    {path: '/share/weixin', name: 'share', component: Share},
     {path: '*', name: 'NotFound', component: NotFound}
   ]
 })

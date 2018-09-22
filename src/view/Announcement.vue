@@ -10,7 +10,9 @@
             <div class="content">
                 <p class="cont-title">{{theme}}</p>
                 <dl flex="cross:center" class="cont-biao">
-                    <dt></dt>
+                    <dt>
+                        <img :src="avatar">
+                    </dt>
                     <dd>{{name}}</dd>
                 </dl>
             </div>
@@ -27,13 +29,14 @@
     import {getNotice} from '../api/route.js'
     export default {
         name: 'announcement',
-        props:['id'],
+        props:['type','id','userId','uuid'],
         data(){
             return {
                 user:{},
                 theme:'',
                 url:'',
-                name:''
+                name:'',
+                avatar:''
             }
         },
         components:{
@@ -56,7 +59,7 @@
                     this.theme = theme;
                     this.url = picture.length > 0 ? picture[0]:false;
                     this.name = club.name
-                    
+                    this.avatar = club.avatar
                 })
             }
         },
