@@ -27,6 +27,9 @@
                 
             }
         },
+        props: {
+            pageData: Object
+        },
         components: {
 
         },
@@ -35,14 +38,16 @@
         },
         methods: {
             download(){
+                console.log(this.pageData)
                 let config = {
                     // 和app协定的scheme
-                    schema: 'mtlf://scheme?p=home',
+                    schema: "AnyGo.1000mind://anygo/" + this.pageData.type + "/" + this.pageData.id,
                     // iOS下的App在appstore的地址
-                    appstore: '//itunes.apple.com/cn/app/%E4%BE%83%E4%BE%83%E7%8C%A9/id1267259289?mt=8',
+                    appstore: 'http://itunes.apple.com/app/id1345961107?mt=8',
                     // 应用宝的地址
                     yyb: '//a.app.qq.com/o/simple.jsp?pkgname=com.mtime.lookface&fromcase=40002'
                 };
+                alert(config.schema)
                 let applink = new AppLink(config)
                 applink.open();
             }

@@ -9,8 +9,6 @@ import Router from 'vue-router'
 const asyncComponent = (name) => {
   return resolve => require([`@/view/${name}`], resolve)
 }
-const Map = asyncComponent('Map')
-const Details = asyncComponent('Details')
 const NotFound = asyncComponent('NotFound')
 const Announcement = asyncComponent('Announcement')
 const Footprint = asyncComponent('Footprint')
@@ -26,7 +24,7 @@ const router = new Router({
   },
   routes: [
     {path: '/', name: 'share', redirect: '/share'},
-    {path: '/share/weixin', name: 'share', component: Share},
+    {path: '/share/weiXin', name: 'share', component: Share},
     {path: '*', name: 'NotFound', component: NotFound}
   ]
 })

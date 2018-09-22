@@ -1,11 +1,11 @@
 <template>
     <div class="h5-share-wrapper" style="height: 100%;overflow-y: auto">
         <announcement v-if="type == 'club'" 
-            :type="type" :id="id" ></announcement>
+            :type="type" :id="id" :userId="userId" :uuid="uuid" ></announcement>
         <footprint  v-if="type == 'track'" 
-            :type="type" :id="id"></footprint>
+            :type="type" :id="id" :userId="userId" :uuid="uuid" ></footprint>
         <journey v-if="type == 'travel' || type == 'poi' || type == 'temp'"
-            :type="type" :id="id"></journey>
+            :type="type" :id="id" :userId="userId" :uuid="uuid" ></journey>
     </div>
 </template>
 
@@ -19,7 +19,9 @@
         data(){
             return {
             	type:'',
-                id:''
+                id:'',
+                userId:'',
+                uuid:''
             }
         },
         components:{
@@ -29,7 +31,7 @@
         },
         created(){
             this.getQuery();
-            setTitle('1234')
+            // setTitle('')
         },
         computed: {
         },
@@ -37,6 +39,8 @@
             getQuery(){
                 this.type = this.$route.query.type;
             	this.id = this.$route.query.id;
+                this.userId = this.$route.query.userId;
+            	this.uuid = this.$route.query.uuid;
             }
         },
         destroyed(){

@@ -1,7 +1,6 @@
 <template>
     <div class="share-wrap footprint">
-        <download></download>
-        <img :src="iconIrems[0]">
+        <download :page-data="pageData"></download>
         <div class="banner">
             <img :src="url">
         </div>
@@ -27,15 +26,15 @@ import User from "../common/User";
 import FooterCode from "../common/FooterCode";
 import { getTrack } from "@/api/route";
 import wx from "@/utils/wx";
-const icon_poiscan = require('../assets/images/icon_poiscan.png');
-const icon_adventure = require('../assets/images/icon_adventure.png');
-const icon_art = require('../assets/images/icon_art.png');
-const icon_culture = require('../assets/images/icon_culture.png');
-const icon_entertainment = require('../assets/images/icon_entertainment.png');
-const icon_food = require('../assets/images/icon_food.png');
-const icon_landscape = require('../assets/images/icon_landscape.png');
-const icon_night = require('../assets/images/icon_night.png');
-const icon_water = require('../assets/images/icon_water.png');
+const poiscan = require('../assets/images/icon_poiscan.png');
+const adventure = require('../assets/images/icon_adventure.png');
+const art = require('../assets/images/icon_art.png');
+const culture = require('../assets/images/icon_culture.png');
+const entertainment = require('../assets/images/icon_entertainment.png');
+const food = require('../assets/images/icon_food.png');
+const landscape = require('../assets/images/icon_landscape.png');
+const night = require('../assets/images/icon_night.png');
+const water = require('../assets/images/icon_water.png');
 export default {
   name: "announcement",
   props: ["type", "id", "userId", "uuid"],
@@ -46,7 +45,18 @@ export default {
       description: "",
       trackname: "",
       iconSrc: "",
-      iconIrems:[icon_poiscan,icon_adventure,icon_art]
+      iconObj:{
+          'poiscan':poiscan,
+          'adventure':adventure,
+          'art':art,
+          'culture':culture,
+          'entertainment':entertainment,
+          'food':food,
+          'landscape':landscape,
+          'night':night,
+          'water':water
+      },
+      pageData: {}
     };
   },
   components: {
@@ -56,6 +66,10 @@ export default {
   },
   created() {
     this.getTrack();
+    this.pageData = {
+        type: this.type,
+        id: this.id
+    }
   },
   computed: {},
   methods: {
@@ -82,8 +96,8 @@ export default {
             let img =
               poiProfileDTO.mainDimension != "" &&
               poiProfileDTO.mainDimension != null
-                ? `../assets/images/icon_${poiProfileDTO.mainDimension}.png`
-                : "../assets/images/icon_poiscan.png";
+                ? this.iconObj[poiProfileDTO.mainDimension]
+                : this.iconObj[poiscan];
             this.iconSrc = img;
           }
         })
@@ -96,7 +110,7 @@ export default {
         title:  'title',
         link: 'link',
         imgUrl: 'logo',
-        desc: ''
+        desc: this.description
       });
     }
   },
