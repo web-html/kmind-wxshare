@@ -186,6 +186,7 @@ const Announcement = asyncComponent('Announcement');
 const Footprint = asyncComponent('Footprint');
 const Journey = asyncComponent('Journey');
 const Share = asyncComponent('Share');
+const Kmind = asyncComponent('KmindIndex');
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
 
@@ -194,7 +195,9 @@ const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 };
   },
-  routes: [{ path: '/', name: 'share', redirect: '/share' }, { path: '/share/weiXin', name: 'share', component: Share }, { path: '*', name: 'NotFound', component: NotFound }]
+  routes: [
+  // { path: '/', name: 'share', redirect: '/share' },
+  { path: '/', name: 'Kmind', component: Kmind }, { path: '/share/weiXin', name: 'share', component: Share }, { path: '*', name: 'NotFound', component: NotFound }]
 });
 
 /* harmony default export */ __webpack_exports__["a"] = (router);

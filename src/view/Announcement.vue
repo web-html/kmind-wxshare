@@ -26,7 +26,7 @@ import Download from "../common/Download";
 import User from "../common/User";
 import FooterCode from "../common/FooterCode";
 import request from "../utils/request.js";
-import { getNotice } from "../api/route.js";
+import { getNotice,getUserInfo } from "../api/route.js";
 export default {
   name: "announcement",
   props: ["type", "id", "userId", "uuid"],
@@ -51,6 +51,7 @@ export default {
       type: this.type,
       id: this.id
     };
+    this.getUserInfo()
   },
   computed: {},
   methods: {
@@ -59,12 +60,27 @@ export default {
       getNotice(params).then(res => {
         let data = res.data;
         let { user, club, theme, picture } = data.root;
-        this.user = user;
+        // this.user = user;
         this.theme = theme;
         this.url = picture.length > 0 ? picture[0] : false;
         this.name = club.name;
         this.avatar = club.avatar;
       });
+    },
+    getUserInfo() {
+        // console.log(this.userId)
+      getUserInfo({
+        'openId': this.userId,
+      })
+        .then(res => {
+        //   console.log(res);
+          if (res.data.code == 200){
+              this.user = res.data.root
+          }
+        })
+        .catch(res => {
+          console.log(res);
+        });
     }
   },
   destroyed() {}

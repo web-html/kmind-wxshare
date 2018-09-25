@@ -101,22 +101,22 @@ export var AppLink = /** @class */ (function () {
         // 微信直接跳 应用宝
         if (browser.isWx) {
             // this.go(this.config.yyb)
-            this.tryCallApp(this.config.schema)
+            // this.tryCallApp(this.config.schema)
 
             if (browser.isIOS) {
                 // 没有下载
-                this.checkOpen(function (isSuccess) {
-                    if (!isSuccess) {
-                        _this.go(_this.config.appstore)
-                    }
-                })
+                // this.checkOpen(function (isSuccess) {
+                //     if (!isSuccess) {
+                //     }
+                // })
+                _this.go(_this.config.appstore)
             } else {
                 // 唤起失败 跳到应用宝
-                this.checkOpen(function (isSuccess) {
-                    if (!isSuccess) {
-                        _this.go(_this.config.yyb)
-                    }
-                })
+                // this.checkOpen(function (isSuccess) {
+                //     if (!isSuccess) {
+                //     }
+                // })
+                _this.go(_this.config.yyb)
             }
         } else if (browser.isQQ) {
             if (browser.isIOS) {

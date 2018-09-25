@@ -19,3 +19,7 @@ export function getTravelDetail (params) {
 export function getNotice (params) {
   return api.post('/api/app/club/look/notice', params)
 }
+// 用户信息
+export function getUserInfo (params) {
+  return api.post('/api/app/user/proInfo', params)
+}

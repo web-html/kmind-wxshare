@@ -47,7 +47,7 @@
                     // 应用宝的地址
                     yyb: '//a.app.qq.com/o/simple.jsp?pkgname=com.mtime.lookface&fromcase=40002'
                 };
-                alert(config.schema)
+                // alert(config.schema)
                 let applink = new AppLink(config)
                 applink.open();
             }

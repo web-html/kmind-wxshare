@@ -24,7 +24,6 @@ import store from './store/index.js'
 import ajax from '@/utils/ajax'
 import sessionStorage from '@/utils/sessionStorage'
 import localStorage from '@/utils/localStorage'
-import WxPay from './utils/wx-pay'
 // 整页loading
 import BigLoading from './components/BigLoading.vue'
 
@@ -33,7 +32,6 @@ Vue.use(MintUI)
 Vue.use(ajax, axios)
 Vue.use(sessionStorage)
 Vue.use(localStorage)
-Vue.use(WxPay)
 
 Vue.component(BigLoading.name, BigLoading)
 

@@ -24,7 +24,7 @@
 import Download from "../common/Download";
 import User from "../common/User";
 import FooterCode from "../common/FooterCode";
-import { getTrack } from "@/api/route";
+import { getTrack,getUserInfo } from "@/api/route";
 import wx from "@/utils/wx";
 const poiscan = require('../assets/images/icon_poiscan.png');
 const adventure = require('../assets/images/icon_adventure.png');
@@ -70,6 +70,7 @@ export default {
         type: this.type,
         id: this.id
     }
+    this.getUserInfo()
   },
   computed: {},
   methods: {
@@ -86,7 +87,7 @@ export default {
               totalDistance,
               theme
             } = data.root;
-            this.user = user || {};
+            // this.user = user || {};
             this.url = poiProfileDTO.strokeCover.url;
             this.description = poiProfileDTO.description;
             this.totalDay = totalDay;
@@ -112,6 +113,21 @@ export default {
         imgUrl: 'logo',
         desc: this.description
       });
+    },
+    getUserInfo() {
+        // console.log(this.userId)
+      getUserInfo({
+        'openId': this.userId,
+      })
+        .then(res => {
+        //   console.log(res);
+          if (res.data.code == 200){
+              this.user = res.data.root
+          }
+        })
+        .catch(res => {
+          console.log(res);
+        });
     }
   },
   destroyed() {}

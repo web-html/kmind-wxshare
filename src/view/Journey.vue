@@ -20,7 +20,7 @@
 import Download from "../common/Download";
 import User from "../common/User";
 import FooterCode from "../common/FooterCode";
-import { getPoiDetail, getTravelDetail, getTempDetail } from "@/api/route";
+import { getPoiDetail, getTravelDetail, getTempDetail,getUserInfo } from "@/api/route";
 import { fetchShareInfo } from "@/api/weixin";
 export default {
   name: "journey",
@@ -79,7 +79,7 @@ export default {
             this.totalDistance = totalDistance;
             this.theme = theme;
             this.poiCount = poiCount;
-            this.user = user;
+            // this.user = user;
             this.desc = `${totalDay}天 | ${poiCount}地点 | ${totalDistance}公里`;
           }
         })
@@ -97,7 +97,7 @@ export default {
           let { user, imageList, name, tagList } = data.root;
           this.url = imageList[0].url;
           this.theme = name;
-          this.user = user;
+        //   this.user = user;
           this.desc = tagList.join(" | ");
         }
       });
@@ -120,15 +120,15 @@ export default {
     //   this.getUserInfo();
     },
     getUserInfo() {
-        console.log(this.userId)
-      fetchShareInfo({
-        type: this.type,
-        id: this.id,
-        userId: this.userId,
-        uuid: this.uuid
+        // console.log(this.userId)
+      getUserInfo({
+        'openId': this.userId,
       })
         .then(res => {
-          console.log(res);
+        //   console.log(res);
+          if (res.data.code == 200){
+              this.user = res.data.root
+          }
         })
         .catch(res => {
           console.log(res);

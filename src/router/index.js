@@ -14,18 +14,20 @@ const Announcement = asyncComponent('Announcement')
 const Footprint = asyncComponent('Footprint')
 const Journey = asyncComponent('Journey')
 const Share = asyncComponent('Share')
+const Kmind = asyncComponent('KmindIndex')
 
 Vue.use(Router)
 
 const router = new Router({
   mode: 'history',
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }
   },
   routes: [
-    {path: '/', name: 'share', redirect: '/share'},
-    {path: '/share/weiXin', name: 'share', component: Share},
-    {path: '*', name: 'NotFound', component: NotFound}
+    // { path: '/', name: 'share', redirect: '/share' },
+    {path: '/', name: 'Kmind',component: Kmind},
+    { path: '/share/weiXin', name: 'share', component: Share },
+    { path: '*', name: 'NotFound', component: NotFound }
   ]
 })
 
