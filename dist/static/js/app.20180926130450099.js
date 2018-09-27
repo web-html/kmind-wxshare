@@ -42,9 +42,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_ajax__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_sessionStorage__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_localStorage__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__utils_wx_pay__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_BigLoading_vue__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_BigLoading_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__components_BigLoading_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_BigLoading_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_BigLoading_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__components_BigLoading_vue__);
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
@@ -71,7 +70,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
 // 整页loading
 
 
@@ -80,9 +78,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_9_min
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_12__utils_ajax__["a" /* default */], __WEBPACK_IMPORTED_MODULE_10_axios___default.a);
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_13__utils_sessionStorage__["a" /* default */]);
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_14__utils_localStorage__["a" /* default */]);
-__WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_15__utils_wx_pay__["a" /* default */]);
 
-__WEBPACK_IMPORTED_MODULE_0_vue__["default"].component(__WEBPACK_IMPORTED_MODULE_16__components_BigLoading_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_16__components_BigLoading_vue___default.a);
+__WEBPACK_IMPORTED_MODULE_0_vue__["default"].component(__WEBPACK_IMPORTED_MODULE_15__components_BigLoading_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_15__components_BigLoading_vue___default.a);
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].config.productionTip = false;
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].prototype.HOST = '/api';
@@ -179,7 +176,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
  * @return {[promise]}      [组件]
  */
 const asyncComponent = name => {
-  return resolve => __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(66)(`./${name}`)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+  return resolve => __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(65)(`./${name}`)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
 };
 const NotFound = asyncComponent('NotFound');
 const Announcement = asyncComponent('Announcement');
@@ -187,6 +184,7 @@ const Footprint = asyncComponent('Footprint');
 const Journey = asyncComponent('Journey');
 const Share = asyncComponent('Share');
 const Kmind = asyncComponent('KmindIndex');
+const KmindDownload = asyncComponent('KmindDownload');
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
 
@@ -197,7 +195,7 @@ const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   },
   routes: [
   // { path: '/', name: 'share', redirect: '/share' },
-  { path: '/', name: 'Kmind', component: Kmind }, { path: '/share/weiXin', name: 'share', component: Share }, { path: '*', name: 'NotFound', component: NotFound }]
+  { path: '/', name: 'Kmind', component: Kmind }, { path: '/share/weiXin', name: 'share', component: Share }, { path: '/KmindDownload', name: 'KmindDownload', component: KmindDownload }, { path: '*', name: 'NotFound', component: NotFound }]
 });
 
 /* harmony default export */ __webpack_exports__["a"] = (router);
@@ -420,61 +418,16 @@ function localStorage(Vue) {
 
 /***/ }),
 /* 59 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const plugin = {
-  install(Vue) {
-    function wxPay(payParams, urlType, autoReg, subscribe) {
-      let that = this;
-      window.WeixinJSBridge.invoke('getBrandWCPayRequest', {
-        'appId': payParams.appId + '',
-        'timeStamp': payParams.timeStamp + '',
-        'nonceStr': payParams.nonceStr + '',
-        'package': 'prepay_id=' + payParams.prepayId,
-        'signType': 'MD5',
-        'paySign': payParams.sign + ''
-      }, function (res) {
-        if (res.err_msg === 'get_brand_wcpay_request:ok') {
-          if (urlType === 'xxcard') {
-            // 去引导页
-            if (subscribe !== 1) {
-              that.$router.push('/guide');
-            } else {
-              // 去引导页
-              if (autoReg === 1) {
-                that.$router.push('/guide');
-              } else {
-                that.$router.push('/bought');
-              }
-            }
-          } else {
-            this.$router.go();
-            // that.$router.push('/paySuccess?orderId=' + payParams.orderId + '&urlType=cust')
-          }
-        } else if (res.err_msg === 'get_brand_wcpay_request:fail') {
-          that.$messagebox('提示', '微信支付失败');
-        }
-      });
-    }
-    Vue.prototype.$wxPay = wxPay;
-  }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (plugin);
-
-/***/ }),
-/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 function injectStyle (ssrContext) {
-  __webpack_require__(61)
+  __webpack_require__(60)
 }
 var Component = __webpack_require__(4)(
   /* script */
-  __webpack_require__(62),
+  __webpack_require__(61),
   /* template */
-  __webpack_require__(63),
+  __webpack_require__(62),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -487,13 +440,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -519,7 +472,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

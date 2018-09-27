@@ -14,6 +14,7 @@
             <footer-code></footer-code>
         </div>
     </div>
+        
 </template>
 
 <script>
