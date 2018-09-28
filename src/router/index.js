@@ -15,6 +15,7 @@ const Footprint = asyncComponent('Footprint')
 const Journey = asyncComponent('Journey')
 const Share = asyncComponent('Share')
 const Kmind = asyncComponent('KmindIndex')
+const KmindDownload = asyncComponent('KmindDownload')
 
 Vue.use(Router)
 
@@ -27,6 +28,7 @@ const router = new Router({
     // { path: '/', name: 'share', redirect: '/share' },
     {path: '/', name: 'Kmind',component: Kmind},
     { path: '/share/weiXin', name: 'share', component: Share },
+    { path: '/KmindDownload', name: 'KmindDownload', component: KmindDownload },
     { path: '*', name: 'NotFound', component: NotFound }
   ]
 })

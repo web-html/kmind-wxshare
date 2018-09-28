@@ -102,26 +102,17 @@ export var AppLink = /** @class */ (function () {
         if (browser.isWx) {
             // this.go(this.config.yyb)
             // this.tryCallApp(this.config.schema)
-
             if (browser.isIOS) {
-                // 没有下载
-                // this.checkOpen(function (isSuccess) {
-                //     if (!isSuccess) {
-                //     }
-                // })
-                _this.go(_this.config.appstore)
+                alert('点击右上角“···”，选择“在Safar打开”');
+                //_this.go(_this.config.appstore)
             } else {
-                // 唤起失败 跳到应用宝
-                // this.checkOpen(function (isSuccess) {
-                //     if (!isSuccess) {
-                //     }
-                // })
-                _this.go(_this.config.yyb)
+                // _this.go(_this.config.yyb)
+                alert('点击右上角“···”，在浏览器中打开即可下载');
             }
         } else if (browser.isQQ) {
             if (browser.isIOS) {
                 // 使用scheme唤起
-                this.tryCallApp(this.config.schema)
+                this.tryCallApp(this.config.ioschema)
                 // 没有下载
                 this.checkOpen(function (isSuccess) {
                     if (!isSuccess) {
@@ -132,22 +123,28 @@ export var AppLink = /** @class */ (function () {
             // iOS跳到AppStore
             if (browser.isAndroid) {
                 // 使用scheme唤起
-                this.tryCallApp(this.config.schema)
+                this.tryCallApp(this.config.andschema)
                 // 唤起失败 跳到应用宝
                 this.checkOpen(function (isSuccess) {
                     if (!isSuccess) {
-                        _this.go(_this.config.yyb)
+                        // _this.go(_this.config.yyb)
+                        window.location.href="http://download.awayroadtrip.com/chuqu.apk";
                     }
                 })
             }
         } else if (browser.isWb) {
             // 使用scheme唤起
-            this.tryCallApp(this.config.schema)
+            if (browser.isIOS) {
+                this.tryCallApp(this.config.ioschema)
+            } else {
+                this.tryCallApp(this.config.andschema)
+            }
+            
             // 微博：唤起失败，也不跳转，会有引导功能
         } else if (browser.isSafari) {
             var version = this.getIOSVersion()
             // 使用scheme唤起
-            this.tryCallApp(this.config.schema)
+            this.tryCallApp(this.config.ioschema)
             // iOS10以下不支持直接跳转到AppStore，跳到应用宝
             if (version < 10) {
                 this.checkOpen(function (isSuccess) {
@@ -166,7 +163,23 @@ export var AppLink = /** @class */ (function () {
             }
         } else {
             // 其他情况，直接跳应用宝
-            this.go(this.config.yyb)
+            if (browser.isIOS) {
+                this.tryCallApp(this.config.ioschema)
+                this.checkOpen(function (isSuccess) {
+                    if (!isSuccess) {
+                        _this.go(_this.config.appstore)
+                    }
+                })
+            } else {
+                this.tryCallApp(this.config.andschema)
+                this.checkOpen(function (isSuccess) {
+                    if (!isSuccess) {
+                        // _this.go(this.config.yyb)
+                        window.location.href="http://download.awayroadtrip.com/chuqu.apk";
+                    }
+                })
+            }
+            
         }
     }
     /**

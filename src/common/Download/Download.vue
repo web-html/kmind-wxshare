@@ -12,7 +12,19 @@
         <div flex="cross:center" class="d-right">
             <button @click.stop="download">下载体验</button>
         </div>
+        <div class="modal">
+        <div class="modal-content">
+            <div class="tit">
+             <p>点击右上角“···”，</p>
+             <p>选择“在Safari打开”</p>
+            </div>
+            <div class="modal-btn">
+                知道了
+            </div>
+        </div>
     </div>
+    </div>
+    
 </template>
 <script>
     import './download.less';
@@ -41,11 +53,12 @@
                 console.log(this.pageData)
                 let config = {
                     // 和app协定的scheme
-                    schema: "AnyGo.1000mind://anygo/" + this.pageData.type + "/" + this.pageData.id,
+                    ioschema: "AnyGo.1000mind://anygo/" + this.pageData.type + "/" + this.pageData.id,
+                    andschema: "scheme://com.kmiles.chuqu/anygo/" + this.pageData.type + "/" + this.pageData.id,
                     // iOS下的App在appstore的地址
                     appstore: 'http://itunes.apple.com/app/id1345961107?mt=8',
                     // 应用宝的地址
-                    yyb: '//a.app.qq.com/o/simple.jsp?pkgname=com.mtime.lookface&fromcase=40002'
+                    yyb: 'http://download.awayroadtrip.com/chuqu.apk'
                 };
                 // alert(config.schema)
                 let applink = new AppLink(config)

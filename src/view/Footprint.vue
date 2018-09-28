@@ -10,7 +10,8 @@
                 <p class="cont-title">{{description}}</p>
                 <dl flex="cross:center" class="cont-biao">
                     <dt>
-                        <img :src="iconSrc">
+                        <img v-if="!iconSrc" src="../assets/images/icon_poiscan.png">
+                        <img v-if="iconSrc" :src="iconSrc">
                     </dt>
                     <dd>{{trackname}}</dd>
                 </dl>
@@ -24,37 +25,38 @@
 import Download from "../common/Download";
 import User from "../common/User";
 import FooterCode from "../common/FooterCode";
-import { getTrack,getUserInfo } from "@/api/route";
+import { getTrack, getUserInfo } from "@/api/route";
 import wx from "@/utils/wx";
-const poiscan = require('../assets/images/icon_poiscan.png');
-const adventure = require('../assets/images/icon_adventure.png');
-const art = require('../assets/images/icon_art.png');
-const culture = require('../assets/images/icon_culture.png');
-const entertainment = require('../assets/images/icon_entertainment.png');
-const food = require('../assets/images/icon_food.png');
-const landscape = require('../assets/images/icon_landscape.png');
-const night = require('../assets/images/icon_night.png');
-const water = require('../assets/images/icon_water.png');
+const poiscan = require("../assets/images/icon_poiscan.png");
+const adventure = require("../assets/images/icon_adventure.png");
+const art = require("../assets/images/icon_art.png");
+const culture = require("../assets/images/icon_culture.png");
+const entertainment = require("../assets/images/icon_entertainment.png");
+const food = require("../assets/images/icon_food.png");
+const landscape = require("../assets/images/icon_landscape.png");
+const night = require("../assets/images/icon_night.png");
+const water = require("../assets/images/icon_water.png");
 export default {
   name: "announcement",
   props: ["type", "id", "userId", "uuid"],
   data() {
     return {
+      userInfo: {},
       user: {},
       url: "",
       description: "",
       trackname: "",
       iconSrc: "",
-      iconObj:{
-          'poiscan':poiscan,
-          'adventure':adventure,
-          'art':art,
-          'culture':culture,
-          'entertainment':entertainment,
-          'food':food,
-          'landscape':landscape,
-          'night':night,
-          'water':water
+      iconObj: {
+        poiscan: poiscan,
+        adventure: adventure,
+        art: art,
+        culture: culture,
+        entertainment: entertainment,
+        food: food,
+        landscape: landscape,
+        night: night,
+        water: water
       },
       pageData: {}
     };
@@ -67,10 +69,9 @@ export default {
   created() {
     this.getTrack();
     this.pageData = {
-        type: this.type,
-        id: this.id
-    }
-    this.getUserInfo()
+      type: this.type,
+      id: this.id
+    };
   },
   computed: {},
   methods: {
@@ -79,50 +80,45 @@ export default {
         .then(res => {
           if (res.data.code == 200) {
             let data = res.data;
-            let {
-              user,
-              poiCount,
-              poiProfileDTO,
-              totalDay,
-              totalDistance,
-              theme
-            } = data.root;
-            // this.user = user || {};
-            this.url = poiProfileDTO.strokeCover.url;
-            this.description = poiProfileDTO.description;
-            this.totalDay = totalDay;
-            this.totalDistance = totalDistance;
+            let { user, poiProfileDTO, imageList } = data.root;
+            this.userInfo = user || {};
+            this.url = imageList[0].url || poiProfileDTO.strokeCover.url;
+            this.description = poiProfileDTO.description
+              ? poiProfileDTO.description
+              : "";
             this.trackname = poiProfileDTO.name;
-            this.poiCount = poiCount;
             let img =
-              poiProfileDTO.mainDimension != "" &&
-              poiProfileDTO.mainDimension != null
+              (poiProfileDTO.mainDimension != "" &&
+              poiProfileDTO.mainDimension != null)
                 ? this.iconObj[poiProfileDTO.mainDimension]
-                : this.iconObj[poiscan];
+                : false;
             this.iconSrc = img;
+            this.getUserInfo()
           }
         })
         .catch(res => {
           console.log(res);
         });
     },
-    share(){
+    share() {
       wx.getShare({
-        title:  'title',
-        link: 'link',
-        imgUrl: 'logo',
+        title: "title",
+        link: "link",
+        imgUrl: "logo",
         desc: this.description
       });
     },
     getUserInfo() {
-        // console.log(this.userId)
+      // console.log(this.userId)
       getUserInfo({
-        'openId': this.userId,
+        openId: this.userId
       })
         .then(res => {
-        //   console.log(res);
-          if (res.data.code == 200){
-              this.user = res.data.root
+          //   console.log(res);
+          if (res.data.code == 200) {
+            this.user = res.data.root;
+          } else {
+            this.user = this.userInfo;
           }
         })
         .catch(res => {
