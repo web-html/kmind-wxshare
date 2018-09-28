@@ -18,7 +18,7 @@
              <p>点击右上角“···”，</p>
              <p>选择“在Safari打开”</p>
             </div>
-            <div class="modal-btn">
+            <div class="modal-btn" @click="click">
                 知道了
             </div>
         </div>
@@ -63,6 +63,9 @@
                 // alert(config.schema)
                 let applink = new AppLink(config)
                 applink.open();
+            },
+            click(){
+                alert('123')
             }
         },
         watch: {
