@@ -103,11 +103,9 @@ export var AppLink = /** @class */ (function () {
             // this.go(this.config.yyb)
             // this.tryCallApp(this.config.schema)
             if (browser.isIOS) {
-                alert('点击右上角“···”，选择“在Safar打开”');
-                //_this.go(_this.config.appstore)
+                _this.go(_this.config.appstore)
             } else {
-                // _this.go(_this.config.yyb)
-                alert('点击右上角“···”，在浏览器中打开即可下载');
+                _this.go(_this.config.yyb)
             }
         } else if (browser.isQQ) {
             if (browser.isIOS) {
