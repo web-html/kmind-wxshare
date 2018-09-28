@@ -1,8 +1,7 @@
-# xxCard
-vue 移动端项目 包含列表、图片裁剪上传，微信分享 微信支付
-
+# 微信分享页
 使用mint-ui框架
 
+## 开发步骤
 npm install
 
 npm run dev
