@@ -72,6 +72,7 @@ export default {
       type: this.type,
       id: this.id
     };
+    // this.share();
   },
   computed: {},
   methods: {
@@ -80,20 +81,24 @@ export default {
         .then(res => {
           if (res.data.code == 200) {
             let data = res.data;
-            let { user, poiProfileDTO, imageList } = data.root;
+            let { user, address,poiProfileDTO, imageList, body } = data.root;
             this.userInfo = user || {};
+            this.getUserInfo()
             this.url = imageList[0].url || poiProfileDTO.strokeCover.url;
-            this.description = poiProfileDTO.description
-              ? poiProfileDTO.description
-              : "";
-            this.trackname = poiProfileDTO.name;
-            let img =
+            this.description = (body == 'undefined' || body == '') ? '来不及说的什么光顾着玩了' : body;
+            this.trackname = address;
+            var img = '';
+            if (poiProfileDTO){
+                img =
               (poiProfileDTO.mainDimension != "" &&
               poiProfileDTO.mainDimension != null)
                 ? this.iconObj[poiProfileDTO.mainDimension]
                 : false;
+            } else {
+                img= false;
+            }
             this.iconSrc = img;
-            this.getUserInfo()
+            
           }
         })
         .catch(res => {
@@ -102,9 +107,9 @@ export default {
     },
     share() {
       wx.getShare({
-        title: "title",
-        link: "link",
-        imgUrl: "logo",
+        title: this.trackname,
+        link: window.location.href,
+        imgUrl: this.url,
         desc: this.description
       });
     },

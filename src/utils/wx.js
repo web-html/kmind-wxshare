@@ -18,8 +18,9 @@ let getConfig = () => {
     let params = {
         url: window.location.href
     }
-    return $api.get('/wechat/shareInfo', params)
+    return $api.post('/api/app/weixin/ticket', params)
         .then(res => {
+            console.log(res)
             //此处要根据具体返回
             if(res.status == 200){
                 let data = res.data;

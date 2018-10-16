@@ -10,3 +10,6 @@ export function security (body) {
     'body': body
   })
 }
+export function getTicket (params) {
+  return api.post('/api/app/weixin/ticket', params)
+}

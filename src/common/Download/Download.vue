@@ -11,16 +11,16 @@
                 </dl>
             </div>
             <div flex="cross:center" class="d-right">
-                <button @click.stop="download">下载体验</button>
+                <button @click.stop="download">打开</button>
             </div>
         </div>
         <div class="modal" v-show="modalShow">
             <div class="modal-content">
                 <div class="tit">
                 <p>点击右上角“...”，</p>
-                <p>选择“在Safari打开”</p>
+                <p>{{strNotice}}</p>
                 </div>
-                <div class="modal-btn">
+                <div class="modal-btn" @click="click">
                     知道了
                 </div>
             </div>
@@ -38,7 +38,8 @@ export default {
   props: ["data"],
   data() {
     return {
-        modalShow: false
+        modalShow: false,
+        strNotice: '选择“在Safari打开”'
     };
   },
   props: {
@@ -72,19 +73,29 @@ export default {
       // alert(config.schema)
       let applink = new AppLink(config);
       if (ua.indexOf("micromessenger") > -1) {
+        if (this.isIOS(ua)){
+            this.strNotice = '选择“在Safari打开”';
+        } else {
+            this.strNotice = '选择“在浏览器打开”';
+        }
         this.modalShow = true;
       } else {
         applink.open();
       }
       
-    }
+    },
+    click(){
+        this.modalShow = false;
+    },
+    isIOS(userAgent) {
+        return userAgent.match(/iPhone|iPad|iPod/i) ? true : false
+    },
   },
   watch: {
-    progress() {
-      this.draw();
-    }
+    
   },
   mounted() {
+    
   },
   destroyed() {}
 };

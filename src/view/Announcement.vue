@@ -2,7 +2,7 @@
     <div class="share-wrap">
         <download :page-data="pageData"></download>
         <div class="banner">
-            <img v-if="!url" src="../assets/images/hero.jpg">
+            <!-- <img v-if="!url" src="../assets/images/hero.jpg"> -->
             <img v-if="url" :src="url">
         </div>
         <div class="share-dowmm">
@@ -27,6 +27,7 @@ import User from "../common/User";
 import FooterCode from "../common/FooterCode";
 import request from "../utils/request.js";
 import { getNotice,getUserInfo } from "../api/route.js";
+const heroSrc = require("../assets/images/hero.jpg");
 export default {
   name: "announcement",
   props: ["type", "id", "userId", "uuid"],
@@ -62,7 +63,7 @@ export default {
         let { user, club, theme, picture } = data.root;
         // this.user = user;
         this.theme = theme;
-        this.url = picture.length > 0 ? picture[0] : false;
+        this.url = picture.length > 0 ? picture[0] : heroSrc;
         this.name = club.name;
         this.avatar = club.avatar;
       });

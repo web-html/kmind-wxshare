@@ -2,7 +2,7 @@
     <div class="share-wrap journey">
         <download :page-data="pageData"></download>
         <div class="banner">
-            <img v-if="!url" src="../assets/images/hero.jpg">
+            <!-- <img v-if="!url" src="../assets/images/hero.jpg"> -->
             <img v-if="url" :src="url">
         </div>
         <div class="share-dowmm">
